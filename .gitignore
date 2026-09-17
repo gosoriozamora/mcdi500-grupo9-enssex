@@ -1,0 +1,26 @@
+# Entorno local de Python
+.venv/
+venv/
+__pycache__/
+*.py[cod]
+.ipynb_checkpoints/
+.pytest_cache/
+
+# Archivos locales y credenciales
+.env
+.env.*
+!.env.example
+.vscode/
+.idea/
+.DS_Store
+Thumbs.db
+~$*
+
+# Datos: documentar su obtención antes de distribuirlos
+**/data/raw/*
+!**/data/raw/README.md
+!**/data/raw/.gitkeep
+**/data/interim/*.csv
+**/data/processed/*.csv
+*.sav
+*.zsav
