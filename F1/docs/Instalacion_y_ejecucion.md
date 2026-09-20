@@ -1,0 +1,227 @@
+# Instalación del entorno y ejecución del proyecto
+
+Esta guía permite preparar el entorno del proyecto ENSSEX en Windows de 64 bits y ejecutar los notebooks disponibles. Los comandos se escriben en **Git Bash**, salvo los bloques identificados como Python, que corresponden a celdas del notebook.
+
+La configuración de referencia se comprobó el 20 de septiembre de 2026. La instalación en un equipo nuevo necesita conexión para descargar Git, Python, el repositorio y las dependencias.
+
+## 1. Herramientas y versiones de referencia
+
+| Componente | Versión registrada | Uso |
+|---|---|---|
+| Python | 3.13.15, 64 bits | Ejecución del proyecto. |
+| Git para Windows | 2.55.0.windows.5 | Control de versiones y Git Bash. |
+| pip | 26.2.1 | Instalación y comprobación de dependencias. |
+| NumPy | 2.5.3 | Operaciones numéricas. |
+| pandas | 3.0.5 | Lectura y procesamiento tabular. |
+| pyreadstat | 1.3.6 | Lectura del SAV y sus metadatos para la conversión. |
+| SciPy | 1.18.1 | Herramientas científicas, según necesidad. |
+| Matplotlib | 3.11.2 | Gráficos. |
+| seaborn | 0.13.2 | Visualización estadística. |
+| scikit-learn | 1.9.1 | Herramientas disponibles para fases posteriores; su instalación no implica que se entrene un modelo. |
+| JupyterLab | 4.6.3 | Trabajo con notebooks. |
+| ipykernel | 7.3.0 | Conexión entre Jupyter y el entorno del proyecto. |
+
+Las versiones de las **121 dependencias** están fijadas en [requirements.txt](../../requirements.txt). Esta tabla resume las principales; el archivo es la referencia completa. Python y Git se instalan por separado y pip se registra aquí porque no está incluido en ese listado.
+
+El archivo de dependencias corresponde a Windows e incluye paquetes propios de ese sistema, como `pywinpty`. Esta guía no declara comprobada la instalación en macOS o Linux.
+
+## 2. Preparar Git y Python
+
+Instalar Git para Windows desde la [página oficial de Git](https://git-scm.com/downloads/win) y abrir Git Bash. Instalar Python Install Manager desde el [sitio oficial de Python](https://www.python.org/downloads/), según las [instrucciones de Python para Windows](https://docs.python.org/3/using/windows.html). Después, cerrar y volver a abrir Git Bash para que reconozca los comandos.
+
+Comprobar Git e instalar la versión de Python del proyecto si aún no está disponible:
+
+```bash
+git --version
+py install 3.13.15
+py -3.13 --version
+py -3.13 -c "import struct; print(struct.calcsize('P') * 8)"
+```
+
+Los dos últimos resultados deben ser `Python 3.13.15` y `64`. Si Python 3.13.15 ya está instalado, basta con comprobarlo; no es necesario reinstalarlo. `py install` requiere el administrador de instalaciones de Python: el lanzador antiguo de Windows no ofrece ese comando. La versión de Git se registra como referencia, pero no se exige una coincidencia exacta para ejecutar los notebooks.
+
+Si `py` no se reconoce, revisar la instalación del administrador y abrir una terminal nueva. Como alternativa, `python --version` permite comprobar un intérprete ya disponible: solo utilizarlo para crear el entorno si corresponde a Python 3.13.15 de 64 bits.
+
+## 3. Obtener una copia del repositorio
+
+Para un equipo que todavía no tenga la carpeta del proyecto:
+
+```bash
+mkdir -p ~/Proyectos
+cd ~/Proyectos
+git clone https://github.com/gosoriozamora/mcdi500-grupo9-enssex.git proyecto-enssex
+cd proyecto-enssex
+git rev-parse --short HEAD
+```
+
+El último comando muestra la revisión de código utilizada; registrarla cuando se realice la prueba de reproducción. Si GitHub solicita identificación, utilizar la cuenta con acceso al repositorio.
+
+Si ya existe una copia del proyecto, abrir Git Bash en su carpeta raíz y conservar el trabajo que contenga. No es necesario clonarlo otra vez ni ejecutar los pasos de creación del entorno si este ya funciona.
+
+## 4. Crear el entorno e instalar las dependencias
+
+Desde la raíz del repositorio, en una copia que aún no tenga `.venv`:
+
+```bash
+py -3.13 -m venv .venv
+source .venv/Scripts/activate
+python --version
+python -m pip install pip==26.2.1
+python -m pip install -r requirements.txt
+python -m pip check
+```
+
+El resultado esperado de la última instrucción es `No broken requirements found.`. Si existe un conflicto o falla la instalación de un paquete, corregirlo antes de continuar y registrar el mensaje. No actualizar todas las bibliotecas para intentar resolverlo sin revisar la diferencia con `requirements.txt`.
+
+Cuando se use el intérprete alternativo comprobado en la sección «Preparar Git y Python» de esta guía, el comando de creación será `python -m venv .venv`. Una vez activado el entorno, utilizar `python -m pip` para instalar en ese mismo intérprete.
+
+Comprobar el entorno y cargar las bibliotecas principales:
+
+```bash
+python -c "import sys, struct; print(sys.version); print(sys.executable); print('Entorno virtual:', sys.prefix != sys.base_prefix); print('Bits:', struct.calcsize('P') * 8)"
+python -c "import numpy, pandas, scipy, matplotlib, seaborn, sklearn, jupyterlab, ipykernel, pyreadstat; print('Importaciones correctas')"
+```
+
+La ruta del intérprete debe terminar en `.venv/Scripts/python.exe` o su equivalente con barras de Windows; el entorno virtual debe indicar `True`. Cada integrante crea su propia `.venv`: no se copia de un equipo a otro ni se incorpora a Git.
+
+## 5. Registrar el kernel del proyecto
+
+Con `.venv` activo y desde la raíz del repositorio:
+
+```bash
+python -m ipykernel install --user --name grupo9_mcdi500 --display-name "Python (grupo9-mcdi500)"
+python -m jupyter kernelspec list
+```
+
+La lista debe incluir `grupo9_mcdi500`. El nombre visible al abrir un notebook será **Python (grupo9-mcdi500)**. El registro se realiza en cada computador y apunta a su entorno local. Si se cambia la ubicación del proyecto, se debe reconstruir el entorno y registrar nuevamente el kernel desde esa ubicación.
+
+## 6. Disponer del archivo de datos
+
+La entrada de la validación preliminar es:
+
+```text
+F1/data/raw/20241205_enssex_desde_sav.csv
+```
+
+Este archivo es el CSV convertido desde `20241205_enssex_data.sav`, con **separador punto y coma (`;`) y codificación `utf-8-sig`**. No sustituirlo por `20241205_enssex_data.csv`: el notebook está configurado para la copia convertida.
+
+Los datos están excluidos de Git, por lo que clonar el repositorio no los incorpora. La [guía de obtención y conversión](Obtencion_y_conversion_ENSSEX.md) documenta la fuente, la licencia, la versión y las comprobaciones de integridad. Para descargar el SAV y generar el CSV y sus metadatos, ejecutar desde la raíz del repositorio, con `.venv` activo:
+
+```bash
+python F1/src/convertir_enssex.py --download
+```
+
+El comando requiere `pyreadstat==1.3.6`, incluido en el archivo de dependencias actualizado. Si el entorno se creó antes de incorporar esa biblioteca, volver a ejecutar `python -m pip install -r requirements.txt` y `python -m pip check`. La conversión conserva las filas, columnas y códigos originales; la preparación analítica corresponde a F2.
+
+Desde la raíz del proyecto se puede comprobar que la entrada existe:
+
+```bash
+python -c "from pathlib import Path; p = Path('F1/data/raw/20241205_enssex_desde_sav.csv'); print(p); assert p.is_file(), 'Falta el CSV convertido en F1/data/raw'"
+```
+
+## 7. Abrir JupyterLab y ejecutar el notebook disponible
+
+Desde la raíz del repositorio, con `.venv` activo:
+
+```bash
+python -m jupyterlab
+```
+
+En JupyterLab:
+
+1. Abrir `F1/notebooks/Validacion_preliminar_ENSSEX.ipynb`.
+2. Seleccionar el kernel **Python (grupo9-mcdi500)**.
+3. Comprobar la celda de configuración: `RUTA = "../data/raw/20241205_enssex_desde_sav.csv"`, `SEP = ";"`, `ENCODING = "utf-8-sig"` e `INFORME = "../docs/informe_validacion_preliminar.md"`.
+4. Reiniciar el kernel y ejecutar todas las celdas en orden, utilizando la opción correspondiente del menú Kernel.
+5. Revisar los mensajes y las salidas, incluido el informe generado en `F1/docs/informe_validacion_preliminar.md`, y guardar el notebook ejecutado.
+
+La ejecución vuelve a escribir ese informe preliminar. Sus observaciones sobre tipos o calidad de datos deben interpretarse y contrastarse con el diccionario; una ejecución sin errores no convierte automáticamente el diagnóstico en la versión final del proyecto.
+
+En una celda de comprobación del notebook se puede verificar el intérprete y el directorio de ejecución:
+
+```python
+import sys
+from pathlib import Path
+
+print("Intérprete:", sys.executable)
+print("Carpeta de ejecución:", Path.cwd())
+assert sys.prefix != sys.base_prefix, "El kernel no utiliza un entorno virtual"
+```
+
+El intérprete debe pertenecer a `.venv` de este proyecto y la carpeta de ejecución debe ser `F1/notebooks` para el notebook preliminar. Si las rutas no coinciden, seleccionar el kernel correcto y reiniciarlo antes de ejecutar de nuevo.
+
+## 8. Rutas relativas y orden de las fases
+
+Las rutas de lectura y escritura se expresan desde la carpeta de ejecución del notebook, sin nombres de usuario ni rutas personales:
+
+| Ubicación del notebook | Entrada original | Datos procesados | Documentación de su fase |
+|---|---|---|---|
+| `F1/notebooks` | `../data/raw/20241205_enssex_desde_sav.csv` | `../data/processed` | `../docs` |
+| `F2/notebooks` | `../../F1/data/raw/20241205_enssex_desde_sav.csv` | `../../F1/data/processed` | `../docs` |
+
+Ejemplo de lectura desde un notebook de F1:
+
+```python
+from pathlib import Path
+import pandas as pd
+
+ruta_datos = Path("../data/raw/20241205_enssex_desde_sav.csv")
+assert ruta_datos.is_file(), "Revisar la ubicación del CSV y la carpeta de ejecución"
+datos = pd.read_csv(ruta_datos, sep=";", encoding="utf-8-sig")
+```
+
+Para F2 se utiliza la ruta de su fila en la tabla. F1 reconocerá los datos; el filtrado, la limpieza y las transformaciones corresponden a F2.
+
+Cuando estén desarrollados los entregables finales, se ejecutará primero `F1/notebooks/F1_Definicion.ipynb` y después el notebook de preparación ubicado en `F2/notebooks`, siempre desde un kernel reiniciado. El nombre definitivo del notebook F2 se incorporará aquí cuando se cree. Actualmente esos notebooks están pendientes: la validación preliminar es el único notebook disponible y no los sustituye.
+
+## 9. Semilla y aleatoriedad
+
+Se establece **`SEMILLA = 42`** como convención del proyecto. La lectura, el filtrado y los conteos del notebook preliminar actual no utilizan operaciones aleatorias, por lo que no dependen de una semilla.
+
+Si posteriormente se incorpora muestreo u otro procedimiento aleatorio, se declarará la semilla en la celda de configuración y se utilizará explícitamente en la operación. Para un generador de NumPy:
+
+```python
+import numpy as np
+
+SEMILLA = 42
+rng = np.random.default_rng(SEMILLA)
+```
+
+Las operaciones posteriores deberán usar ese generador; cuando una función reciba `random_state`, se le entregará `SEMILLA`. Se documentará para qué se usa y se conservarán las versiones de las bibliotecas. Declarar una constante sin conectarla a las operaciones aleatorias no asegura su reproducción. Este bloque es una pauta para el desarrollo posterior, no una transformación ya incorporada al notebook.
+
+## 10. Retomar el trabajo y cerrar la sesión
+
+Cada vez que se abra una terminal nueva, entrar en la raíz del proyecto y activar el entorno antes de iniciar JupyterLab:
+
+```bash
+cd ~/Proyectos/proyecto-enssex
+source .venv/Scripts/activate
+python -m jupyterlab
+```
+
+Si el repositorio se guardó en otra carpeta, abrir Git Bash directamente allí. Al terminar, guardar los notebooks, detener JupyterLab en la terminal con `Ctrl+C`, confirmar el cierre si se solicita y ejecutar `deactivate`.
+
+## 11. Evidencias y límites de la comprobación actual
+
+En el equipo de Guillermo se verificaron el 20/09/2026:
+
+- Python 3.13.15 de 64 bits en `.venv`.
+- Las 121 versiones de `requirements.txt`, sin paquetes ausentes ni diferencias.
+- `python -m pip check`, con resultado `No broken requirements found.`.
+- La carga de NumPy, pandas, SciPy, ipykernel, JupyterLab y pyreadstat.
+- El registro `grupo9_mcdi500`, cuyo intérprete coincide con el Python de `.venv`.
+- La existencia de la entrada mediante las rutas relativas de F1 y F2.
+
+El [registro de Karla](verificacion_entorno_karla.md) documenta su revisión del entorno. La verificación integral de reproducibilidad deberá incluir una instalación desde una copia nueva del repositorio y la ejecución completa de F1 y F2 en ambos equipos, una vez preparados los datos y los notebooks.
+
+Para esa prueba se guardarán la revisión de Git, las versiones, la comprobación del entorno y las salidas de los notebooks en cada equipo. Si se incorporan nuevas dependencias, se revisará su necesidad, se actualizará `requirements.txt` desde el entorno del proyecto y se registrará el cambio; no se regenerará desde el Python general del computador.
+
+## Fuentes técnicas
+
+- [Entornos virtuales de Python](https://docs.python.org/3.13/library/venv.html).
+- [Instalación de dependencias con pip](https://pip.pypa.io/en/stable/user_guide/#requirements-files).
+- [Registro de kernels de IPython](https://ipython.readthedocs.io/en/stable/install/kernel_install.html).
+- [Inicio de JupyterLab](https://jupyterlab.readthedocs.io/en/stable/getting_started/starting.html).
+- [Generadores aleatorios de NumPy](https://numpy.org/doc/stable/reference/random/generator.html).
+
+Las versiones y rutas del proyecto proceden de la comprobación local; los enlaces técnicos respaldan los procedimientos generales.

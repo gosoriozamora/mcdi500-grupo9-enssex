@@ -1,0 +1,33 @@
+{
+  "status": "OK",
+  "verified_at_utc": "2026-09-20T20:07:45+00:00",
+  "source_page": "https://datos.gob.cl/dataset/encuesta-nacional-de-salud-sexualidad-y-genero-enssex-2022-2023/resource/80062904-7206-4d82-a0e8-611b428b0ef9",
+  "source_url": "https://datos.gob.cl/dataset/c6983439-49f6-4e71-85fe-e8de6e73dae0/resource/80062904-7206-4d82-a0e8-611b428b0ef9/download/20241205_enssex_data.sav",
+  "downloaded_this_run": true,
+  "source_file": "20241205_enssex_data.sav",
+  "source_bytes": 41227608,
+  "source_sha256": "0f4218b9553600dfd44e6b1f78d376b040a0e6f0d854453312c59a6497ec58ea",
+  "source_unchanged": true,
+  "csv_file": "20241205_enssex_desde_sav.csv",
+  "csv_bytes": 51201111,
+  "csv_sha256": "75393ce321f5151fbfd7846034158aabcbe448e82c76fa7c919eeace194ef0d8",
+  "metadata_file": "etiquetas_y_metadatos_ENSSEX.json",
+  "metadata_sha256": "c4d439b1f16b191dc86c189a0b70af2816721a3f1b08e5277855043b67eaca73",
+  "versions": {
+    "python": "3.13.15",
+    "pyreadstat": "1.3.6",
+    "pandas": "3.0.5",
+    "numpy": "2.5.3"
+  },
+  "checks": {
+    "rows": 20392,
+    "columns": 1126,
+    "column_names_and_order": "OK",
+    "numeric_values_and_missing": "OK",
+    "text_and_dates": "OK",
+    "csv_record_widths": "OK",
+    "numeric_rtol": 1e-14,
+    "numeric_atol": 0
+  },
+  "scope": "Conversión de formato; no incluye limpieza, selección ni recodificación."
+}
