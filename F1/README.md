@@ -4,7 +4,9 @@ El [notebook F1_Definicion.ipynb](notebooks/F1_Definicion.ipynb) presenta el pro
 
 ## Reconocimiento inicial de los datos
 
-El código está organizado en funciones para comprobar las dependencias, la estructura de carpetas, la identidad del CSV y la disponibilidad de las variables. Reconoce la base completa de 20.392 registros y 1.126 columnas y muestra el perfil de las 15 variables acordadas, distinguiendo campos vacíos y códigos de no respuesta.
+El código está organizado en funciones para comprobar las dependencias, la estructura de carpetas, la identidad del CSV y la disponibilidad de las variables. Reconoce la base completa de 20.392 registros y 1.126 columnas y muestra el perfil de las 19 variables acordadas, distinguiendo campos vacíos y códigos de no respuesta.
+
+La selección comprende 19 columnas originales: 3 variables centrales, 12 complementarias y 4 auxiliares. Incluye género (`p3`), año de inicio de convivencia (`p84`), edad de la pareja (`p91`) y `fecha` como referencia temporal por validar. Los años aproximados de convivencia y la diferencia de edad se calcularán en F2 cuando sus entradas estén validadas. El diagnóstico de F1 informa dos fechas de 1970 en la base completa; no corrige ni elimina esos registros.
 
 F1 conserva todos los registros y columnas. La selección de convivientes, la limpieza, las recodificaciones y la exportación del conjunto procesado se realizarán en F2. La comprobación final confirma que el archivo y la tabla en memoria permanecen sin cambios.
 

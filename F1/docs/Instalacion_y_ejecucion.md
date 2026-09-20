@@ -138,7 +138,9 @@ En JupyterLab:
 
 El notebook comprueba que el intérprete corresponda a la `.venv` del proyecto y que la carpeta de ejecución sea `F1/notebooks`. También contrasta todas las versiones de `requirements.txt` y la huella del CSV con `F1/docs/verificacion_conversion_enssex.json`. Si falta el CSV, seguir la guía de obtención y conversión; si una dependencia no coincide, actualizar el entorno antes de volver a ejecutar.
 
-La salida esperada es una base de 20.392 filas y 1.126 columnas, con las 15 variables presentes y 121 dependencias coincidentes. Se muestran dimensiones, tipos de lectura, identificadores, vacíos y no respuesta codificada. F1 no filtra convivientes ni realiza limpieza, imputación o recodificación. Las comprobaciones finales verifican que el CSV y la tabla en memoria permanezcan intactos.
+La salida esperada es una base de 20.392 filas y 1.126 columnas, con las 19 variables presentes y 121 dependencias coincidentes. Se muestran dimensiones, tipos de lectura, identificadores, vacíos y no respuesta codificada. F1 no filtra convivientes ni realiza limpieza, imputación o recodificación. Las comprobaciones finales verifican que el CSV y la tabla en memoria permanezcan intactos.
+
+La selección comprende 19 columnas originales: 3 variables centrales, 12 complementarias y 4 auxiliares. Incluye género (`p3`), año de inicio de convivencia (`p84`), edad de la pareja (`p91`) y `fecha` como referencia temporal por validar. Los años aproximados de convivencia y la diferencia de edad se calcularán en F2 cuando sus entradas estén validadas. El diagnóstico de F1 informa dos fechas de 1970 en la base completa; no corrige ni elimina esos registros.
 
 La evidencia de ejecución queda en las salidas del notebook. F1 no vuelve a escribir el informe del validador preliminar ni genera un dataset procesado. `Validacion_preliminar_ENSSEX.ipynb` se conserva como antecedente y no es un paso previo obligatorio para ejecutar F1.
 
@@ -207,7 +209,7 @@ En el equipo de Guillermo se verificaron el 20/09/2026:
 - El registro `grupo9_mcdi500`, cuyo intérprete coincide con el Python de `.venv`.
 - La existencia de la entrada mediante las rutas relativas de F1 y F2.
 - La ejecución completa de F1 desde un kernel nuevo, con 10 celdas de código consecutivas y sin errores.
-- La lectura de 20.392 filas y 1.126 columnas y el perfil de las 15 variables acordadas.
+- La lectura de 20.392 filas y 1.126 columnas y el perfil de las 19 variables acordadas.
 - La detección de tablas vacías, columnas requeridas ausentes y nombres duplicados en ejemplos de control.
 - La conservación del CSV y de la tabla en memoria al finalizar el reconocimiento.
 

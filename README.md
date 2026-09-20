@@ -6,7 +6,7 @@ Nuestro proyecto utiliza ENSSEX 2022–2023 para abordar la siguiente pregunta:
 
 > ¿Cómo varían la valoración de la vida sexual y el bienestar mental o emocional percibido según el grado de dependencia económica de la pareja entre las personas encuestadas en ENSSEX 2022–2023 que conviven con ella?
 
-El alcance es descriptivo y comparativo de la muestra, sin ponderación. La definición incluye 12 variables principales y 3 auxiliares; las dos valoraciones se mantienen separadas y las diferencias no se interpretan como relaciones causales.
+El alcance es descriptivo y comparativo de la muestra, sin ponderación. La selección incluye 19 columnas originales: 3 variables centrales, 12 complementarias y 4 auxiliares. Se prevén dos medidas derivadas para F2. Las dos valoraciones se mantienen separadas y las diferencias no se interpretan como relaciones causales.
 
 ## Integrantes
 
@@ -68,7 +68,7 @@ En JupyterLab se utiliza **Python (grupo9-mcdi500)**, cuyo identificador es `gru
 
 Abrir `F1/notebooks/F1_Definicion.ipynb`, seleccionar el kernel del proyecto y utilizar **Kernel → Restart Kernel and Run All Cells**. Requiere el archivo `F1/data/raw/20241205_enssex_desde_sav.csv`, con separador `;` y codificación `utf-8-sig`. El archivo no se descarga al clonar el repositorio: los datos originales están excluidos de Git. La [guía de obtención y conversión de ENSSEX](F1/docs/Obtencion_y_conversion_ENSSEX.md) explica cómo descargarlos y reconstruir el CSV con `python F1/src/convertir_enssex.py --download`, desde la raíz del proyecto y con el entorno activo. El script conserva el SAV y verifica la integridad de la conversión; la [evidencia de ejecución](F1/docs/verificacion_conversion_enssex.json) registra sus resultados.
 
-F1 comprueba las dependencias, la estructura, la identidad del CSV y la presencia de las 15 variables. Reconoce los 20.392 registros y las 1.126 columnas sin filtrar, limpiar, imputar ni recodificar. Sus tablas distinguen vacíos y códigos de no respuesta, y la comprobación final verifica que la base permanezca intacta. La validación preliminar se conserva como antecedente docente; no es necesario ejecutarla para correr F1. Cuando F2 esté disponible, se ejecutará después de F1.
+F1 comprueba las dependencias, la estructura, la identidad del CSV y la presencia de las 19 variables. Reconoce los 20.392 registros y las 1.126 columnas sin filtrar, limpiar, imputar ni recodificar. Sus tablas distinguen vacíos y códigos de no respuesta, y la comprobación final verifica que la base permanezca intacta. La validación preliminar se conserva como antecedente docente; no es necesario ejecutarla para correr F1. Cuando F2 esté disponible, se ejecutará después de F1.
 
 El 20/09/2026 se comprobó en el equipo de Guillermo que las 121 dependencias registradas coinciden con las instaladas, que `pip check` no detecta conflictos y que el kernel apunta a `.venv`. La verificación integral de reproducibilidad sigue pendiente: comprenderá la instalación desde una copia nueva del repositorio y la ejecución completa del proyecto en ambos equipos.
 
@@ -84,7 +84,7 @@ Ambos integrantes guardaremos nuestros cambios desde nuestras propias cuentas de
 
 - Construir y ejecutar el notebook F2, conservando sus resultados.
 - Repetir F1 en el equipo de Karla y realizar la verificación integral de ambos notebooks en los dos equipos.
-- Armonizar el informe con la pregunta, los objetivos y las 15 variables documentadas en F1.
+- Mantener alineados el informe y los notebooks, utilizando como base las definiciones desarrolladas en el informe y contrastando las afirmaciones técnicas con las evidencias del repositorio.
 - Explicar las decisiones de limpieza y transformación.
 - Probar el código con datos habituales y con situaciones que puedan producir errores.
 - Revisar los resultados de cada etapa.
