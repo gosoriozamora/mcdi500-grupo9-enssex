@@ -2,7 +2,11 @@
 
 Proyecto de Programación para la Ciencia de Datos de la Universidad Andrés Bello.
 
-Nuestro tema de trabajo es el bienestar y la calidad de vida a partir de los datos de ENSSEX 2022–2023.
+Nuestro proyecto utiliza ENSSEX 2022–2023 para abordar la siguiente pregunta:
+
+> ¿Cómo varían la valoración de la vida sexual y el bienestar mental o emocional percibido según el grado de dependencia económica de la pareja entre las personas encuestadas en ENSSEX 2022–2023 que conviven con ella?
+
+El alcance es descriptivo y comparativo de la muestra, sin ponderación. La definición incluye 12 variables principales y 3 auxiliares; las dos valoraciones se mantienen separadas y las diferencias no se interpretan como relaciones causales.
 
 ## Integrantes
 
@@ -44,7 +48,7 @@ Las carpetas `F1/data` y `F1/src` se utilizarán también en las fases posterior
 
 Conservamos una copia de la Formativa 1, sin cambios, en [F1/docs/Formativa1_Grupo9.pdf](F1/docs/Formativa1_Grupo9.pdf). El informe de la Sumativa 1 se preparará como un documento nuevo en [docs](docs/README.md).
 
-Por ahora, contamos con la estructura del repositorio y una validación preliminar en F1. Los notebooks finales y el informe de la Sumativa 1 están pendientes.
+El [notebook F1](F1/notebooks/F1_Definicion.ipynb) contiene la definición del proyecto, el diccionario, la comprobación del entorno y el reconocimiento inicial de la base. Se ejecutó completo desde un kernel nuevo en el equipo de Guillermo y conserva sus salidas. El notebook F2 y la integración final del informe siguen pendientes.
 
 Los archivos `.gitkeep` permiten conservar en Git las carpetas que aún no tienen contenido. No forman parte del análisis.
 
@@ -62,15 +66,15 @@ python -m jupyterlab
 
 En JupyterLab se utiliza **Python (grupo9-mcdi500)**, cuyo identificador es `grupo9_mcdi500`. Cada integrante registra este kernel desde su propio entorno virtual.
 
-El notebook disponible actualmente es `F1/notebooks/Validacion_preliminar_ENSSEX.ipynb`. Requiere el archivo `F1/data/raw/20241205_enssex_desde_sav.csv`, con separador `;` y codificación `utf-8-sig`. El archivo no se descarga al clonar el repositorio: los datos originales están excluidos de Git. La [guía de obtención y conversión de ENSSEX](F1/docs/Obtencion_y_conversion_ENSSEX.md) explica cómo descargarlos y reconstruir el CSV con `python F1/src/convertir_enssex.py --download`, desde la raíz del proyecto y con el entorno activo. El script conserva el SAV y verifica la integridad de la conversión; la [evidencia de ejecución](F1/docs/verificacion_conversion_enssex.json) registra sus resultados.
+Abrir `F1/notebooks/F1_Definicion.ipynb`, seleccionar el kernel del proyecto y utilizar **Kernel → Restart Kernel and Run All Cells**. Requiere el archivo `F1/data/raw/20241205_enssex_desde_sav.csv`, con separador `;` y codificación `utf-8-sig`. El archivo no se descarga al clonar el repositorio: los datos originales están excluidos de Git. La [guía de obtención y conversión de ENSSEX](F1/docs/Obtencion_y_conversion_ENSSEX.md) explica cómo descargarlos y reconstruir el CSV con `python F1/src/convertir_enssex.py --download`, desde la raíz del proyecto y con el entorno activo. El script conserva el SAV y verifica la integridad de la conversión; la [evidencia de ejecución](F1/docs/verificacion_conversion_enssex.json) registra sus resultados.
 
-La guía incluye las rutas relativas desde F1 y F2, la comprobación del intérprete, el reinicio del kernel y el orden de ejecución. F1 se ejecutará antes de F2 cuando estén completos sus notebooks. La validación preliminar no sustituye esos entregables.
+F1 comprueba las dependencias, la estructura, la identidad del CSV y la presencia de las 15 variables. Reconoce los 20.392 registros y las 1.126 columnas sin filtrar, limpiar, imputar ni recodificar. Sus tablas distinguen vacíos y códigos de no respuesta, y la comprobación final verifica que la base permanezca intacta. La validación preliminar se conserva como antecedente docente; no es necesario ejecutarla para correr F1. Cuando F2 esté disponible, se ejecutará después de F1.
 
 El 20/09/2026 se comprobó en el equipo de Guillermo que las 121 dependencias registradas coinciden con las instaladas, que `pip check` no detecta conflictos y que el kernel apunta a `.venv`. La verificación integral de reproducibilidad sigue pendiente: comprenderá la instalación desde una copia nueva del repositorio y la ejecución completa del proyecto en ambos equipos.
 
 La conversión de SAV a CSV requiere `pyreadstat==1.3.6`, incorporado a `requirements.txt`. Si el entorno se preparó antes de esta incorporación, actualizarlo con `python -m pip install -r requirements.txt` y comprobarlo con `python -m pip check`.
 
-Se define `SEMILLA = 42` para las operaciones aleatorias que eventualmente se incorporen. La validación preliminar actual no utiliza aleatoriedad. Los datos y `.venv` se mantienen fuera del control de versiones; cada integrante reconstruye su entorno.
+Se define `SEMILLA = 42` para las operaciones aleatorias que eventualmente se incorporen. F1 y la validación preliminar no utilizan aleatoriedad. Los datos y `.venv` se mantienen fuera del control de versiones; cada integrante reconstruye su entorno.
 
 ## Trabajo en equipo
 
@@ -78,9 +82,9 @@ Ambos integrantes guardaremos nuestros cambios desde nuestras propias cuentas de
 
 ## Trabajo pendiente
 
-- Definir la pregunta de investigación y los objetivos.
-- Seleccionar las variables y explicar su significado.
-- Completar los notebooks de F1 y F2 y guardar sus resultados.
+- Construir y ejecutar el notebook F2, conservando sus resultados.
+- Repetir F1 en el equipo de Karla y realizar la verificación integral de ambos notebooks en los dos equipos.
+- Armonizar el informe con la pregunta, los objetivos y las 15 variables documentadas en F1.
 - Explicar las decisiones de limpieza y transformación.
 - Probar el código con datos habituales y con situaciones que puedan producir errores.
 - Revisar los resultados de cada etapa.

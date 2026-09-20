@@ -97,7 +97,7 @@ La lista debe incluir `grupo9_mcdi500`. El nombre visible al abrir un notebook s
 
 ## 6. Disponer del archivo de datos
 
-La entrada de la validación preliminar es:
+La entrada de F1 y de la validación preliminar es:
 
 ```text
 F1/data/raw/20241205_enssex_desde_sav.csv
@@ -119,7 +119,7 @@ Desde la raíz del proyecto se puede comprobar que la entrada existe:
 python -c "from pathlib import Path; p = Path('F1/data/raw/20241205_enssex_desde_sav.csv'); print(p); assert p.is_file(), 'Falta el CSV convertido en F1/data/raw'"
 ```
 
-## 7. Abrir JupyterLab y ejecutar el notebook disponible
+## 7. Abrir JupyterLab y ejecutar F1
 
 Desde la raíz del repositorio, con `.venv` activo:
 
@@ -129,26 +129,18 @@ python -m jupyterlab
 
 En JupyterLab:
 
-1. Abrir `F1/notebooks/Validacion_preliminar_ENSSEX.ipynb`.
+1. Abrir `F1/notebooks/F1_Definicion.ipynb`.
 2. Seleccionar el kernel **Python (grupo9-mcdi500)**.
-3. Comprobar la celda de configuración: `RUTA = "../data/raw/20241205_enssex_desde_sav.csv"`, `SEP = ";"`, `ENCODING = "utf-8-sig"` e `INFORME = "../docs/informe_validacion_preliminar.md"`.
-4. Reiniciar el kernel y ejecutar todas las celdas en orden, utilizando la opción correspondiente del menú Kernel.
-5. Revisar los mensajes y las salidas, incluido el informe generado en `F1/docs/informe_validacion_preliminar.md`, y guardar el notebook ejecutado.
+3. Revisar la configuración: `RUTA_DATOS = Path("../data/raw/20241205_enssex_desde_sav.csv")`, `SEPARADOR = ";"` y `CODIFICACION = "utf-8-sig"`.
+4. Seleccionar **Kernel → Restart Kernel and Run All Cells** y confirmar.
+5. Comprobar que las 10 celdas de código tengan contadores consecutivos, sin errores, y que la tabla final muestre todas las comprobaciones en `OK`.
+6. Guardar con `Ctrl + S` para conservar las salidas del equipo utilizado.
 
-La ejecución vuelve a escribir ese informe preliminar. Sus observaciones sobre tipos o calidad de datos deben interpretarse y contrastarse con el diccionario; una ejecución sin errores no convierte automáticamente el diagnóstico en la versión final del proyecto.
+El notebook comprueba que el intérprete corresponda a la `.venv` del proyecto y que la carpeta de ejecución sea `F1/notebooks`. También contrasta todas las versiones de `requirements.txt` y la huella del CSV con `F1/docs/verificacion_conversion_enssex.json`. Si falta el CSV, seguir la guía de obtención y conversión; si una dependencia no coincide, actualizar el entorno antes de volver a ejecutar.
 
-En una celda de comprobación del notebook se puede verificar el intérprete y el directorio de ejecución:
+La salida esperada es una base de 20.392 filas y 1.126 columnas, con las 15 variables presentes y 121 dependencias coincidentes. Se muestran dimensiones, tipos de lectura, identificadores, vacíos y no respuesta codificada. F1 no filtra convivientes ni realiza limpieza, imputación o recodificación. Las comprobaciones finales verifican que el CSV y la tabla en memoria permanezcan intactos.
 
-```python
-import sys
-from pathlib import Path
-
-print("Intérprete:", sys.executable)
-print("Carpeta de ejecución:", Path.cwd())
-assert sys.prefix != sys.base_prefix, "El kernel no utiliza un entorno virtual"
-```
-
-El intérprete debe pertenecer a `.venv` de este proyecto y la carpeta de ejecución debe ser `F1/notebooks` para el notebook preliminar. Si las rutas no coinciden, seleccionar el kernel correcto y reiniciarlo antes de ejecutar de nuevo.
+La evidencia de ejecución queda en las salidas del notebook. F1 no vuelve a escribir el informe del validador preliminar ni genera un dataset procesado. `Validacion_preliminar_ENSSEX.ipynb` se conserva como antecedente y no es un paso previo obligatorio para ejecutar F1.
 
 ## 8. Rutas relativas y orden de las fases
 
@@ -167,16 +159,19 @@ import pandas as pd
 
 ruta_datos = Path("../data/raw/20241205_enssex_desde_sav.csv")
 assert ruta_datos.is_file(), "Revisar la ubicación del CSV y la carpeta de ejecución"
-datos = pd.read_csv(ruta_datos, sep=";", encoding="utf-8-sig")
+datos = pd.read_csv(
+    ruta_datos, sep=";", encoding="utf-8-sig",
+    keep_default_na=False, na_values=[""], low_memory=False,
+)
 ```
 
 Para F2 se utiliza la ruta de su fila en la tabla. F1 reconocerá los datos; el filtrado, la limpieza y las transformaciones corresponden a F2.
 
-Cuando estén desarrollados los entregables finales, se ejecutará primero `F1/notebooks/F1_Definicion.ipynb` y después el notebook de preparación ubicado en `F2/notebooks`, siempre desde un kernel reiniciado. El nombre definitivo del notebook F2 se incorporará aquí cuando se cree. Actualmente esos notebooks están pendientes: la validación preliminar es el único notebook disponible y no los sustituye.
+El notebook `F1/notebooks/F1_Definicion.ipynb` ya está desarrollado y ejecutado en el equipo de Guillermo. El notebook de preparación ubicado en `F2/notebooks` sigue pendiente. Cuando esté disponible se ejecutará después de F1, siempre desde un kernel reiniciado; su nombre definitivo se incorporará a esta guía.
 
 ## 9. Semilla y aleatoriedad
 
-Se establece **`SEMILLA = 42`** como convención del proyecto. La lectura, el filtrado y los conteos del notebook preliminar actual no utilizan operaciones aleatorias, por lo que no dependen de una semilla.
+Se establece **`SEMILLA = 42`** como convención del proyecto. F1 declara esta constante, pero su lectura y reconocimiento inicial son deterministas y no utilizan operaciones aleatorias. La validación preliminar tampoco requiere aleatoriedad.
 
 Si posteriormente se incorpora muestreo u otro procedimiento aleatorio, se declarará la semilla en la celda de configuración y se utilizará explícitamente en la operación. Para un generador de NumPy:
 
@@ -211,6 +206,10 @@ En el equipo de Guillermo se verificaron el 20/09/2026:
 - La carga de NumPy, pandas, SciPy, ipykernel, JupyterLab y pyreadstat.
 - El registro `grupo9_mcdi500`, cuyo intérprete coincide con el Python de `.venv`.
 - La existencia de la entrada mediante las rutas relativas de F1 y F2.
+- La ejecución completa de F1 desde un kernel nuevo, con 10 celdas de código consecutivas y sin errores.
+- La lectura de 20.392 filas y 1.126 columnas y el perfil de las 15 variables acordadas.
+- La detección de tablas vacías, columnas requeridas ausentes y nombres duplicados en ejemplos de control.
+- La conservación del CSV y de la tabla en memoria al finalizar el reconocimiento.
 
 El [registro de Karla](verificacion_entorno_karla.md) documenta su revisión del entorno. La verificación integral de reproducibilidad deberá incluir una instalación desde una copia nueva del repositorio y la ejecución completa de F1 y F2 en ambos equipos, una vez preparados los datos y los notebooks.
 
