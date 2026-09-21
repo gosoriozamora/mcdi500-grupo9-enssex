@@ -97,3 +97,7 @@ Ambos integrantes guardaremos nuestros cambios desde nuestras propias cuentas de
 - Mantener actualizadas las dependencias y la guía de ejecución al completar los notebooks y el procedimiento de obtención de datos.
 - Preparar el informe, relacionar el trabajo con el mapa conceptual e incorporar las referencias.
 - Comprobar que el docente pueda acceder al repositorio.
+
+## Verificación integral de reproducción
+
+Se comprobó una copia nueva de GitHub con un entorno virtual nuevo: las 121 dependencias, la obtención del original y ambos notebooks finalizaron correctamente. Los dos CSV regenerados coinciden con los publicados al normalizar los saltos de línea. Véase la [evidencia de reproducción](F1/docs/Verificacion_reproduccion_completa.md) y la [verificación de F2 por Karla](F2/docs/Verificacion_F2_Karla.md).

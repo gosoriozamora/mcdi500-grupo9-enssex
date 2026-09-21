@@ -221,7 +221,7 @@ En el entorno local de desarrollo se verificaron el 20/09/2026:
 
 El [registro de verificación del segundo entorno](verificacion_entorno_karla.md) documenta las comprobaciones de instalación realizadas.
 
-Para esa prueba se guardarán la revisión de Git, las versiones, la comprobación del entorno y las salidas de los notebooks en cada equipo. Si se incorporan nuevas dependencias, se revisará su necesidad, se actualizará `requirements.txt` desde el entorno del proyecto y se registrará el cambio; no se regenerará desde el Python general del computador.
+La [verificación integral desde una copia nueva](Verificacion_reproduccion_completa.md) registra la revisión de Git, la instalación independiente, la ejecución de ambos notebooks y la coincidencia de los CSV publicados y regenerados. Si se incorporan nuevas dependencias, se revisará su necesidad, se actualizará `requirements.txt` desde el entorno del proyecto y se registrará el cambio; no se regenerará desde el Python general del computador.
 
 ## Fuentes técnicas
 
