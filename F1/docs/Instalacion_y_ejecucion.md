@@ -169,11 +169,17 @@ datos = pd.read_csv(
 
 Para F2 se utiliza la ruta de su fila en la tabla. F1 reconocerá los datos; el filtrado, la limpieza y las transformaciones corresponden a F2.
 
-El notebook `F1/notebooks/F1_Definicion.ipynb` ya está desarrollado y ejecutado en el equipo de Guillermo. El notebook de preparación ubicado en `F2/notebooks` sigue pendiente. Cuando esté disponible se ejecutará después de F1, siempre desde un kernel reiniciado; su nombre definitivo se incorporará a esta guía.
+Los notebooks `F1/notebooks/F1_Definicion.ipynb` y `F2/notebooks/F2_limpieza_transformacion_ENSSEX.ipynb` están desarrollados y conservan sus salidas. Ejecutar F1 y después F2, cada uno con **Kernel → Restart Kernel and Run All Cells** y el kernel **Python (grupo9-mcdi500)**. F2 no depende de variables en memoria de F1.
+
+F2 importa sus funciones desde `F1/src`, verifica las dependencias y contrasta su selección con F1. Procesa 8.579 personas y genera dos archivos en `F1/data/processed`: el principal de 21 columnas y una matriz nominal auxiliar de 65 columnas. La diferencia de edad está calculada; los años de convivencia se conservan sin valores hasta validar la referencia temporal. No hay imputaciones ni eliminación de filas por faltantes o extremos.
+
+Cada ejecución regenera la bitácora, el resumen para el informe, el diccionario y `validacion_F2.json` en `F2/docs`, además de actualizar `F2/README.md`. Al terminar, la tabla de cierre debe mostrar siete resultados OK. Estos resultados comprueban el procesamiento y no declaran resuelta la limitación temporal.
+
+El código incluye casos normales, límites y excepciones, y verifica la relectura de ambos CSV. Guardar y cerrar el notebook antes de actualizar los archivos del repositorio; al recibir una versión nueva, volver a abrirlo desde disco antes de ejecutar.
 
 ## 9. Semilla y aleatoriedad
 
-Se establece **`SEMILLA = 42`** como convención del proyecto. F1 declara esta constante, pero su lectura y reconocimiento inicial son deterministas y no utilizan operaciones aleatorias. La validación preliminar tampoco requiere aleatoriedad.
+Se establece **`SEMILLA = 42`** como convención del proyecto. F1 declara esta constante, pero su lectura y reconocimiento inicial son deterministas y no utilizan operaciones aleatorias. F2 y la validación preliminar tampoco requieren aleatoriedad.
 
 Si posteriormente se incorpora muestreo u otro procedimiento aleatorio, se declarará la semilla en la celda de configuración y se utilizará explícitamente en la operación. Para un generador de NumPy:
 
@@ -200,7 +206,7 @@ Si el repositorio se guardó en otra carpeta, abrir Git Bash directamente allí.
 
 ## 11. Evidencias y límites de la comprobación actual
 
-En el equipo de Guillermo se verificaron el 20/09/2026:
+En el entorno local de desarrollo se verificaron el 20/09/2026:
 
 - Python 3.13.15 de 64 bits en `.venv`.
 - Las 121 versiones de `requirements.txt`, sin paquetes ausentes ni diferencias.
@@ -213,7 +219,7 @@ En el equipo de Guillermo se verificaron el 20/09/2026:
 - La detección de tablas vacías, columnas requeridas ausentes y nombres duplicados en ejemplos de control.
 - La conservación del CSV y de la tabla en memoria al finalizar el reconocimiento.
 
-El [registro de Karla](verificacion_entorno_karla.md) documenta su revisión del entorno. La verificación integral de reproducibilidad deberá incluir una instalación desde una copia nueva del repositorio y la ejecución completa de F1 y F2 en ambos equipos, una vez preparados los datos y los notebooks.
+El [registro de verificación del segundo entorno](verificacion_entorno_karla.md) documenta las comprobaciones de instalación realizadas.
 
 Para esa prueba se guardarán la revisión de Git, las versiones, la comprobación del entorno y las salidas de los notebooks en cada equipo. Si se incorporan nuevas dependencias, se revisará su necesidad, se actualizará `requirements.txt` desde el entorno del proyecto y se registrará el cambio; no se regenerará desde el Python general del computador.
 

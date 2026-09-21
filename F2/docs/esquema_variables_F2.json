@@ -1,0 +1,516 @@
+{
+  "version": "1.1",
+  "pregunta": "¿Cómo varían la valoración de la vida sexual y el bienestar mental o emocional percibido según el grado de dependencia económica de la pareja entre las personas encuestadas en ENSSEX 2022–2023 que conviven con ella?",
+  "centrales": [
+    "p93",
+    "i_6_p9",
+    "i_2_p9"
+  ],
+  "variables": [
+    {
+      "nombre": "p93",
+      "rol": "central",
+      "tipo": "ordinal",
+      "descripcion": "¿Diría que usted depende económicamente de su pareja?",
+      "categorias": [
+        1,
+        2,
+        3
+      ],
+      "etiquetas": {
+        "1": "Sí, completamente",
+        "2": "Sí, en parte",
+        "3": "No"
+      },
+      "no_respuesta": [
+        9
+      ],
+      "ordenada": true,
+      "nombre_legible": "Dependencia económica de la pareja",
+      "grupo_explicativo": "central",
+      "justificacion": "Define los tres grupos que se compararán: dependencia completa, parcial y ausencia de dependencia. Es la variable explicativa de la pregunta; no equivale al monto de ingresos ni demuestra una relación causal."
+    },
+    {
+      "nombre": "i_6_p9",
+      "rol": "central",
+      "tipo": "ordinal",
+      "descripcion": "P9: valorar de 1 a 7 cómo se siente en distintos ámbitos. Ítem: «Con su vida sexual».",
+      "categorias": [
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7
+      ],
+      "etiquetas": {
+        "1": "1 Muy mal",
+        "2": "2",
+        "3": "3",
+        "4": "4",
+        "5": "5",
+        "6": "6",
+        "7": "7 Muy bien"
+      },
+      "no_respuesta": [
+        9
+      ],
+      "ordenada": true,
+      "nombre_legible": "Valoración de la vida sexual",
+      "grupo_explicativo": "central",
+      "justificacion": "Registra una de las dos valoraciones que queremos comparar entre niveles de dependencia. Describe cómo la persona valora su vida sexual; no se sustituye por la presencia de actividad sexual ni se suma al bienestar emocional."
+    },
+    {
+      "nombre": "i_2_p9",
+      "rol": "central",
+      "tipo": "ordinal",
+      "descripcion": "P9: valorar de 1 a 7 cómo se siente en distintos ámbitos. Ítem: «Con su bienestar mental o emocional».",
+      "categorias": [
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7
+      ],
+      "etiquetas": {
+        "1": "1 Muy mal",
+        "2": "2",
+        "3": "3",
+        "4": "4",
+        "5": "5",
+        "6": "6",
+        "7": "7 Muy bien"
+      },
+      "no_respuesta": [
+        9
+      ],
+      "ordenada": true,
+      "nombre_legible": "Bienestar mental o emocional percibido",
+      "grupo_explicativo": "central",
+      "justificacion": "Registra la segunda valoración de la pregunta. Permite estudiar este ámbito por separado de la vida sexual. Es una percepción declarada por la persona, no un diagnóstico de salud mental."
+    },
+    {
+      "nombre": "p4",
+      "rol": "complementaria",
+      "tipo": "discreta",
+      "descripcion": "¿Qué edad tiene? (años).",
+      "categorias": [],
+      "etiquetas": {},
+      "no_respuesta": [],
+      "ordenada": false,
+      "nombre_legible": "Edad de la persona encuestada",
+      "grupo_explicativo": "sociodemografica",
+      "justificacion": "Permite describir la composición por edad de los grupos de dependencia y evaluar comparaciones por etapas de vida. También es necesaria para calcular la diferencia de edad con la pareja."
+    },
+    {
+      "nombre": "p1",
+      "rol": "complementaria",
+      "tipo": "nominal",
+      "descripcion": "¿Cuál es su sexo asignado al nacer?",
+      "categorias": [
+        1,
+        2
+      ],
+      "etiquetas": {
+        "1": "Hombre",
+        "2": "Mujer"
+      },
+      "no_respuesta": [],
+      "ordenada": false,
+      "nombre_legible": "Sexo asignado al nacer",
+      "grupo_explicativo": "sociodemografica",
+      "justificacion": "Permite caracterizar a las personas y explorar, si los datos lo permiten, si los patrones descriptivos difieren según el sexo asignado al nacer. Se conserva separado del género declarado porque son preguntas distintas."
+    },
+    {
+      "nombre": "p3",
+      "rol": "complementaria",
+      "tipo": "nominal",
+      "descripcion": "¿Cuál es el género con el que usted se identifica?",
+      "categorias": [
+        1,
+        2,
+        3,
+        4,
+        5,
+        6
+      ],
+      "etiquetas": {
+        "1": "Masculino",
+        "2": "Femenino",
+        "3": "Transmasculino u hombre trans",
+        "4": "Transfemenino o mujer trans",
+        "5": "No binario",
+        "6": "Otro. Especifique"
+      },
+      "no_respuesta": [
+        7,
+        8,
+        9
+      ],
+      "ordenada": false,
+      "nombre_legible": "Género declarado",
+      "grupo_explicativo": "sociodemografica",
+      "justificacion": "Permite describir cómo se identifican las personas sin deducir su género a partir del sexo asignado al nacer. Su uso en comparaciones posteriores dependerá del número de respuestas disponibles en cada categoría."
+    },
+    {
+      "nombre": "p5",
+      "rol": "complementaria",
+      "tipo": "nominal",
+      "descripcion": "¿Cuál es su nivel educacional más alto alcanzado o su nivel educacional actual?",
+      "categorias": [
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8,
+        9,
+        10,
+        11,
+        12,
+        13,
+        14,
+        15,
+        16,
+        17
+      ],
+      "etiquetas": {
+        "1": "Nunca asistió",
+        "2": "Sala cuna",
+        "3": "Jardín Infantil (medio menor y medio mayor)",
+        "4": "Pre-kinder /Kinder (Transición Menor y Transición Mayor)",
+        "5": "Educación Especial (Diferencial)",
+        "6": "Primario o Preparatoria (Sistema antiguo)",
+        "7": "Educación Básica",
+        "8": "Humanidades (Sistema Antiguo)",
+        "9": "Educación Media Científico-Humanista",
+        "10": "Técnica Comercial, Industrial o Normalista (Sistema Antiguo)",
+        "11": "Educación Media Técnica Profesional",
+        "12": "Técnico Nivel Superior Incompleto (carreras de 1 a 3 años)",
+        "13": "Técnico Nivel Superior Completo (carreras de 1 a 3 años)",
+        "14": "Profesional Incompleto (carreras de 4 o más años)",
+        "15": "Profesional Completo (carreras de 4 o más años)",
+        "16": "Postgrado Incompleto",
+        "17": "Postgrado Completo"
+      },
+      "no_respuesta": [
+        88,
+        99
+      ],
+      "ordenada": false,
+      "nombre_legible": "Nivel educacional",
+      "grupo_explicativo": "sociodemografica",
+      "justificacion": "Aporta contexto educativo a la composición de los grupos. Puede servir para caracterizar sus diferencias en fases posteriores; no se usa como sustituto de ingreso ni se impone un orden a modalidades educativas heterogéneas."
+    },
+    {
+      "nombre": "region",
+      "rol": "complementaria",
+      "tipo": "nominal",
+      "descripcion": "Región registrada en la base; no es una pregunta numerada del cuestionario.",
+      "categorias": [
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8,
+        9,
+        10,
+        11,
+        12,
+        13,
+        14,
+        15,
+        16
+      ],
+      "etiquetas": {
+        "1": "Tarapacá",
+        "2": "Antofagasta",
+        "3": "Atacama",
+        "4": "Coquimbo",
+        "5": "Valparaíso",
+        "6": "O'Higgins",
+        "7": "Maule",
+        "8": "Biobío",
+        "9": "La Araucanía",
+        "10": "Los Lagos",
+        "11": "Aysén",
+        "12": "Magallanes",
+        "13": "Metropolitana",
+        "14": "Los Ríos",
+        "15": "Arica y Parinacota",
+        "16": "Ñuble"
+      },
+      "no_respuesta": [],
+      "ordenada": false,
+      "nombre_legible": "Región",
+      "grupo_explicativo": "sociodemografica",
+      "justificacion": "Permite describir la composición territorial de la muestra y evaluar comparaciones por contexto geográfico. Conservarla no implica que este análisis sin ponderación produzca estimaciones representativas de cada región."
+    },
+    {
+      "nombre": "p7",
+      "rol": "complementaria",
+      "tipo": "nominal",
+      "descripcion": "¿Cuál es su estado conyugal o civil actual?",
+      "categorias": [
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8
+      ],
+      "etiquetas": {
+        "1": "Casado(a)",
+        "2": "Conviviente o pareja sin acuerdo de unión civil",
+        "3": "Conviviente civil (con acuerdo de unión civil)",
+        "4": "Anulado(a)",
+        "5": "Separado(a)",
+        "6": "Divorciado(a)",
+        "7": "Viudo(a)",
+        "8": "Soltero(a)"
+      },
+      "no_respuesta": [
+        88,
+        99
+      ],
+      "ordenada": false,
+      "nombre_legible": "Estado conyugal o civil",
+      "grupo_explicativo": "sociodemografica",
+      "justificacion": "Permite distinguir situaciones civiles entre quienes efectivamente conviven con su pareja. Aporta contexto de la relación; no reemplaza las preguntas que identifican si la persona tiene pareja y vive con ella."
+    },
+    {
+      "nombre": "p92",
+      "rol": "complementaria",
+      "tipo": "nominal",
+      "descripcion": "Comparando con su pareja actual, el ingreso económico de usted es…",
+      "categorias": [
+        1,
+        2,
+        3,
+        4,
+        5,
+        6
+      ],
+      "etiquetas": {
+        "1": "Mucho menor",
+        "2": "Menor",
+        "3": "Similar",
+        "4": "Mayor",
+        "5": "Mucho mayor",
+        "6": "Usted no tiene ingresos propios"
+      },
+      "no_respuesta": [
+        8,
+        9
+      ],
+      "ordenada": false,
+      "nombre_legible": "Ingreso relativo respecto de la pareja",
+      "grupo_explicativo": "relacion_salud",
+      "justificacion": "Complementa la dependencia declarada con la posición de ingresos frente a la pareja. Tener ingresos menores y depender económicamente no son respuestas equivalentes. Se conserva también la categoría sin ingresos propios."
+    },
+    {
+      "nombre": "p84",
+      "rol": "complementaria",
+      "tipo": "discreta",
+      "descripcion": "¿Desde qué año viven juntos? Se aplica a quienes declaran convivir con su pareja.",
+      "categorias": [],
+      "etiquetas": {},
+      "no_respuesta": [
+        9999
+      ],
+      "ordenada": false,
+      "nombre_legible": "Año de inicio de convivencia",
+      "grupo_explicativo": "relacion_salud",
+      "justificacion": "Describe desde cuándo conviven y permite preparar una duración aproximada de la relación. Se conserva el año original, aunque esa duración no se calcula mientras falte validar una fecha de referencia."
+    },
+    {
+      "nombre": "p91",
+      "rol": "complementaria",
+      "tipo": "discreta",
+      "descripcion": "¿Qué edad tiene esa pareja? Edad en años cumplidos.",
+      "categorias": [],
+      "etiquetas": {},
+      "no_respuesta": [
+        999
+      ],
+      "ordenada": false,
+      "nombre_legible": "Edad de la pareja",
+      "grupo_explicativo": "relacion_salud",
+      "justificacion": "Aporta contexto de la relación y, junto con la edad de la persona encuestada, permite calcular la diferencia de edad. Se usa lo declarado por la persona; no es una segunda entrevista a su pareja."
+    },
+    {
+      "nombre": "p96",
+      "rol": "complementaria",
+      "tipo": "nominal",
+      "descripcion": "En el último mes, ¿tuvo relaciones sexuales con su pareja?",
+      "categorias": [
+        1,
+        2
+      ],
+      "etiquetas": {
+        "1": "Sí",
+        "2": "No"
+      },
+      "no_respuesta": [
+        9
+      ],
+      "ordenada": false,
+      "nombre_legible": "Actividad sexual con la pareja en el último mes",
+      "grupo_explicativo": "relacion_salud",
+      "justificacion": "Permite contextualizar la valoración de la vida sexual según la presencia de actividad reciente con la pareja. No mide satisfacción ni frecuencia, por lo que se conserva como una dimensión distinta del resultado principal."
+    },
+    {
+      "nombre": "p10",
+      "rol": "complementaria",
+      "tipo": "ordinal",
+      "descripcion": "En general, usted diría que su salud es…",
+      "categorias": [
+        1,
+        2,
+        3,
+        4,
+        5
+      ],
+      "etiquetas": {
+        "1": "Muy mala",
+        "2": "Mala",
+        "3": "Ni buena ni mala",
+        "4": "Buena",
+        "5": "Muy buena"
+      },
+      "no_respuesta": [
+        8,
+        9
+      ],
+      "ordenada": true,
+      "nombre_legible": "Salud general percibida",
+      "grupo_explicativo": "relacion_salud",
+      "justificacion": "Aporta una descripción del estado de salud general percibido para contextualizar ambos resultados. No se interpreta como causa de las valoraciones ni reemplaza la pregunta específica sobre bienestar mental o emocional."
+    },
+    {
+      "nombre": "p8",
+      "rol": "complementaria",
+      "tipo": "ordinal",
+      "descripcion": "¿Cómo calificaría su calidad de vida?",
+      "categorias": [
+        1,
+        2,
+        3,
+        4,
+        5
+      ],
+      "etiquetas": {
+        "1": "Muy mala",
+        "2": "Mala",
+        "3": "Ni buena ni mala",
+        "4": "Buena",
+        "5": "Muy buena"
+      },
+      "no_respuesta": [
+        8,
+        9
+      ],
+      "ordenada": true,
+      "nombre_legible": "Calidad de vida percibida",
+      "grupo_explicativo": "relacion_salud",
+      "justificacion": "Permite situar las dos valoraciones específicas dentro de una apreciación más amplia de la vida. Se conserva para análisis complementarios; no se combina con ellas para construir un indicador único."
+    },
+    {
+      "nombre": "p81",
+      "rol": "auxiliar",
+      "tipo": "nominal",
+      "descripcion": "Actualmente, ¿usted tiene pareja?",
+      "categorias": [
+        1,
+        2
+      ],
+      "etiquetas": {
+        "1": "Sí",
+        "2": "No"
+      },
+      "no_respuesta": [
+        9
+      ],
+      "ordenada": false,
+      "nombre_legible": "Tiene pareja actualmente",
+      "grupo_explicativo": "auxiliar",
+      "justificacion": "Identifica a las personas que declaran una pareja actual. Es el primer filtro de la población y debe aplicarse junto con la convivencia con esa pareja; tener pareja por sí solo no garantiza convivencia."
+    },
+    {
+      "nombre": "p83",
+      "rol": "auxiliar",
+      "tipo": "nominal",
+      "descripcion": "¿Y actualmente usted vive con esa pareja? Se aplica a quienes responden 1 en P81.",
+      "categorias": [
+        1,
+        2
+      ],
+      "etiquetas": {
+        "1": "Sí",
+        "2": "No"
+      },
+      "no_respuesta": [
+        9
+      ],
+      "ordenada": false,
+      "nombre_legible": "Convive actualmente con su pareja",
+      "grupo_explicativo": "auxiliar",
+      "justificacion": "Identifica la convivencia con la pareja actual. Junto con la pregunta sobre existencia de pareja, delimita exactamente la población de la investigación. Después del filtro se conserva como comprobación, no como predictor variable."
+    },
+    {
+      "nombre": "folio_encuesta",
+      "rol": "auxiliar",
+      "tipo": "identificador",
+      "descripcion": "Identificador de la encuesta; no es una pregunta sustantiva.",
+      "categorias": [],
+      "etiquetas": {},
+      "no_respuesta": [],
+      "ordenada": false,
+      "nombre_legible": "Identificador de la encuesta",
+      "grupo_explicativo": "auxiliar",
+      "justificacion": "Permite comprobar que cada registro esté identificado, detectar duplicados y vincular la base preparada con el original. Su número no representa una característica de la persona y no se utiliza en promedios ni modelos."
+    },
+    {
+      "nombre": "fecha",
+      "rol": "auxiliar",
+      "tipo": "fecha",
+      "descripcion": "Fecha registrada en la base; el libro de códigos no desarrolla su significado y el SAV no aporta una etiqueta descriptiva.",
+      "categorias": [],
+      "etiquetas": {},
+      "no_respuesta": [],
+      "ordenada": false,
+      "nombre_legible": "Fecha registrada en la base",
+      "grupo_explicativo": "auxiliar",
+      "justificacion": "Se conserva para revisar una posible referencia temporal y comprobar coherencia con el inicio de convivencia. Las fuentes no definen qué evento representa; por eso su inclusión no autoriza a calcular años de convivencia ni a asumir que es la fecha de entrevista."
+    }
+  ],
+  "derivadas": {
+    "diferencia_edad_pareja": "p4 - p91. Positivo: la persona encuestada es mayor. Requiere ambas edades válidas.",
+    "anios_convivencia_aprox": "Columna reservada sin valores. Las fuentes consultadas no definen el evento representado por fecha; no se calcula hasta validarlo."
+  },
+  "fuentes": [
+    "F1/notebooks/F1_Definicion.ipynb",
+    "F1/data/raw/etiquetas_y_metadatos_ENSSEX.json",
+    "Cuestionario ENSSEX, P84 y P91: códigos 9999 y 999 respectivamente.",
+    "Manual de uso y libro de códigos ENSSEX, diferencias documentadas en F1."
+  ],
+  "politicas": {
+    "imputacion": "Ninguna",
+    "eliminacion_por_faltantes": "Ninguna; denominadores por comparación",
+    "extremos": "Señalar por IQR y conservar; no constituyen errores por sí solos",
+    "fecha_referencia_validada": false,
+    "ponderacion": "Sin ponderación; descripción de la muestra",
+    "p92": "Nominal: código 6 sin ingresos propios fuera del orden parcial de 1–5",
+    "p5": "Nominal original; no imponer orden sin armonizar modalidades educativas"
+  }
+}

@@ -1,0 +1,21 @@
+# Bitácora de decisiones de F1 y F2
+
+Los antecedentes de F1 se contrastan con su notebook y con la evidencia de conversión. Los impactos de F2 se calculan en cada ejecución. Las dos valoraciones se mantienen separadas; el alcance es descriptivo y comparativo de la muestra, sin ponderación.
+
+| id | fase | decision | motivo | alternativa_descartada | impacto |
+| --- | --- | --- | --- | --- | --- |
+| F1-01 | F1 | Conservar el original y su huella | Mantener trazabilidad de la conversión SAV–CSV | Editar raw en cada fase | 20392 filas y 1126 columnas originales intactas |
+| F1-02 | F1 | Usar 19 columnas: 3 centrales, 12 complementarias y 4 auxiliares | Responder la pregunta y contextualizarla con el alcance acordado | Seleccionar todas las columnas o mezclar los dos resultados | 19 seleccionadas; 2 resultados ordinales separados; sin ponderadores ni inferencia poblacional |
+| F2-01 | F2 | Seleccionar Tiene pareja actualmente (p81)=1 y Convive actualmente con su pareja (p83)=1 conjuntamente | La unidad de estudio es la persona que convive con su pareja | Usar solo estado civil o uno de los filtros | 20392 → 8579 personas; 11813 fuera del alcance |
+| F2-02 | F2 | Comprobar folios antes de limpiar | Una repetición requiere investigación; no elegir arbitrariamente una respuesta | drop_duplicates automático | 0 folios ausentes; 0 repetidos; 0 filas eliminadas |
+| F2-03 | F2 | Convertir NS/NR según cada pregunta | Los códigos especiales no son respuestas sustantivas y contaminan los cálculos | Reemplazar 8, 9 o 99 globalmente | 883 celdas recodificadas; 0 cambios en regiones válidas, estado civil 8 e ingreso relativo 6 |
+| F2-04 | F2 | Conservar faltantes y usar denominadores por comparación | Evitar atribuir una respuesta íntima no observada; la sensibilidad muestra efectos de imputar | Eliminar toda fila incompleta o imputar media/mediana | 0 valores imputados; 0 personas eliminadas por faltantes; casos completos globales conservarían 7825 de 8579 |
+| F2-05 | F2 | Conservar extremos y registrar señales de revisión | La regla IQR detecta rareza, no demuestra error; no hay fuente para corregir las edades | Eliminar o winsorizar por IQR | 510 señales variable-persona en 4 variables, no personas únicas; 0 recortes |
+| F2-06 | F2 | Tipificar ordinales con orden explícito y nominales sin orden | El tipo de almacenamiento no define la escala de medición | Orden alfabético o tratar códigos nominales como cantidades | 5 ordinales con orden de códigos declarado; Dependencia económica de la pareja (p93) aumenta hacia menor dependencia; nominales conservan significado |
+| F2-07 | F2 | Calcular Edad de la persona encuestada (p4) menos Edad de la pareja (p91) | Diferencia interpretable en años, conservando el signo | Restar códigos de no respuesta o usar valor absoluto | 8579 diferencias calculadas; rango -81 a 48 años |
+| F2-08 | F2 | Dejar duración de convivencia sin calcular | Fecha registrada en la base (fecha) tiene formato válido, pero su evento de referencia no está documentado | Asumir Fecha registrada en la base (fecha) de entrevista, usar año actual o 2022 para todas las personas | 8579 ausencias técnicas en Años aproximados de convivencia (anios_convivencia_aprox); no son no respuestas de la encuesta |
+| F2-09 | F2 | Exportar one-hot en una matriz auxiliar | Dar una representación numérica a las nominales sin inventar distancias | Reemplazar el dataset interpretable por dummies o usar folio como predictor | 8579 filas; 64 indicadores más folio; 1 indicador explícito de ausencia por variable |
+| F2-10 | F2 | Mantener edades y diferencia en años; no escalar | El alcance actual es descriptivo; no hay algoritmo basado en distancias que necesite escalamiento | Normalizar automáticamente todas las columnas | 0 columnas escaladas; códigos ordinales no tratados como mediciones continuas |
+| F2-11 | F2 | Exportar CSV con esquema y comprobar su relectura | CSV no conserva categorías de pandas; el diccionario declara tipos, orden y ausencias | Entregar solo un CSV sin significado de los códigos | 8579 filas × 21 columnas; 19 originales preparadas + diferencia calculada + duración reservada |
+
+Las imputaciones se evaluaron solo como escenarios de sensibilidad; ninguna se aplicó. La duración de convivencia queda sin calcular hasta documentar una referencia temporal válida.

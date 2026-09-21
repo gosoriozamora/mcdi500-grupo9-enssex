@@ -1,0 +1,169 @@
+{
+  "estado": "OK",
+  "alcance": "Ejecución completa del flujo y validación de sus resultados",
+  "original": {
+    "filas": 20392,
+    "columnas": 1126,
+    "sha256": "75393ce321f5151fbfd7846034158aabcbe448e82c76fa7c919eeace194ef0d8",
+    "sin_cambios": true
+  },
+  "seleccion": {
+    "filas": 8579,
+    "columnas_originales": 19,
+    "filtro": "p81=1 y p83=1"
+  },
+  "limpieza": {
+    "NS_NR_recodificados": 883,
+    "imputaciones": 0,
+    "filas_eliminadas_por_faltantes": 0,
+    "filas_eliminadas_por_extremos": 0
+  },
+  "derivadas": {
+    "diferencias_edad_calculadas": 8579,
+    "duraciones_calculadas": 0,
+    "motivo": "Columna reservada sin valores. Las fuentes consultadas no definen el evento representado por fecha; no se calcula hasta validarlo."
+  },
+  "validaciones": {
+    "invariantes": 130,
+    "casos_controlados": 21,
+    "resultados_casos": [
+      {
+        "caso": "Región 8 y 9 son válidas",
+        "resultado": "OK"
+      },
+      {
+        "caso": "Estado civil 8 válido, 88/99 ausentes",
+        "resultado": "OK"
+      },
+      {
+        "caso": "Ingreso relativo 6 válido, 8/9 ausentes",
+        "resultado": "OK"
+      },
+      {
+        "caso": "Edad de pareja 99 válida; 999 es NS/NR",
+        "resultado": "OK"
+      },
+      {
+        "caso": "Género 7, 8 y 9 son no respuesta",
+        "resultado": "OK"
+      },
+      {
+        "caso": "Año 9999 es no respuesta",
+        "resultado": "OK"
+      },
+      {
+        "caso": "Escala 1–7 admite extremos, recodifica 9",
+        "resultado": "OK"
+      },
+      {
+        "caso": "Escala 1–7 rechaza código 8",
+        "resultado": "OK"
+      },
+      {
+        "caso": "Edad rechaza texto inesperado",
+        "resultado": "OK"
+      },
+      {
+        "caso": "Edad rechaza valores fraccionarios",
+        "resultado": "OK"
+      },
+      {
+        "caso": "Fecha imposible se detecta",
+        "resultado": "OK"
+      },
+      {
+        "caso": "Tabla vacía se detecta",
+        "resultado": "OK"
+      },
+      {
+        "caso": "Columna ausente se detecta",
+        "resultado": "OK"
+      },
+      {
+        "caso": "Nombres duplicados se detectan",
+        "resultado": "OK"
+      },
+      {
+        "caso": "Ambos filtros son necesarios; la copia no modifica la base",
+        "resultado": "OK"
+      },
+      {
+        "caso": "Folios repetidos detienen la selección",
+        "resultado": "OK"
+      },
+      {
+        "caso": "Selección sin convivientes se detecta",
+        "resultado": "OK"
+      },
+      {
+        "caso": "Orden, derivadas, NA y one-hot conservan el significado",
+        "resultado": "OK"
+      },
+      {
+        "caso": "Cambio de una respuesta válida es detectado",
+        "resultado": "OK"
+      },
+      {
+        "caso": "Una categoría, sin nulos y varianza cero",
+        "resultado": "OK"
+      },
+      {
+        "caso": "Columna completamente ausente se conserva como tal",
+        "resultado": "OK"
+      }
+    ],
+    "relectura_csv": "OK"
+  },
+  "exportados": {
+    "principal": {
+      "archivo": "enssex_convivientes_F2.csv",
+      "filas": 8579,
+      "columnas": 21,
+      "sha256": "66483136ca745005c76344ca759ba8f54b3ce7710242cd81b6f72a1b69f07e49"
+    },
+    "nominales": {
+      "archivo": "enssex_convivientes_F2_nominales.csv",
+      "filas": 8579,
+      "columnas": 65,
+      "sha256": "8896ffa62fe569aed2d91f59560e88fff073ed2379790885bbdcf25be9fcb5f0"
+    }
+  },
+  "disponibilidad": [
+    {
+      "criterio": "Convivientes conservados",
+      "disponibles": 8579,
+      "no_disponibles": 0
+    },
+    {
+      "criterio": "Dependencia y valoración de vida sexual",
+      "disponibles": 8399,
+      "no_disponibles": 180
+    },
+    {
+      "criterio": "Dependencia y bienestar emocional",
+      "disponibles": 8491,
+      "no_disponibles": 88
+    },
+    {
+      "criterio": "Tres centrales completas",
+      "disponibles": 8392,
+      "no_disponibles": 187
+    },
+    {
+      "criterio": "Todas las 19 originales completas",
+      "disponibles": 7825,
+      "no_disponibles": 754
+    }
+  ],
+  "versiones": {
+    "python": "3.13.15",
+    "pandas": "3.0.5",
+    "numpy": "2.5.3",
+    "matplotlib": "3.11.2"
+  },
+  "huellas_codigo": {
+    "preparar_enssex.py": "2ae58e220e29cde6d988be7544a9f6aad5f3c5d08752532fd0978f26ff178752",
+    "validar_preparacion_enssex.py": "70517ecba103477c86164a783bace0880ee2b4bba84c2a689af191c30ccd7f19"
+  },
+  "esquema_sha256": "528e51635e52da0e4105e79404a03ca34ac59e356de2104c4b3706cf61690f1c"
+}
