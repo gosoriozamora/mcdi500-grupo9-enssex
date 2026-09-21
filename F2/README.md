@@ -22,7 +22,7 @@ El notebook se ejecuta desde F2/notebooks. No necesita variables de una sesión 
 - Matriz nominal auxiliar: 65 columnas, incluido el folio.
 - 130 invariantes, 21 casos controlados y relectura completa de ambos CSV verificados.
 
-Los CSV `enssex_convivientes_F2.csv` y `enssex_convivientes_F2_nominales.csv` se generan en `F1/data/processed`, están excluidos de Git y pueden reconstruirse. Se conservan las carpetas compartidas `F1/data` y `F1/src` del proyecto.
+Los CSV `enssex_convivientes_F2.csv` y `enssex_convivientes_F2_nominales.csv` se generan en `F1/data/processed`, se incluyen en el repositorio para facilitar su revisión y pueden reconstruirse ejecutando este notebook. Se conservan las carpetas compartidas `F1/data` y `F1/src` del proyecto.
 
 ## Documentación y código
 

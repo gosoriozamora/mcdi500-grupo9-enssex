@@ -162,7 +162,7 @@
     "matplotlib": "3.11.2"
   },
   "huellas_codigo": {
-    "preparar_enssex.py": "2ae58e220e29cde6d988be7544a9f6aad5f3c5d08752532fd0978f26ff178752",
+    "preparar_enssex.py": "7fa88d44455ad3ff56e05729f17d61fb3e46cc17c77ac4a3ff446facb519f745",
     "validar_preparacion_enssex.py": "70517ecba103477c86164a783bace0880ee2b4bba84c2a689af191c30ccd7f19"
   },
   "esquema_sha256": "528e51635e52da0e4105e79404a03ca34ac59e356de2104c4b3706cf61690f1c"

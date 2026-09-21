@@ -80,7 +80,7 @@ Se define `SEMILLA = 42` para las operaciones aleatorias que eventualmente se in
 
 F2 conserva 8.579 personas y convierte 883 códigos de no respuesta en ausencias, según cada pregunta. No imputa ni elimina filas por faltantes o extremos estadísticos. El archivo principal tiene 21 columnas: 19 originales preparadas, diferencia de edad calculada y duración de convivencia reservada sin valores. Las fuentes no definen el evento representado por `fecha`, por lo que no se presupone una fecha de entrevista.
 
-Los archivos `enssex_convivientes_F2.csv` y `enssex_convivientes_F2_nominales.csv` se generan en `F1/data/processed`. La matriz auxiliar tiene 64 indicadores nominales más el folio. Ambos CSV están excluidos de Git; se reconstruyen ejecutando F2. La relectura comprueba todos los valores y ausencias.
+Los archivos `enssex_convivientes_F2.csv` y `enssex_convivientes_F2_nominales.csv` se generan en `F1/data/processed`. La matriz auxiliar tiene 64 indicadores nominales más el folio. Ambos CSV se incluyen en el repositorio para facilitar su revisión y pueden reconstruirse ejecutando F2. El [diccionario de datos](F2/docs/Diccionario_procesado_F2.md) describe las preguntas, categorías y códigos. La relectura comprueba todos los valores y ausencias.
 
 La [documentación de F2](F2/README.md) enlaza la bitácora, el diccionario, la configuración y los resultados. Las funciones de `F1/src/preparar_enssex.py` y sus casos controlados permiten revisar las decisiones y reproducir cada etapa. La duración reservada no debe incluirse en una selección global de casos completos.
 
