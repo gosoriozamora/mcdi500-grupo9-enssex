@@ -1,5 +1,9 @@
-# Informes del proyecto
+# Informe y anexos del proyecto
 
-En esta carpeta prepararemos el informe integrado de la Sumativa 1, con el trabajo de las fases 1 y 2. Guardaremos la versión editable, el PDF para la entrega y los anexos que necesitemos.
+Esta carpeta reúne los documentos de apoyo al informe integrado de la Sumativa 1.
 
-El informe está pendiente de elaboración. La Formativa 1 se conserva por separado en [F1/docs/Formativa1_Grupo9.pdf](../F1/docs/Formativa1_Grupo9.pdf) y servirá como base para desarrollar el nuevo documento.
+- [Mapa conceptual actualizado en PDF](Mapa_conceptual_Sumativa1.pdf).
+- [Mapa conceptual editable](Mapa_conceptual_Sumativa1.pptx).
+- [Vinculación del mapa y evolución de la planificación](Vinculacion_mapa_Sumativa1.md).
+
+El informe integrado está en elaboración. Los anexos anteriores aportan la correspondencia entre planificación y desarrollo técnico. La [Formativa 1 original](../F1/docs/Formativa1_Grupo9.pdf) se conserva sin cambios.

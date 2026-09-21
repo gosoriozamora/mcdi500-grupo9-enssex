@@ -101,3 +101,7 @@ Ambos integrantes guardaremos nuestros cambios desde nuestras propias cuentas de
 ## Verificación integral de reproducción
 
 Se comprobó una copia nueva de GitHub con un entorno virtual nuevo: las 121 dependencias, la obtención del original y ambos notebooks finalizaron correctamente. Los dos CSV regenerados coinciden con los publicados al normalizar los saltos de línea. Véase la [evidencia de reproducción](F1/docs/Verificacion_reproduccion_completa.md) y la [verificación de F2 por Karla](F2/docs/Verificacion_F2_Karla.md).
+
+## Vinculación con el mapa conceptual
+
+El [mapa actualizado en PDF](docs/Mapa_conceptual_Sumativa1.pdf) y su [versión editable](docs/Mapa_conceptual_Sumativa1.pptx) muestran la pregunta, las variables, el entorno y las conexiones entre etapas y evidencias. La [tabla de vinculación y evolución](docs/Vinculacion_mapa_Sumativa1.md) identifica qué está implementado, qué se proyecta para F3–F4 y por qué cambió la planificación. La Formativa original se conserva como antecedente.
