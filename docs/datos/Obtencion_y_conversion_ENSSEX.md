@@ -23,17 +23,17 @@ Las rutas de esta tabla parten de la raíz del repositorio:
 
 | Archivo | Función | Control de versiones |
 |---|---|---|
-| `F1/src/convertir_enssex.py` | Descarga opcional, conversión y comprobaciones. | Se incorpora a Git. |
-| `F1/data/raw/20241205_enssex_data.sav` | Original descargado, que se conserva sin modificar. | Excluido de Git. |
-| `F1/data/raw/20241205_enssex_desde_sav.csv` | Copia CSV completa para lectura desde los notebooks. | Excluido de Git. |
-| `F1/data/raw/etiquetas_y_metadatos_ENSSEX.json` | Etiquetas, categorías y características de la base que el CSV no conserva por sí solo. | Excluido de Git; se regenera con el script. |
-| `F1/docs/verificacion_conversion_enssex.json` | Huellas, versiones, dimensiones y resultados de las comprobaciones. | Evidencia que se incorpora a Git. |
+| `src/convertir_enssex.py` | Descarga opcional, conversión y comprobaciones. | Se incorpora a Git. |
+| `data/raw/20241205_enssex_data.sav` | Original descargado, que se conserva sin modificar. | Excluido de Git. |
+| `data/raw/20241205_enssex_desde_sav.csv` | Copia CSV completa para lectura desde los notebooks. | Excluido de Git. |
+| `data/raw/etiquetas_y_metadatos_ENSSEX.json` | Etiquetas, categorías y características de la base que el CSV no conserva por sí solo. | Excluido de Git; se regenera con el script. |
+| `docs/datos/verificacion_conversion_enssex.json` | Huellas, versiones, dimensiones y resultados de las comprobaciones. | Evidencia que se incorpora a Git. |
 
 La copia CSV convertida conserva el contenido original y por eso se ubica junto al SAV en `data/raw`. Los datos que posteriormente se limpien o transformen se guardarán en `data/processed`.
 
 ## Preparar el entorno
 
-Seguir la [guía de instalación y ejecución](Instalacion_y_ejecucion.md). Desde la raíz del repositorio, en Git Bash:
+Seguir la [guía de instalación y ejecución](../../F1/docs/Instalacion_y_ejecucion.md). Desde la raíz del repositorio, en Git Bash:
 
 ```bash
 source .venv/Scripts/activate
@@ -48,26 +48,26 @@ La conversión comprobada utiliza Python 3.13.15, pandas 3.0.5, NumPy 2.5.3 y **
 Desde la raíz del repositorio:
 
 ```bash
-python F1/src/convertir_enssex.py --download
+python src/convertir_enssex.py --download
 ```
 
-Si el SAV no está disponible, el script lo descarga desde el enlace oficial y comprueba su huella antes de conservarlo en `F1/data/raw`. Si ya existe, verifica y reutiliza ese archivo. Una huella diferente detiene el procedimiento: debe revisarse si cambió la versión publicada o si la descarga está incompleta, sin sustituir el original del proyecto.
+Si el SAV no está disponible, el script lo descarga desde el enlace oficial y comprueba su huella antes de conservarlo en `data/raw`. Si ya existe, verifica y reutiliza ese archivo. Una huella diferente detiene el procedimiento: debe revisarse si cambió la versión publicada o si la descarga está incompleta, sin sustituir el original del proyecto.
 
 También es posible descargar el SAV desde la ficha oficial, guardarlo en la ubicación de la tabla y ejecutar sin conexión:
 
 ```bash
-python F1/src/convertir_enssex.py
+python src/convertir_enssex.py
 ```
 
-El proceso informa su avance y termina con `Conversión verificada: 20392 filas y 1126 columnas.`. La evidencia queda en `F1/docs/verificacion_conversion_enssex.json`. Un código de salida distinto de cero indica que el procedimiento no se completó y requiere revisar el mensaje de error.
+El proceso informa su avance y termina con `Conversión verificada: 20392 filas y 1126 columnas.`. La evidencia queda en `docs/datos/verificacion_conversion_enssex.json`. Un código de salida distinto de cero indica que el procedimiento no se completó y requiere revisar el mensaje de error.
 
 El script vuelve a generar y comprobar los resultados antes de aceptarlos. Si un CSV o archivo de metadatos existente tiene contenido diferente, se conserva intacto y se detiene la escritura de las salidas. Para revisar una diferencia se puede utilizar otra carpeta:
 
 ```bash
-python F1/src/convertir_enssex.py --output-dir F1/data/raw/revision_conversion --report F1/data/raw/revision_conversion/verificacion_conversion_enssex.json
+python src/convertir_enssex.py --output-dir data/raw/revision_conversion --report data/raw/revision_conversion/verificacion_conversion_enssex.json
 ```
 
-Este ejemplo utiliza el mismo SAV y deja las salidas de revisión separadas. El archivo de evidencia indicado con `--report` se actualiza en cada ejecución correcta. Todas las opciones están disponibles mediante `python F1/src/convertir_enssex.py --help`.
+Este ejemplo utiliza el mismo SAV y deja las salidas de revisión separadas. El archivo de evidencia indicado con `--report` se actualiza en cada ejecución correcta. Todas las opciones están disponibles mediante `python src/convertir_enssex.py --help`.
 
 ## Criterios de conversión
 
@@ -108,7 +108,7 @@ ruta = Path("../data/raw/20241205_enssex_desde_sav.csv")
 datos = pd.read_csv(ruta, sep=";", encoding="utf-8-sig")
 ```
 
-Desde `F2/notebooks`, la ruta relativa es `../../F1/data/raw/20241205_enssex_desde_sav.csv`. En F2 se revisarán los tipos inferidos, los textos que pandas pueda interpretar como ausentes y los códigos especiales de cada variable antes de limpiar o transformar los datos.
+Desde `F2/notebooks`, la ruta relativa es `../../data/raw/20241205_enssex_desde_sav.csv`. En F2 se revisarán los tipos inferidos, los textos que pandas pueda interpretar como ausentes y los códigos especiales de cada variable antes de limpiar o transformar los datos.
 
 ## Fuente técnica
 

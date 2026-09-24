@@ -1,0 +1,57 @@
+{
+  "fecha": "2026-09-24",
+  "alcance": "Reorganización local; misma instalación de dependencias, kernels nuevos independientes. No equivale a reproducción desde un entorno recién instalado.",
+  "notebooks": [
+    {
+      "notebook": "F1/notebooks/F1_Definicion.ipynb",
+      "estado": "OK",
+      "celdas_codigo": 10
+    },
+    {
+      "notebook": "F2/notebooks/F2_limpieza_transformacion_ENSSEX.ipynb",
+      "estado": "OK",
+      "celdas_codigo": 13
+    }
+  ],
+  "funciones_sin_cambio_de_cuerpo": [
+    "sha256_archivo",
+    "huella_tabla",
+    "verificar_entorno",
+    "verificar_alineacion_f1",
+    "validar_columnas",
+    "cargar_base",
+    "perfil_variables",
+    "seleccionar_convivientes",
+    "normalizar_variable",
+    "limpiar_codigos",
+    "diagnosticar_tiempo",
+    "resumen_atipicos",
+    "disponibilidad_analisis",
+    "comparar_imputaciones",
+    "construir_derivadas",
+    "tipificar_categorias",
+    "codificar_nominales",
+    "validar_resultado",
+    "serializar_base",
+    "exportar_resultados",
+    "graficar_diagnostico",
+    "graficar_edades",
+    "etiqueta_variable",
+    "rotular_referencias",
+    "presentar_tabla"
+  ],
+  "casos_controlados": 21,
+  "invariantes": 130,
+  "datos": "Originales y CSV procesados idénticos byte a byte a la copia anterior.",
+  "reglas_analiticas": "Sin cambios; el producto principal conserva 21 columnas y 8579 filas.",
+  "validacion_enlaces_vigentes": "OK; se excluyen evidencias históricas, antecedentes y checkpoints.",
+  "huellas_datos_antes": {
+    "F1/data/processed/.gitkeep": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "F1/data/processed/enssex_convivientes_F2.csv": "66483136ca745005c76344ca759ba8f54b3ce7710242cd81b6f72a1b69f07e49",
+    "F1/data/processed/enssex_convivientes_F2_nominales.csv": "8896ffa62fe569aed2d91f59560e88fff073ed2379790885bbdcf25be9fcb5f0",
+    "F1/data/raw/20241205_enssex_data.csv": "ef14d722c21f64acab6256e8f009a62f5d336acad70c3b58993628a0f05a5b00",
+    "F1/data/raw/20241205_enssex_data.sav": "0f4218b9553600dfd44e6b1f78d376b040a0e6f0d854453312c59a6497ec58ea",
+    "F1/data/raw/20241205_enssex_desde_sav.csv": "75393ce321f5151fbfd7846034158aabcbe448e82c76fa7c919eeace194ef0d8",
+    "F1/data/raw/etiquetas_y_metadatos_ENSSEX.json": "c4d439b1f16b191dc86c189a0b70af2816721a3f1b08e5277855043b67eaca73"
+  }
+}

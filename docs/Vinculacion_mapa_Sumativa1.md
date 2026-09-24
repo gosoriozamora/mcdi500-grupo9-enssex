@@ -1,5 +1,7 @@
 # Vinculación del mapa conceptual con el avance del proyecto
 
+> Documento histórico de Sumativa 1. Las rutas y la arquitectura descritas corresponden a esa entrega. Para la versión actual, consultar [Organización del repositorio](Organizacion_repositorio.md); los archivos movidos conservan su antecedente en Git.
+
 El mapa conceptual de la Formativa 1 orientó la organización del proyecto, el flujo de trabajo y la selección de herramientas. Su actualización conserva las seis etapas y los dos retornos iterativos, pero distingue lo implementado en F1 y F2 de los componentes previstos para F3 y F4. También incorpora las variables que sostienen la pregunta, el entorno virtual y las relaciones entre cada etapa y sus evidencias.
 
 La pregunta actual es: «¿Cómo varían la valoración de la vida sexual y el bienestar mental o emocional percibido según el grado de dependencia económica de la pareja entre las personas encuestadas en ENSSEX 2022–2023 que conviven con ella?». Se aborda con un alcance descriptivo y comparativo de la muestra, sin ponderación ni atribución de relaciones causales.

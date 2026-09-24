@@ -21,22 +21,22 @@ En este repositorio reuniremos el trabajo de las fases 1 y 2 para la Sumativa 1.
 proyecto-enssex/
 ├── README.md
 ├── requirements.txt
-├── .gitignore
+├── data/raw/                 # Originales compartidos, fuera de Git
+├── src/convertir_enssex.py   # Obtención y conversión de la fuente
 ├── F1/
-│   ├── README.md
-│   ├── data/
-│   │   ├── raw/
-│   │   └── processed/
-│   ├── notebooks/
-│   ├── src/
-│   └── docs/
+│   ├── notebooks/           # Definición y reconocimiento
+│   ├── docs/
+│   └── antecedentes/        # Validación preliminar histórica
 ├── F2/
-│   ├── README.md
 │   ├── notebooks/
+│   ├── src/                 # Preparación, gráficos y documentación separados
+│   ├── tests/
+│   ├── data/processed/      # Productos de F2
 │   └── docs/
 ├── F3/
 ├── F4/
 └── docs/
+    └── datos/              # Obtención y evidencia de conversión
 ```
 
 - **F1:** definición del problema, objetivos, preparación del entorno y primera revisión de los datos.
@@ -44,7 +44,7 @@ proyecto-enssex/
 - **F3 y F4:** espacios reservados para las siguientes fases del curso.
 - **docs, en la raíz:** informe integrado de la Sumativa 1 y sus anexos.
 
-Las carpetas `F1/data` y `F1/src` se utilizarán también en las fases posteriores, siguiendo la organización de la guía del curso y de nuestro mapa conceptual. F2 guardará los datos que procese en `F1/data/processed`; el código y las explicaciones de esa fase estarán identificados en F2.
+Los originales de `data/raw` son compartidos por las fases. F2 contiene sus módulos, pruebas y productos procesados. La separación de responsabilidades se describe en [Organización del repositorio](docs/Organizacion_repositorio.md).
 
 Conservamos una copia de la Formativa 1, sin cambios, en [F1/docs/Formativa1_Grupo9.pdf](F1/docs/Formativa1_Grupo9.pdf). El informe de la Sumativa 1 se preparará como un documento nuevo en [docs](docs/README.md).
 
@@ -66,7 +66,7 @@ python -m jupyterlab
 
 En JupyterLab se utiliza **Python (grupo9-mcdi500)**, cuyo identificador es `grupo9_mcdi500`. Cada integrante registra este kernel desde su propio entorno virtual.
 
-Abrir `F1/notebooks/F1_Definicion.ipynb`, seleccionar el kernel del proyecto y utilizar **Kernel → Restart Kernel and Run All Cells**. Requiere el archivo `F1/data/raw/20241205_enssex_desde_sav.csv`, con separador `;` y codificación `utf-8-sig`. El archivo no se descarga al clonar el repositorio: los datos originales están excluidos de Git. La [guía de obtención y conversión de ENSSEX](F1/docs/Obtencion_y_conversion_ENSSEX.md) explica cómo descargarlos y reconstruir el CSV con `python F1/src/convertir_enssex.py --download`, desde la raíz del proyecto y con el entorno activo. El script conserva el SAV y verifica la integridad de la conversión; la [evidencia de ejecución](F1/docs/verificacion_conversion_enssex.json) registra sus resultados.
+Abrir `F1/notebooks/F1_Definicion.ipynb`, seleccionar el kernel del proyecto y utilizar **Kernel → Restart Kernel and Run All Cells**. Requiere el archivo `data/raw/20241205_enssex_desde_sav.csv`, con separador `;` y codificación `utf-8-sig`. El archivo no se descarga al clonar el repositorio: los datos originales están excluidos de Git. La [guía de obtención y conversión de ENSSEX](docs/datos/Obtencion_y_conversion_ENSSEX.md) explica cómo descargarlos y reconstruir el CSV con `python src/convertir_enssex.py --download`, desde la raíz del proyecto y con el entorno activo. El script conserva el SAV y verifica la integridad de la conversión; la [evidencia de ejecución](docs/datos/verificacion_conversion_enssex.json) registra sus resultados.
 
 F1 comprueba las dependencias, la estructura, la identidad del CSV y la presencia de las 19 variables. Reconoce los 20.392 registros y las 1.126 columnas sin filtrar, limpiar, imputar ni recodificar. Sus tablas distinguen vacíos y códigos de no respuesta, y la comprobación final verifica que la base permanezca intacta. La validación preliminar se conserva como antecedente docente; no es necesario ejecutarla para correr F1. Después se ejecuta `F2/notebooks/F2_limpieza_transformacion_ENSSEX.ipynb` con **Restart Kernel and Run All Cells**. F2 se inicia en un kernel independiente y lee el original; no depende de variables en memoria de F1.
 
@@ -80,9 +80,9 @@ Se define `SEMILLA = 42` para las operaciones aleatorias que eventualmente se in
 
 F2 conserva 8.579 personas y convierte 883 códigos de no respuesta en ausencias, según cada pregunta. No imputa ni elimina filas por faltantes o extremos estadísticos. El archivo principal tiene 21 columnas: 19 originales preparadas, diferencia de edad calculada y duración de convivencia reservada sin valores. Las fuentes no definen el evento representado por `fecha`, por lo que no se presupone una fecha de entrevista.
 
-Los archivos `enssex_convivientes_F2.csv` y `enssex_convivientes_F2_nominales.csv` se generan en `F1/data/processed`. La matriz auxiliar tiene 64 indicadores nominales más el folio. Ambos CSV se incluyen en el repositorio para facilitar su revisión y pueden reconstruirse ejecutando F2. El [diccionario de datos](F2/docs/Diccionario_procesado_F2.md) describe las preguntas, categorías y códigos. La relectura comprueba todos los valores y ausencias.
+Los archivos `enssex_convivientes_F2.csv` y `enssex_convivientes_F2_nominales.csv` se generan en `F2/data/processed`. La matriz auxiliar tiene 64 indicadores nominales más el folio. Ambos CSV se incluyen en el repositorio para facilitar su revisión y pueden reconstruirse ejecutando F2. El [diccionario de datos](F2/docs/Diccionario_procesado_F2.md) describe las preguntas, categorías y códigos. La relectura comprueba todos los valores y ausencias.
 
-La [documentación de F2](F2/README.md) enlaza la bitácora, el diccionario, la configuración y los resultados. Las funciones de `F1/src/preparar_enssex.py` y sus casos controlados permiten revisar las decisiones y reproducir cada etapa. La duración reservada no debe incluirse en una selección global de casos completos.
+La [documentación de F2](F2/README.md) enlaza la bitácora, el diccionario, la configuración y los resultados. Las funciones de `F2/src/preparar_enssex.py` y sus casos controlados permiten revisar las decisiones y reproducir cada etapa. La duración reservada no debe incluirse en una selección global de casos completos.
 
 ## Trabajo en equipo
 

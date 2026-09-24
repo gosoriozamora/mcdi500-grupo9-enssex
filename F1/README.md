@@ -13,23 +13,23 @@ F1 conserva todos los registros y columnas. La selección de convivientes, la li
 ## Cómo ejecutar F1
 
 1. Seguir la [guía de instalación y ejecución](docs/Instalacion_y_ejecucion.md) para disponer del entorno y del kernel **Python (grupo9-mcdi500)**.
-2. Obtener el CSV mediante la [guía de obtención y conversión](docs/Obtencion_y_conversion_ENSSEX.md). Los datos no se incluyen al clonar el repositorio.
+2. Obtener el CSV mediante la [guía de obtención y conversión](../docs/datos/Obtencion_y_conversion_ENSSEX.md). Los datos no se incluyen al clonar el repositorio.
 3. Desde la raíz del proyecto, activar `.venv` e iniciar JupyterLab.
 4. Abrir `F1/notebooks/F1_Definicion.ipynb` y seleccionar el kernel del proyecto.
 5. Utilizar **Kernel → Restart Kernel and Run All Cells**, revisar las salidas y guardar el notebook.
 
-La ejecución utiliza rutas relativas desde `F1/notebooks`. Requiere el CSV convertido en `F1/data/raw` y la evidencia de conversión en `F1/docs/verificacion_conversion_enssex.json`.
+La ejecución utiliza rutas relativas desde `F1/notebooks`. Requiere el CSV convertido en `data/raw` y la evidencia de conversión en `docs/datos/verificacion_conversion_enssex.json`.
 
 ## Organización de los archivos
 
-- `notebooks`: F1 y la validación preliminar conservada como antecedente docente.
-- `data/raw`: datos originales, CSV convertido y notas de procedencia.
-- `data/processed`: resultados que generará F2 para las fases posteriores.
-- `src`: código de conversión y funciones de apoyo compartidas por las fases.
-- `docs`: guías, evidencias de conversión y entorno, y documentación del proyecto.
+- `notebooks`: notebook vigente de definición y reconocimiento de F1.
+- `docs`: guías de entorno y evidencias de F1.
+- `antecedentes`: validación preliminar y su informe, conservados como documentación histórica.
+- Los originales compartidos están en `data/raw`, desde la raíz del proyecto; la conversión está en `src/convertir_enssex.py` y su documentación en `docs/datos`.
+- La preparación, pruebas y productos de F2 están dentro de `F2`.
 
 ## Evidencia y continuidad
 
 F1 se ejecutó completo desde un kernel nuevo en el equipo de Guillermo, con 10 celdas de código numeradas consecutivamente y sin errores. Las salidas registran 121 dependencias coincidentes, la comprobación de la base y tres casos de entrada incorrecta detectados. Falta reproducir el notebook completo en el equipo de Karla y realizar la verificación conjunta con F2.
 
-El [notebook de validación preliminar](notebooks/Validacion_preliminar_ENSSEX.ipynb) se conserva como antecedente del material del curso. Su clasificación automática debe contrastarse con el diccionario del equipo y no sustituye la interpretación analítica de las variables.
+El [notebook de validación preliminar](antecedentes/Validacion_preliminar_ENSSEX.ipynb) se conserva como antecedente del material del curso. Su clasificación automática debe contrastarse con el diccionario del equipo y no sustituye la interpretación analítica de las variables.

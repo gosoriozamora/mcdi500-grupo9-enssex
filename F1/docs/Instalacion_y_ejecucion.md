@@ -100,15 +100,15 @@ La lista debe incluir `grupo9_mcdi500`. El nombre visible al abrir un notebook s
 La entrada de F1 y de la validación preliminar es:
 
 ```text
-F1/data/raw/20241205_enssex_desde_sav.csv
+data/raw/20241205_enssex_desde_sav.csv
 ```
 
 Este archivo es el CSV convertido desde `20241205_enssex_data.sav`, con **separador punto y coma (`;`) y codificación `utf-8-sig`**. No sustituirlo por `20241205_enssex_data.csv`: el notebook está configurado para la copia convertida.
 
-Los datos están excluidos de Git, por lo que clonar el repositorio no los incorpora. La [guía de obtención y conversión](Obtencion_y_conversion_ENSSEX.md) documenta la fuente, la licencia, la versión y las comprobaciones de integridad. Para descargar el SAV y generar el CSV y sus metadatos, ejecutar desde la raíz del repositorio, con `.venv` activo:
+Los datos están excluidos de Git, por lo que clonar el repositorio no los incorpora. La [guía de obtención y conversión](../../docs/datos/Obtencion_y_conversion_ENSSEX.md) documenta la fuente, la licencia, la versión y las comprobaciones de integridad. Para descargar el SAV y generar el CSV y sus metadatos, ejecutar desde la raíz del repositorio, con `.venv` activo:
 
 ```bash
-python F1/src/convertir_enssex.py --download
+python src/convertir_enssex.py --download
 ```
 
 El comando requiere `pyreadstat==1.3.6`, incluido en el archivo de dependencias actualizado. Si el entorno se creó antes de incorporar esa biblioteca, volver a ejecutar `python -m pip install -r requirements.txt` y `python -m pip check`. La conversión conserva las filas, columnas y códigos originales; la preparación analítica corresponde a F2.
@@ -116,7 +116,7 @@ El comando requiere `pyreadstat==1.3.6`, incluido en el archivo de dependencias 
 Desde la raíz del proyecto se puede comprobar que la entrada existe:
 
 ```bash
-python -c "from pathlib import Path; p = Path('F1/data/raw/20241205_enssex_desde_sav.csv'); print(p); assert p.is_file(), 'Falta el CSV convertido en F1/data/raw'"
+python -c "from pathlib import Path; p = Path('data/raw/20241205_enssex_desde_sav.csv'); print(p); assert p.is_file(), 'Falta el CSV convertido en data/raw'"
 ```
 
 ## 7. Abrir JupyterLab y ejecutar F1
@@ -131,12 +131,12 @@ En JupyterLab:
 
 1. Abrir `F1/notebooks/F1_Definicion.ipynb`.
 2. Seleccionar el kernel **Python (grupo9-mcdi500)**.
-3. Revisar la configuración: `RUTA_DATOS = Path("../data/raw/20241205_enssex_desde_sav.csv")`, `SEPARADOR = ";"` y `CODIFICACION = "utf-8-sig"`.
+3. Revisar la configuración: `RUTA_DATOS = Path("../../data/raw/20241205_enssex_desde_sav.csv")`, `SEPARADOR = ";"` y `CODIFICACION = "utf-8-sig"`.
 4. Seleccionar **Kernel → Restart Kernel and Run All Cells** y confirmar.
 5. Comprobar que las 10 celdas de código tengan contadores consecutivos, sin errores, y que la tabla final muestre todas las comprobaciones en `OK`.
 6. Guardar con `Ctrl + S` para conservar las salidas del equipo utilizado.
 
-El notebook comprueba que el intérprete corresponda a la `.venv` del proyecto y que la carpeta de ejecución sea `F1/notebooks`. También contrasta todas las versiones de `requirements.txt` y la huella del CSV con `F1/docs/verificacion_conversion_enssex.json`. Si falta el CSV, seguir la guía de obtención y conversión; si una dependencia no coincide, actualizar el entorno antes de volver a ejecutar.
+El notebook comprueba que el intérprete corresponda a la `.venv` del proyecto y que la carpeta de ejecución sea `F1/notebooks`. También contrasta todas las versiones de `requirements.txt` y la huella del CSV con `docs/datos/verificacion_conversion_enssex.json`. Si falta el CSV, seguir la guía de obtención y conversión; si una dependencia no coincide, actualizar el entorno antes de volver a ejecutar.
 
 La salida esperada es una base de 20.392 filas y 1.126 columnas, con las 19 variables presentes y 121 dependencias coincidentes. Se muestran dimensiones, tipos de lectura, identificadores, vacíos y no respuesta codificada. F1 no filtra convivientes ni realiza limpieza, imputación o recodificación. Las comprobaciones finales verifican que el CSV y la tabla en memoria permanezcan intactos.
 
@@ -150,8 +150,8 @@ Las rutas de lectura y escritura se expresan desde la carpeta de ejecución del 
 
 | Ubicación del notebook | Entrada original | Datos procesados | Documentación de su fase |
 |---|---|---|---|
-| `F1/notebooks` | `../data/raw/20241205_enssex_desde_sav.csv` | `../data/processed` | `../docs` |
-| `F2/notebooks` | `../../F1/data/raw/20241205_enssex_desde_sav.csv` | `../../F1/data/processed` | `../docs` |
+| `F1/notebooks` | `../../data/raw/20241205_enssex_desde_sav.csv` | No exporta datos procesados | `../docs` |
+| `F2/notebooks` | `../../data/raw/20241205_enssex_desde_sav.csv` | `../../F2/data/processed` | `../docs` |
 
 Ejemplo de lectura desde un notebook de F1:
 
@@ -159,7 +159,7 @@ Ejemplo de lectura desde un notebook de F1:
 from pathlib import Path
 import pandas as pd
 
-ruta_datos = Path("../data/raw/20241205_enssex_desde_sav.csv")
+ruta_datos = Path("../../data/raw/20241205_enssex_desde_sav.csv")
 assert ruta_datos.is_file(), "Revisar la ubicación del CSV y la carpeta de ejecución"
 datos = pd.read_csv(
     ruta_datos, sep=";", encoding="utf-8-sig",
@@ -171,7 +171,7 @@ Para F2 se utiliza la ruta de su fila en la tabla. F1 reconocerá los datos; el 
 
 Los notebooks `F1/notebooks/F1_Definicion.ipynb` y `F2/notebooks/F2_limpieza_transformacion_ENSSEX.ipynb` están desarrollados y conservan sus salidas. Ejecutar F1 y después F2, cada uno con **Kernel → Restart Kernel and Run All Cells** y el kernel **Python (grupo9-mcdi500)**. F2 no depende de variables en memoria de F1.
 
-F2 importa sus funciones desde `F1/src`, verifica las dependencias y contrasta su selección con F1. Procesa 8.579 personas y genera dos archivos en `F1/data/processed`: el principal de 21 columnas y una matriz nominal auxiliar de 65 columnas. La diferencia de edad está calculada; los años de convivencia se conservan sin valores hasta validar la referencia temporal. No hay imputaciones ni eliminación de filas por faltantes o extremos.
+F2 importa sus funciones desde `F2/src` y sus casos controlados desde `F2/tests`, verifica las dependencias y contrasta su selección con F1. Procesa 8.579 personas y genera dos archivos en `F2/data/processed`: el principal de 21 columnas y una matriz nominal auxiliar de 65 columnas. La diferencia de edad está calculada; los años de convivencia se conservan sin valores hasta validar la referencia temporal. No hay imputaciones ni eliminación de filas por faltantes o extremos.
 
 Cada ejecución regenera la bitácora, el resumen para el informe, el diccionario y `validacion_F2.json` en `F2/docs`, además de actualizar `F2/README.md`. Al terminar, la tabla de cierre debe mostrar siete resultados OK. Estos resultados comprueban el procesamiento y no declaran resuelta la limitación temporal.
 

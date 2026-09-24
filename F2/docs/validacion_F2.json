@@ -162,8 +162,11 @@
     "matplotlib": "3.11.2"
   },
   "huellas_codigo": {
-    "preparar_enssex.py": "7fa88d44455ad3ff56e05729f17d61fb3e46cc17c77ac4a3ff446facb519f745",
-    "validar_preparacion_enssex.py": "70517ecba103477c86164a783bace0880ee2b4bba84c2a689af191c30ccd7f19"
+    "F2/src/preparar_enssex.py": "0e955dfa97ee2d25b4e0cbfeae21c08300187584d0d3d3a0f2ebe0f7fee503c4",
+    "F2/src/visualizar_enssex.py": "a5ec693e67e478be84e46d7f92930fe301e388b4aba746c23a0a22fae2e55c18",
+    "F2/src/presentacion_enssex.py": "d9028a912e0cfa32c1bc510d81d3f41a22ae0a5b3d3381bd91b5df71708e02a0",
+    "F2/src/documentar_enssex.py": "a9c06e6cd35b435d25971635712711051194b33910f2cc39795f41a8724dc448",
+    "F2/tests/validar_preparacion_enssex.py": "70517ecba103477c86164a783bace0880ee2b4bba84c2a689af191c30ccd7f19"
   },
   "esquema_sha256": "528e51635e52da0e4105e79404a03ca34ac59e356de2104c4b3706cf61690f1c"
 }

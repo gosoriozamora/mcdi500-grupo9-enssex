@@ -26,5 +26,5 @@ Thumbs.db
 *.zsav
 
 # Resultados de F2 incluidos en la entrega
-!F1/data/processed/enssex_convivientes_F2.csv
-!F1/data/processed/enssex_convivientes_F2_nominales.csv
+!F2/data/processed/enssex_convivientes_F2.csv
+!F2/data/processed/enssex_convivientes_F2_nominales.csv

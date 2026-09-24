@@ -5,7 +5,7 @@ La preparación utiliza la selección acordada de 19 columnas originales y conse
 ## Ejecución
 
 1. Preparar el entorno siguiendo la [guía de instalación](../F1/docs/Instalacion_y_ejecucion.md).
-2. Disponer del CSV original según la [guía de obtención](../F1/docs/Obtencion_y_conversion_ENSSEX.md).
+2. Disponer del CSV original según la [guía de obtención](../docs/datos/Obtencion_y_conversion_ENSSEX.md).
 3. Abrir [F2_limpieza_transformacion_ENSSEX.ipynb](notebooks/F2_limpieza_transformacion_ENSSEX.ipynb) desde JupyterLab.
 4. Seleccionar **Python (grupo9-mcdi500)** y usar **Kernel → Restart Kernel and Run All Cells**.
 5. Revisar las tablas de evidencia y el cierre, que debe indicar OK en sus siete comprobaciones.
@@ -22,7 +22,7 @@ El notebook se ejecuta desde F2/notebooks. No necesita variables de una sesión 
 - Matriz nominal auxiliar: 65 columnas, incluido el folio.
 - 130 invariantes, 21 casos controlados y relectura completa de ambos CSV verificados.
 
-Los CSV `enssex_convivientes_F2.csv` y `enssex_convivientes_F2_nominales.csv` se generan en `F1/data/processed`, se incluyen en el repositorio para facilitar su revisión y pueden reconstruirse ejecutando este notebook. Se conservan las carpetas compartidas `F1/data` y `F1/src` del proyecto.
+Los CSV `enssex_convivientes_F2.csv` y `enssex_convivientes_F2_nominales.csv` se generan en `F2/data/processed`, se incluyen en el repositorio para facilitar su revisión y pueden reconstruirse ejecutando este notebook. La entrada compartida está en `data/raw`; los módulos propios y las pruebas de F2 están en `F2/src` y `F2/tests`.
 
 ## Documentación y código
 
@@ -32,8 +32,9 @@ Los CSV `enssex_convivientes_F2.csv` y `enssex_convivientes_F2_nominales.csv` se
 - [Selección y justificación de las 19 columnas](docs/Seleccion_y_justificacion_variables_F2.md).
 - [Configuración de variables](docs/esquema_variables_F2.json).
 - [Evidencia de validación](docs/validacion_F2.json).
-- [Funciones de preparación](../F1/src/preparar_enssex.py).
-- [Casos controlados de validación](../F1/src/validar_preparacion_enssex.py).
+- [Funciones de preparación](../F2/src/preparar_enssex.py).
+- [Casos controlados de validación](tests/validar_preparacion_enssex.py).
+- [Gráficos](src/visualizar_enssex.py), [presentación de tablas](src/presentacion_enssex.py) y [generación de documentación](src/documentar_enssex.py).
 
 ## Límites
 

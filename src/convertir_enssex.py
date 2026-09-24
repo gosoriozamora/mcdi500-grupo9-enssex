@@ -191,9 +191,9 @@ def convert(source, output_dir, report_path, download=False):
 
 def main():
     parser = argparse.ArgumentParser(description=__doc__)
-    parser.add_argument("--source", type=Path, default=Path("F1/data/raw/20241205_enssex_data.sav"))
-    parser.add_argument("--output-dir", type=Path, default=Path("F1/data/raw"))
-    parser.add_argument("--report", type=Path, default=Path("F1/docs/verificacion_conversion_enssex.json"))
+    parser.add_argument("--source", type=Path, default=Path("data/raw/20241205_enssex_data.sav"))
+    parser.add_argument("--output-dir", type=Path, default=Path("data/raw"))
+    parser.add_argument("--report", type=Path, default=Path("docs/datos/verificacion_conversion_enssex.json"))
     parser.add_argument("--download", action="store_true", help="Descargar el SAV oficial si aún no existe.")
     args = parser.parse_args()
     try:

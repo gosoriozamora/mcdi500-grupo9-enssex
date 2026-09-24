@@ -128,4 +128,4 @@ La varianza de códigos en los escenarios de imputación es un diagnóstico mec�
 
 ## Ubicación de los productos
 
-Los CSV se generan en F1/data/processed. La configuración y el diccionario están en F2/docs/esquema_variables_F2.json y Diccionario_procesado_F2.md. La bitácora y validacion_F2.json permiten contrastar estas cifras con las salidas del notebook.
+Los CSV se generan en F2/data/processed. La configuración y el diccionario están en F2/docs/esquema_variables_F2.json y Diccionario_procesado_F2.md. La bitácora y validacion_F2.json permiten contrastar estas cifras con las salidas del notebook.
