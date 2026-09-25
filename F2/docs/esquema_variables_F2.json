@@ -495,8 +495,7 @@
     }
   ],
   "derivadas": {
-    "diferencia_edad_pareja": "p4 - p91. Positivo: la persona encuestada es mayor. Requiere ambas edades válidas.",
-    "anios_convivencia_aprox": "Columna reservada sin valores. Las fuentes consultadas no definen el evento representado por fecha; no se calcula hasta validarlo."
+    "diferencia_edad_pareja": "p4 - p91. Positivo: la persona encuestada es mayor. Requiere ambas edades válidas."
   },
   "fuentes": [
     "F1/notebooks/F1_Definicion.ipynb",
@@ -511,6 +510,7 @@
     "fecha_referencia_validada": false,
     "ponderacion": "Sin ponderación; descripción de la muestra",
     "p92": "Nominal: código 6 sin ingresos propios fuera del orden parcial de 1–5",
-    "p5": "Nominal original; no imponer orden sin armonizar modalidades educativas"
+    "p5": "Nominal original; no imponer orden sin armonizar modalidades educativas",
+    "duracion_convivencia": "No se calcula ni se exporta anios_convivencia_aprox: las fuentes consultadas no definen el evento representado por fecha; falta una referencia temporal validada."
   }
 }

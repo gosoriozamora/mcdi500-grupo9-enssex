@@ -21,7 +21,7 @@
   "derivadas": {
     "diferencias_edad_calculadas": 8579,
     "duraciones_calculadas": 0,
-    "motivo": "Columna reservada sin valores. Las fuentes consultadas no definen el evento representado por fecha; no se calcula hasta validarlo."
+    "motivo": "No se calcula ni se exporta anios_convivencia_aprox: las fuentes consultadas no definen el evento representado por fecha; falta una referencia temporal validada."
   },
   "validaciones": {
     "invariantes": 130,
@@ -118,8 +118,8 @@
     "principal": {
       "archivo": "enssex_convivientes_F2.csv",
       "filas": 8579,
-      "columnas": 21,
-      "sha256": "66483136ca745005c76344ca759ba8f54b3ce7710242cd81b6f72a1b69f07e49"
+      "columnas": 20,
+      "sha256": "9af8b7f5f95289fdf1d632d60b384b5820013c659e184245f535ce11918a21fc"
     },
     "nominales": {
       "archivo": "enssex_convivientes_F2_nominales.csv",
@@ -163,11 +163,11 @@
   },
   "metodo_huellas_codigo": "SHA-256 con finales de línea normalizados a LF",
   "huellas_codigo": {
-    "F2/src/preparar_enssex.py": "172ea6ae80ba1b0171ecf38dd889795f42a9358d31e432a8d044f2df5db88985",
+    "F2/src/preparar_enssex.py": "7bd7bbd4818247cb0112c2f4bad39a539eadfd267475a0733e226a1252a33ffc",
     "F2/src/visualizar_enssex.py": "a5ec693e67e478be84e46d7f92930fe301e388b4aba746c23a0a22fae2e55c18",
     "F2/src/presentacion_enssex.py": "d9028a912e0cfa32c1bc510d81d3f41a22ae0a5b3d3381bd91b5df71708e02a0",
-    "F2/src/documentar_enssex.py": "a9c06e6cd35b435d25971635712711051194b33910f2cc39795f41a8724dc448",
-    "F2/tests/validar_preparacion_enssex.py": "70517ecba103477c86164a783bace0880ee2b4bba84c2a689af191c30ccd7f19"
+    "F2/src/documentar_enssex.py": "6ea06f243ee0cb8cb8fe81ec766090cb832da3bd72cbe320ad6f6d682d4484ba",
+    "F2/tests/validar_preparacion_enssex.py": "b68a811c7cc3b4a702efe72ec2a34f4692e47f56c8836fb52c2c15e11d592af8"
   },
-  "esquema_sha256": "528e51635e52da0e4105e79404a03ca34ac59e356de2104c4b3706cf61690f1c"
+  "esquema_sha256": "ba07debf0ff880bac775c64584a2fcb1c172ff7f88a13acea402df951fd3d2ad"
 }

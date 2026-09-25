@@ -1,6 +1,6 @@
 # Diccionario del conjunto procesado de F2
 
-19 columnas originales preparadas y dos columnas derivadas, una calculada y otra reservada sin valores. CSV: separador punto y coma, UTF-8 con BOM, sin índice, fecha ISO AAAA-MM-DD, códigos enteros y campos vacíos para ausencias. El folio se lee como texto. Para reconstruir categorías y su orden se utiliza esquema_variables_F2.json.
+19 columnas originales preparadas y una derivada calculada: diferencia de edad. La duración de convivencia no se exporta por falta de una referencia temporal validada. CSV: separador punto y coma, UTF-8 con BOM, sin índice, fecha ISO AAAA-MM-DD, códigos enteros y campos vacíos para ausencias. El folio se lee como texto. Para reconstruir categorías y su orden se utiliza esquema_variables_F2.json.
 
 | variable | rol | tipo_en_memoria | descripcion | codigos_validos | NS_NR_en_raw | orden | faltantes |
 | --- | --- | --- | --- | --- | --- | --- | --- |
@@ -24,6 +24,5 @@
 | Identificador de la encuesta (folio_encuesta) | auxiliar | string | Identificador de la encuesta; no es una pregunta sustantiva. | identificador | [] | Sin orden nominal / no aplica | 0 |
 | Fecha registrada en la base (fecha) | auxiliar | datetime64[us] | Fecha registrada en la base; el libro de códigos no desarrolla su significado y el SAV no aporta una etiqueta descriptiva. | fecha | [] | Sin orden nominal / no aplica | 0 |
 | Diferencia de edad con la pareja (diferencia_edad_pareja) | derivada | Int64 | p4 - p91. Positivo: la persona encuestada es mayor. Requiere ambas edades válidas. | Enteros con signo | No aplica | No aplica | 0 |
-| Años aproximados de convivencia (anios_convivencia_aprox) | derivada | Int64 | Columna reservada sin valores. Las fuentes consultadas no definen el evento representado por fecha; no se calcula hasta validarlo. | Sin calcular | No aplica | No aplica | 8579 |
 
-La matriz auxiliar nominal contiene folio_encuesta y columnas nombre__codigo, más nombre__sin_respuesta para cada nominal. Cada bloque suma uno por persona. Los indicadores no aumentan la selección sustantiva de 19 variables y no forman parte del CSV principal de 21 columnas.
+La matriz auxiliar nominal contiene folio_encuesta y columnas nombre__codigo, más nombre__sin_respuesta para cada nominal. Cada bloque suma uno por persona. Los indicadores no aumentan la selección sustantiva de 19 variables y no forman parte del CSV principal de 20 columnas.

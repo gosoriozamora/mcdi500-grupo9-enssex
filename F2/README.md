@@ -18,7 +18,7 @@ El notebook se ejecuta desde F2/notebooks. No necesita variables de una sesión 
 
 - 8,579 personas con p81=1 y p83=1.
 - 883 celdas NS/NR recodificadas; 0 imputaciones y 0 filas eliminadas por faltantes o extremos.
-- Conjunto principal: 21 columnas; las 19 originales preparadas, diferencia de edad calculada y duración reservada sin valores.
+- Conjunto principal: 20 columnas; las 19 originales preparadas y la diferencia de edad calculada.
 - Matriz nominal auxiliar: 65 columnas, incluido el folio.
 - 130 invariantes, 21 casos controlados y relectura completa de ambos CSV verificados.
 
@@ -38,4 +38,4 @@ Los CSV `enssex_convivientes_F2.csv` y `enssex_convivientes_F2_nominales.csv` se
 
 ## Límites
 
-La duración de convivencia no se calcula: las fuentes consultadas no definen el evento que representa `fecha`. Sus ausencias son técnicas y no deben mezclarse con no respuestas de la encuesta. Se conservan los extremos estadísticos con su diagnóstico; no se declaran errores sin respaldo.
+La duración de convivencia no se calcula: las fuentes consultadas no definen el evento que representa `fecha`. La columna vacía anios_convivencia_aprox no se genera ni se exporta. Se conservan los extremos estadísticos con su diagnóstico; no se declaran errores sin respaldo.

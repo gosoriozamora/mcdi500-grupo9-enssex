@@ -2,7 +2,7 @@
 
 ¿Cómo varían la valoración de la vida sexual y el bienestar mental o emocional percibido según el grado de dependencia económica de la pareja entre las personas encuestadas en ENSSEX 2022–2023 que conviven con ella?
 
-Se conservan 8,579 personas seleccionadas con p81=1 y p83=1. El conjunto principal tiene 21 columnas: las 19 originales preparadas, la diferencia de edad calculada y el espacio reservado para los años de convivencia. Este último permanece sin valores por falta de una referencia temporal documentada. No debe incluirse en el cálculo de completitud de respuestas originales.
+Se conservan 8,579 personas seleccionadas con p81=1 y p83=1. El conjunto principal tiene 20 columnas: las 19 originales preparadas y la diferencia de edad calculada. La duración de convivencia no se calcula ni se exporta por falta de una referencia temporal documentada. Se retira la columna vacía de la versión anterior, atendiendo la observación de S1.
 
 No se imputan respuestas ni se eliminan personas por no respuesta o por extremos estadísticos. Los códigos originales y sus motivos de ausencia se pueden recuperar en raw mediante folio_encuesta. Cada análisis posterior debe indicar sus propios casos válidos y no interpretar estas cifras como estimaciones poblacionales.
 
@@ -120,7 +120,6 @@ No se imputan respuestas ni se eliminan personas por no respuesta o por extremos
 | Identificador de la encuesta (folio_encuesta) | string | 0 | 0.000 |
 | Fecha registrada en la base (fecha) | datetime64[us] | 0 | 0.000 |
 | Diferencia de edad con la pareja (diferencia_edad_pareja) | Int64 | 0 | 0.000 |
-| Años aproximados de convivencia (anios_convivencia_aprox) | Int64 | 8579 | 100.000 |
 
 ## Límites y continuidad
 

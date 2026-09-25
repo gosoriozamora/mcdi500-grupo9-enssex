@@ -73,7 +73,8 @@ def ejecutar_pruebas(esquema):
         limpia,_=limpiar_codigos(datos,esquema)
         final=tipificar_categorias(construir_derivadas(limpia),esquema)
         assert final.diferencia_edad_pareja.tolist()==[3,-10]
-        assert final.anios_convivencia_aprox.isna().all()
+        assert 'anios_convivencia_aprox' not in final.columns
+        assert len(final.columns) == 20
         assert final.p93.cat.ordered and final.p93.cat.categories.tolist()==[1,2,3]
         assert not final.region.cat.ordered
         matriz=codificar_nominales(final,esquema)

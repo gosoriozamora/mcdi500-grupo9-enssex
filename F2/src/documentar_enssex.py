@@ -34,10 +34,10 @@ def bitacora_decisiones(base, seleccion, limpia, final, matriz, impacto, disponi
         ('F2-05','F2','Conservar extremos y registrar señales de revisión','La regla IQR detecta rareza, no demuestra error; no hay fuente para corregir las edades','Eliminar o winsorizar por IQR',f'{int(atipicos.senalados_IQR.sum())} señales variable-persona en {len(atipicos)} variables, no personas únicas; 0 recortes'),
         ('F2-06','F2','Tipificar ordinales con orden explícito y nominales sin orden','El tipo de almacenamiento no define la escala de medición','Orden alfabético o tratar códigos nominales como cantidades','5 ordinales con orden de códigos declarado; p93 aumenta hacia menor dependencia; nominales conservan significado'),
         ('F2-07','F2','Calcular p4 menos p91','Diferencia interpretable en años, conservando el signo','Restar códigos de no respuesta o usar valor absoluto',f'{int(final.diferencia_edad_pareja.notna().sum())} diferencias calculadas; rango {final.diferencia_edad_pareja.min()} a {final.diferencia_edad_pareja.max()} años'),
-        ('F2-08','F2','Dejar duración de convivencia sin calcular','fecha tiene formato válido, pero su evento de referencia no está documentado','Asumir fecha de entrevista, usar año actual o 2022 para todas las personas',f'{len(final)} ausencias técnicas en anios_convivencia_aprox; no son no respuestas de la encuesta'),
+        ('F2-08','F2','Dejar duración de convivencia sin calcular','fecha tiene formato válido, pero su evento de referencia no está documentado','Asumir fecha de entrevista, usar año actual o 2022 para todas las personas','anios_convivencia_aprox no se genera ni se exporta; se retira la columna vacía observada en S1'),
         ('F2-09','F2','Exportar one-hot en una matriz auxiliar','Dar una representación numérica a las nominales sin inventar distancias','Reemplazar el dataset interpretable por dummies o usar folio como predictor',f'{len(matriz)} filas; {len(matriz.columns)-1} indicadores más folio; 1 indicador explícito de ausencia por variable'),
         ('F2-10','F2','Mantener edades y diferencia en años; no escalar','El alcance actual es descriptivo; no hay algoritmo basado en distancias que necesite escalamiento','Normalizar automáticamente todas las columnas','0 columnas escaladas; códigos ordinales no tratados como mediciones continuas'),
-        ('F2-11','F2','Exportar CSV con esquema y comprobar su relectura','CSV no conserva categorías de pandas; el diccionario declara tipos, orden y ausencias','Entregar solo un CSV sin significado de los códigos',f'{len(final)} filas × {len(final.columns)} columnas; 19 originales preparadas + diferencia calculada + duración reservada'),
+        ('F2-11','F2','Exportar CSV con esquema y comprobar su relectura','CSV no conserva categorías de pandas; el diccionario declara tipos, orden y ausencias','Entregar solo un CSV sin significado de los códigos',f'{len(final)} filas × {len(final.columns)} columnas; 19 originales preparadas + diferencia calculada'),
     ]
     return pd.DataFrame(filas,columns=['id','fase','decision','motivo','alternativa_descartada','impacto'])
 
@@ -54,7 +54,7 @@ def documentar_resultados(carpeta, esquema, resumen, tablas, bitacora, final):
     contenido += 'Las imputaciones se evaluaron solo como escenarios de sensibilidad; ninguna se aplicó. La duración de convivencia queda sin calcular hasta documentar una referencia temporal válida.\n'
     (carpeta/'Bitacora_decisiones_F1_F2.md').write_text(contenido,encoding='utf-8')
     texto = '# Resultados de la preparación de ENSSEX\n\n'+esquema['pregunta']+'\n\n'
-    texto += (f"Se conservan {len(final):,} personas seleccionadas con p81=1 y p83=1. El conjunto principal tiene 21 columnas: las 19 originales preparadas, la diferencia de edad calculada y el espacio reservado para los años de convivencia. Este último permanece sin valores por falta de una referencia temporal documentada. No debe incluirse en el cálculo de completitud de respuestas originales.\n\n")
+    texto += (f"Se conservan {len(final):,} personas seleccionadas con p81=1 y p83=1. El conjunto principal tiene {len(final.columns)} columnas: las 19 originales preparadas y la diferencia de edad calculada. La duración de convivencia no se calcula ni se exporta por falta de una referencia temporal documentada. Se retira la columna vacía de la versión anterior, atendiendo la observación de S1.\n\n")
     texto += 'No se imputan respuestas ni se eliminan personas por no respuesta o por extremos estadísticos. Los códigos originales y sus motivos de ausencia se pueden recuperar en raw mediante folio_encuesta. Cada análisis posterior debe indicar sus propios casos válidos y no interpretar estas cifras como estimaciones poblacionales.\n\n'
     for titulo, tabla in tablas.items():
         texto += '## '+titulo+'\n\n'+tabla_markdown(presentar_tabla(tabla, esquema))+'\n\n'
@@ -67,14 +67,14 @@ def documentar_resultados(carpeta, esquema, resumen, tablas, bitacora, final):
                       'descripcion':v['descripcion'],'codigos_validos':'; '.join(f'{k}={val}' for k,val in v['etiquetas'].items()) or v['tipo'],
                       'NS_NR_en_raw':str(v['no_respuesta']),'orden':str(v['categorias']) if v['ordenada'] else 'Sin orden nominal / no aplica',
                       'faltantes':int(final[v['nombre']].isna().sum())})
-    for nombre in ['diferencia_edad_pareja','anios_convivencia_aprox']:
+    for nombre in esquema['derivadas']:
         filas.append({'variable':etiqueta_variable(nombre, esquema),'rol':'derivada','tipo_en_memoria':'Int64','descripcion':esquema['derivadas'][nombre],
                       'codigos_validos':'Enteros con signo' if nombre.startswith('diferencia') else 'Sin calcular',
                       'NS_NR_en_raw':'No aplica','orden':'No aplica','faltantes':int(final[nombre].isna().sum())})
     dic = '# Diccionario del conjunto procesado de F2\n\n'
-    dic += '19 columnas originales preparadas y dos columnas derivadas, una calculada y otra reservada sin valores. CSV: separador punto y coma, UTF-8 con BOM, sin índice, fecha ISO AAAA-MM-DD, códigos enteros y campos vacíos para ausencias. El folio se lee como texto. Para reconstruir categorías y su orden se utiliza esquema_variables_F2.json.\n\n'
+    dic += '19 columnas originales preparadas y una derivada calculada: diferencia de edad. La duración de convivencia no se exporta por falta de una referencia temporal validada. CSV: separador punto y coma, UTF-8 con BOM, sin índice, fecha ISO AAAA-MM-DD, códigos enteros y campos vacíos para ausencias. El folio se lee como texto. Para reconstruir categorías y su orden se utiliza esquema_variables_F2.json.\n\n'
     dic += tabla_markdown(pd.DataFrame(filas))+'\n\n'
-    dic += 'La matriz auxiliar nominal contiene folio_encuesta y columnas nombre__codigo, más nombre__sin_respuesta para cada nominal. Cada bloque suma uno por persona. Los indicadores no aumentan la selección sustantiva de 19 variables y no forman parte del CSV principal de 21 columnas.\n'
+    dic += 'La matriz auxiliar nominal contiene folio_encuesta y columnas nombre__codigo, más nombre__sin_respuesta para cada nominal. Cada bloque suma uno por persona. Los indicadores no aumentan la selección sustantiva de 19 variables y no forman parte del CSV principal de 20 columnas.\n'
     (carpeta/'Diccionario_procesado_F2.md').write_text(dic,encoding='utf-8')
     (carpeta/'Seleccion_y_justificacion_variables_F2.md').write_text('# Selección de variables de ENSSEX\n\n'+documentar_seleccion(esquema),encoding='utf-8')
     readme = '''# Fase 2 · Limpieza y transformación de ENSSEX
@@ -97,7 +97,7 @@ El notebook se ejecuta desde F2/notebooks. No necesita variables de una sesión 
 
 '''
     readme += f"- {len(final):,} personas con p81=1 y p83=1.\n- {resumen['limpieza']['NS_NR_recodificados']} celdas NS/NR recodificadas; 0 imputaciones y 0 filas eliminadas por faltantes o extremos.\n"
-    readme += f"- Conjunto principal: {len(final.columns)} columnas; las 19 originales preparadas, diferencia de edad calculada y duración reservada sin valores.\n"
+    readme += f"- Conjunto principal: {len(final.columns)} columnas; las 19 originales preparadas y la diferencia de edad calculada.\n"
     readme += f"- Matriz nominal auxiliar: {resumen['exportados']['nominales']['columnas']} columnas, incluido el folio.\n"
     readme += f"- {resumen['validaciones']['invariantes']} invariantes, {resumen['validaciones']['casos_controlados']} casos controlados y relectura completa de ambos CSV verificados.\n\n"
     readme += '''Los CSV `enssex_convivientes_F2.csv` y `enssex_convivientes_F2_nominales.csv` se generan en `F2/data/processed`, se incluyen en el repositorio para facilitar su revisión y pueden reconstruirse ejecutando este notebook. La entrada compartida está en `data/raw`; los módulos propios y las pruebas de F2 están en `F2/src` y `F2/tests`.
@@ -116,7 +116,7 @@ El notebook se ejecuta desde F2/notebooks. No necesita variables de una sesión 
 
 ## Límites
 
-La duración de convivencia no se calcula: las fuentes consultadas no definen el evento que representa `fecha`. Sus ausencias son técnicas y no deben mezclarse con no respuestas de la encuesta. Se conservan los extremos estadísticos con su diagnóstico; no se declaran errores sin respaldo.
+La duración de convivencia no se calcula: las fuentes consultadas no definen el evento que representa `fecha`. La columna vacía anios_convivencia_aprox no se genera ni se exporta. Se conservan los extremos estadísticos con su diagnóstico; no se declaran errores sin respaldo.
 '''
     (carpeta.parent/'README.md').write_text(readme,encoding='utf-8')
 
@@ -153,7 +153,7 @@ Las tablas indican la pregunta asociada, con ajustes menores de redacción ya do
 
 En F2 comprobamos la disponibilidad y calidad de estas columnas. En F3 podremos comparar cada valoración entre los grupos de dependencia, describir la composición de esos grupos y evaluar análisis por características personales o de la relación, siempre que existan suficientes respuestas válidas. Conservar una columna no la convierte automáticamente en una causa, un predictor o una variable de ajuste obligatoria.
 
-La edad de la persona encuestada (p4) y la edad de su pareja (p91) permiten calcular la diferencia de edad. El año de inicio de convivencia (p84) y la fecha registrada (fecha) permitirían calcular una duración aproximada solo si se confirma una referencia temporal válida. Por eso conservamos esos datos, pero los años de convivencia permanecen sin calcular. Estas dos derivadas se explican aparte de las 19 columnas originales.
+La edad de la persona encuestada (p4) y la edad de su pareja (p91) permiten calcular la diferencia de edad. El año de inicio de convivencia (p84) y la fecha registrada (fecha) permitirían calcular una duración aproximada solo si se confirma una referencia temporal válida. Por eso conservamos esos datos, pero los años de convivencia permanecen sin calcular. Solo la diferencia de edad se exporta como derivada, aparte de las 19 columnas originales.
 
 '''
     return texto
