@@ -11,6 +11,7 @@ import numpy as np
 import pandas as pd
 
 
+
 def sha256_archivo(ruta):
     """Calcula la identidad del archivo sin cargarlo entero en memoria."""
     digest = hashlib.sha256()
@@ -21,11 +22,18 @@ def sha256_archivo(ruta):
 
 
 
+def sha256_codigo(ruta):
+    """Calcula SHA-256 del código con finales de línea normalizados a LF."""
+    contenido = Path(ruta).read_bytes()
+    contenido = contenido.replace(b'\r\n', b'\n').replace(b'\r', b'\n')
+    return hashlib.sha256(contenido).hexdigest()
+
+
+
 def huella_tabla(tabla):
     digest = hashlib.sha256(pd.util.hash_pandas_object(tabla, index=True).values.tobytes())
     digest.update(str(list(zip(tabla.columns, tabla.dtypes.astype(str)))).encode())
     return digest.hexdigest()
-
 
 
 def verificar_entorno(raiz):
