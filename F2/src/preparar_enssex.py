@@ -277,12 +277,11 @@ def comparar_imputaciones(limpia, columnas, grupo='p93'):
 
 
 def construir_derivadas(limpia):
-    """Calcula diferencia de edad; reserva duración sin inventar una referencia."""
+    """Calcula diferencia de edad; no exporta duración sin referencia validada."""
     resultado = limpia.copy(deep=True)
     resultado['diferencia_edad_pareja'] = (resultado['p4'] - resultado['p91']).astype('Int64')
     # Las fuentes no definen qué evento representa fecha. No usar el año actual,
     # ni asumir que todas las entrevistas corresponden al año nominal del estudio.
-    resultado['anios_convivencia_aprox'] = pd.Series(pd.NA, index=resultado.index, dtype='Int64')
     return resultado
 
 
@@ -318,9 +317,9 @@ def validar_resultado(original, final, matriz, esquema):
             raise AssertionError(nombre)
         filas.append({'comprobacion': nombre, 'resultado': 'OK'})
     originales = [v['nombre'] for v in esquema['variables']]
-    esperadas = originales + ['diferencia_edad_pareja', 'anios_convivencia_aprox']
+    esperadas = originales + ['diferencia_edad_pareja']
     exigir('Se conservan todas las personas seleccionadas y su orden', final.index.equals(original.index))
-    exigir('19 columnas originales y 2 espacios para derivadas', final.columns.tolist() == esperadas)
+    exigir('19 columnas originales y una derivada calculada', final.columns.tolist() == esperadas)
     exigir('Folios presentes y únicos', final['folio_encuesta'].notna().all() and final['folio_encuesta'].is_unique)
     exigir('Filtros de pareja y convivencia', final['p81'].eq(1).all() and final['p83'].eq(1).all())
     for v in esquema['variables']:
@@ -344,7 +343,7 @@ def validar_resultado(original, final, matriz, esquema):
                    fechas_antes.dt.strftime('%Y-%m-%d').equals(final[nombre].dt.strftime('%Y-%m-%d')))
     exigir('Diferencia de edad calculada correctamente',
            final['diferencia_edad_pareja'].equals((final['p4']-final['p91']).astype('Int64')))
-    exigir('Duración no calculada sin referencia validada', final['anios_convivencia_aprox'].isna().all())
+    exigir('Duración sin referencia validada excluida del producto', 'anios_convivencia_aprox' not in final.columns)
     exigir('Matriz nominal conserva folios y filas', matriz['folio_encuesta'].equals(final['folio_encuesta']))
     for v in esquema['variables']:
         if v['tipo'] != 'nominal' or v['rol'] == 'auxiliar':
