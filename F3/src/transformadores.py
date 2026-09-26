@@ -5,7 +5,7 @@ El entorno de ejecución debe incluir F2/src en su ruta de importación.
 from copy import deepcopy
 
 import pandas as pd
-from preparar_enssex import limpiar_codigos, validar_columnas
+from preparar_enssex import limpiar_codigos, validar_columnas, tipificar_categorias
 
 
 class Transformador:
@@ -72,3 +72,31 @@ class LimpiadorCodigos(Transformador):
         if self._resumen is None:
             raise RuntimeError("Todavía no hay una limpieza completada.")
         return self._resumen.copy(deep=True)
+
+
+class TipificadorCategorias(Transformador):
+    """Asigna las categorías y su orden según el esquema de F2."""
+
+    def __init__(self, esquema):
+        self._esquema = deepcopy(esquema)
+        columnas = [
+            variable["nombre"]
+            for variable in self._esquema["variables"]
+        ]
+        super().__init__(columnas)
+
+    def _aplicar(self, tabla):
+        # Comprobamos los valores antes de convertirlos a categorías.
+        for variable in self._esquema["variables"]:
+            categorias = variable["categorias"]
+
+            if categorias:
+                nombre = variable["nombre"]
+                presentes = tabla[nombre].dropna()
+
+                if not presentes.isin(categorias).all():
+                    raise ValueError(
+                        f"Categoría no documentada en {nombre}."
+                    )
+
+        return tipificar_categorias(tabla, self._esquema)
