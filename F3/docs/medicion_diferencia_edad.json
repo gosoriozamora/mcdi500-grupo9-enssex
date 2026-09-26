@@ -1,0 +1,265 @@
+{
+  "filas_fuente": 8579,
+  "tamanos": [
+    1000,
+    5000,
+    20000,
+    50000
+  ],
+  "semilla": 42,
+  "muestreo": "Con reemplazo, solo p4 y p91; índice reiniciado en cada muestra.",
+  "repeticiones": 5,
+  "ejecuciones_por_repeticion": 5,
+  "ejecuciones_memoria_por_alternativa_y_tamano": 1,
+  "mediciones": [
+    {
+      "filas": 1000,
+      "equivalencia": "OK",
+      "entrada_intacta": true,
+      "diferencias_ausentes": 0,
+      "orden_temporal": [
+        [
+          "bucle",
+          "columnas"
+        ],
+        [
+          "columnas",
+          "bucle"
+        ],
+        [
+          "bucle",
+          "columnas"
+        ],
+        [
+          "columnas",
+          "bucle"
+        ],
+        [
+          "bucle",
+          "columnas"
+        ]
+      ],
+      "resultados": {
+        "bucle": {
+          "segundos_por_ejecucion": [
+            0.0004100000020116568,
+            0.00036120000295341014,
+            0.0004555199993774295,
+            0.00036881999112665654,
+            0.00039886001031845807
+          ],
+          "menor_segundos": 0.00036120000295341014,
+          "maximo_rastreado_bytes": 52152,
+          "serie_devuelta_bytes": 9132
+        },
+        "columnas": {
+          "segundos_por_ejecucion": [
+            0.00014303999487310647,
+            0.00029084000270813705,
+            0.00014088000170886517,
+            0.00016844000201672317,
+            0.00014398000203073025
+          ],
+          "menor_segundos": 0.00014088000170886517,
+          "maximo_rastreado_bytes": 17256,
+          "serie_devuelta_bytes": 9132
+        }
+      }
+    },
+    {
+      "filas": 5000,
+      "equivalencia": "OK",
+      "entrada_intacta": true,
+      "diferencias_ausentes": 0,
+      "orden_temporal": [
+        [
+          "bucle",
+          "columnas"
+        ],
+        [
+          "columnas",
+          "bucle"
+        ],
+        [
+          "bucle",
+          "columnas"
+        ],
+        [
+          "columnas",
+          "bucle"
+        ],
+        [
+          "bucle",
+          "columnas"
+        ]
+      ],
+      "resultados": {
+        "bucle": {
+          "segundos_por_ejecucion": [
+            0.0014123399974778294,
+            0.0014461599988862873,
+            0.0014318199828267097,
+            0.001489460002630949,
+            0.0016804999904707074
+          ],
+          "menor_segundos": 0.0014123399974778294,
+          "maximo_rastreado_bytes": 249176,
+          "serie_devuelta_bytes": 45132
+        },
+        "columnas": {
+          "segundos_por_ejecucion": [
+            0.00015860002022236586,
+            0.0001367799937725067,
+            0.00014380000066012145,
+            0.00016084001399576663,
+            0.000151900015771389
+          ],
+          "menor_segundos": 0.0001367799937725067,
+          "maximo_rastreado_bytes": 53256,
+          "serie_devuelta_bytes": 45132
+        }
+      }
+    },
+    {
+      "filas": 20000,
+      "equivalencia": "OK",
+      "entrada_intacta": true,
+      "diferencias_ausentes": 0,
+      "orden_temporal": [
+        [
+          "bucle",
+          "columnas"
+        ],
+        [
+          "columnas",
+          "bucle"
+        ],
+        [
+          "bucle",
+          "columnas"
+        ],
+        [
+          "columnas",
+          "bucle"
+        ],
+        [
+          "bucle",
+          "columnas"
+        ]
+      ],
+      "resultados": {
+        "bucle": {
+          "segundos_por_ejecucion": [
+            0.005819479981437325,
+            0.005521959997713566,
+            0.005333400005474687,
+            0.005576739995740354,
+            0.005412039998918772
+          ],
+          "menor_segundos": 0.005333400005474687,
+          "maximo_rastreado_bytes": 995312,
+          "serie_devuelta_bytes": 180132
+        },
+        "columnas": {
+          "segundos_por_ejecucion": [
+            0.00018408000469207763,
+            0.00015257999766618013,
+            0.00016036001034080982,
+            0.00015816001687198877,
+            0.00016220000106841325
+          ],
+          "menor_segundos": 0.00015257999766618013,
+          "maximo_rastreado_bytes": 188256,
+          "serie_devuelta_bytes": 180132
+        }
+      }
+    },
+    {
+      "filas": 50000,
+      "equivalencia": "OK",
+      "entrada_intacta": true,
+      "diferencias_ausentes": 0,
+      "orden_temporal": [
+        [
+          "bucle",
+          "columnas"
+        ],
+        [
+          "columnas",
+          "bucle"
+        ],
+        [
+          "bucle",
+          "columnas"
+        ],
+        [
+          "columnas",
+          "bucle"
+        ],
+        [
+          "bucle",
+          "columnas"
+        ]
+      ],
+      "resultados": {
+        "bucle": {
+          "segundos_por_ejecucion": [
+            0.014737880020402373,
+            0.014056940004229546,
+            0.013810080010443926,
+            0.01416076000314206,
+            0.013777119992300867
+          ],
+          "menor_segundos": 0.013777119992300867,
+          "maximo_rastreado_bytes": 2496672,
+          "serie_devuelta_bytes": 450132
+        },
+        "columnas": {
+          "segundos_por_ejecucion": [
+            0.00019976000767201184,
+            0.00021192000713199377,
+            0.00020828000269830228,
+            0.00017444000113755464,
+            0.00019058000762015582
+          ],
+          "menor_segundos": 0.00017444000113755464,
+          "maximo_rastreado_bytes": 458256,
+          "serie_devuelta_bytes": 450132
+        }
+      }
+    }
+  ],
+  "fecha_utc": "2026-09-26T22:31:51.881727+00:00",
+  "equivalencia_f2": "OK",
+  "archivo_original_intacto": true,
+  "archivo_fuente": "20241205_enssex_desde_sav.csv",
+  "sha256_csv": "75393ce321f5151fbfd7846034158aabcbe448e82c76fa7c919eeace194ef0d8",
+  "esquema_sha256_normalizado_lf": "ba07debf0ff880bac775c64584a2fcb1c172ff7f88a13acea402df951fd3d2ad",
+  "huellas_codigo_normalizadas_lf": {
+    "F2/src/preparar_enssex.py": "7bd7bbd4818247cb0112c2f4bad39a539eadfd267475a0733e226a1252a33ffc",
+    "F3/src/diferencia_edad.py": "4c44c2baf8a1eed9d605c95cabf69055dd172820d7b8e7824f23e638302f6682",
+    "F3/src/medicion_algoritmos.py": "8d77511db624d7a1dec4a35dcf3cf82ebb29875a2863d0af8280cdb12d7858d5",
+    "F3/benchmarks/medir_diferencia_edad.py": "fcf86e6a9157633035fb586a304f21f897e4ff923aa912dc8e172409371d9749"
+  },
+  "entorno": {
+    "python": "3.13.15",
+    "sistema": "Windows",
+    "version_sistema": "11",
+    "arquitectura": "AMD64",
+    "procesador": "Intel64 Family 6 Model 197 Stepping 2, GenuineIntel",
+    "pandas": "3.0.5",
+    "numpy": "2.5.3",
+    "matplotlib": "3.11.2"
+  },
+  "condiciones": {
+    "tiempo": "timeit.Timer; cada bloque dividido por ejecuciones; menor repetición.",
+    "incluye": "Validación común, resta y construcción de la serie; descarte del resultado temporal.",
+    "excluye": "Carga, limpieza, muestreo, igualdad, hash, impresión y escritura de evidencia.",
+    "orden": "Tamaños crecientes; alternativas alternadas en cada repetición.",
+    "gc": "gc.collect antes de cada bloque; timeit desactiva GC durante el cronometraje.",
+    "calentamiento": "Ambas funciones ejecutadas para comprobar cada muestra antes de medir.",
+    "memoria": "Una ejecución separada; máximo de asignaciones rastreadas, no RSS total.",
+    "serie": "memory_usage(index=True, deep=True); incluye índice compartido, no temporales.",
+    "limitacion": "Entorno y procesos de fondo influyen; los tiempos no prueban por sí solos Big O."
+  }
+}
