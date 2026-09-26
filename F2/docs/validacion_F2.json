@@ -169,5 +169,6 @@
     "F2/src/documentar_enssex.py": "6ea06f243ee0cb8cb8fe81ec766090cb832da3bd72cbe320ad6f6d682d4484ba",
     "F2/tests/validar_preparacion_enssex.py": "b68a811c7cc3b4a702efe72ec2a34f4692e47f56c8836fb52c2c15e11d592af8"
   },
+  "metodo_huella_esquema": "SHA-256 con finales de línea normalizados a LF",
   "esquema_sha256": "ba07debf0ff880bac775c64584a2fcb1c172ff7f88a13acea402df951fd3d2ad"
 }
