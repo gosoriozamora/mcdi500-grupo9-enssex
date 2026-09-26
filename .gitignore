@@ -28,3 +28,6 @@ Thumbs.db
 # Resultados de F2 incluidos en la entrega
 !F2/data/processed/enssex_convivientes_F2.csv
 !F2/data/processed/enssex_convivientes_F2_nominales.csv
+
+# Mediciones locales de revisión; evidencia seleccionada en F3/docs
+F3/benchmarks/resultados_locales/
