@@ -31,3 +31,6 @@ Thumbs.db
 
 # Mediciones locales de revisión; evidencia seleccionada en F3/docs
 F3/benchmarks/resultados_locales/
+
+# Manifiesto local que acompaña los CSV generados por F3
+F3/data/processed/exportacion_F3.json
