@@ -73,6 +73,7 @@ La prueba real compara valores y resúmenes de los 14 escenarios con F2 para
 originales; por eso la restricción adicional reproduce los resultados de F2.
 Las pruebas no generan ni reemplazan archivos de datos.
 
-Este componente todavía no incorpora el pipeline completo, mediciones ni notebook
-F3. La referencia de comportamiento es `F2/src/preparar_enssex.py`, función
+Este documento describe el componente de faltantes. Su integración en el
+[pipeline](Pipeline_ENSSEX.md), las mediciones y el notebook se documentan en el
+[README de F3](../README.md). La referencia de comportamiento es `F2/src/preparar_enssex.py`, función
 `comparar_imputaciones`, junto con `F2/docs/esquema_variables_F2.json`.

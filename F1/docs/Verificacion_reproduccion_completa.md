@@ -1,5 +1,7 @@
 # Verificación integral de reproducción
 
+> **Registro histórico.** Esta comprobación corresponde a la revisión `d9de7f0`, anterior a la reorganización y al retiro de la columna de duración vacía. Las 21 columnas y la ruta `F1/src/convertir_enssex.py` mencionadas abajo describen esa versión y se conservan como evidencia histórica. El producto principal vigente tiene **20 columnas** y el conversor está en `src/convertir_enssex.py`. Para ejecutar la versión actual, seguir el [README principal](../../README.md) y las [instrucciones de F3](../../F3/README.md). La [reproducción de F3 del 27/09/2026](../../F3/docs/Verificacion_reproduccion_F3.md) documenta una comprobación independiente sobre `9294ac4`.
+
 Se verificó la revisión `d9de7f097fd3b0c1d975ed5d855f629c48c6a055` desde una copia nueva de GitHub, con un entorno virtual nuevo de Python 3.13.15 en Windows de 64 bits. Las 121 dependencias coincidieron con las versiones fijadas y `pip check` confirmó que no existen conflictos. Se descargó el SAV desde la fuente oficial y se generó el CSV siguiendo las instrucciones del proyecto. No se reutilizaron el entorno virtual ni los datos originales de la copia de desarrollo.
 
 F1 y F2 se ejecutaron desde kernels nuevos e independientes, con 10 y 13 celdas de código respectivamente, sin errores. Se superaron 130 invariantes y 21 casos controlados. La base original de 20.392 registros y 1.126 columnas permaneció intacta.

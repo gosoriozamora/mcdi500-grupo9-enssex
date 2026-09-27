@@ -102,7 +102,10 @@ de productos e intermedios, incluidos índices, tipos, categorías y orden. Tamb
 comprueba que la base recibida permanezca intacta.
 
 Conservar tablas intermedias y realizar copias facilita la revisión pero consume
-memoria: no se afirma una mejora de rendimiento sin medirla. Siguen pendientes las
-mediciones, la exportación propia de F3, el notebook y la reproducción desde un
-entorno limpio. Esta integración acredita el recorrido en memoria, no la entrega
-completa de Sumativa 2.
+memoria: no se afirma una mejora del pipeline completo a partir de mediciones de
+operaciones aisladas. Después de este componente se integraron la
+[exportación](Exportacion_F3.md), las [mediciones de lectura](Medicion_lectura_SAV.md),
+la [comparación algorítmica](Complejidad_diferencia_edad.md) y el
+[notebook F3](../notebooks/F3_Nucleo_algoritmico_ENSSEX.ipynb).
+La [reproducción desde copia y entorno nuevos](Verificacion_reproduccion_F3.md)
+se comprobó el 27/09/2026. El [README de F3](../README.md) reúne las instrucciones actuales.

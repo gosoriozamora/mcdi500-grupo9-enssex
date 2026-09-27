@@ -2,7 +2,7 @@
 
 Esta guía permite preparar el entorno del proyecto ENSSEX en Windows de 64 bits y ejecutar los notebooks disponibles. Los comandos se escriben en **Git Bash**, salvo los bloques identificados como Python, que corresponden a celdas del notebook.
 
-La configuración de referencia se comprobó el 20 de septiembre de 2026. La instalación en un equipo nuevo necesita conexión para descargar Git, Python, el repositorio y las dependencias.
+La configuración de referencia se comprobó el 20 de septiembre de 2026. Para la ejecución integrada de F3, consultar también el [README de F3](../../F3/README.md), que describe sus entradas, productos y comprobaciones. La instalación en un equipo nuevo necesita conexión para descargar Git, Python, el repositorio y las dependencias.
 
 ## 1. Herramientas y versiones de referencia
 
@@ -140,7 +140,7 @@ El notebook comprueba que el intérprete corresponda a la `.venv` del proyecto y
 
 La salida esperada es una base de 20.392 filas y 1.126 columnas, con las 19 variables presentes y 121 dependencias coincidentes. Se muestran dimensiones, tipos de lectura, identificadores, vacíos y no respuesta codificada. F1 no filtra convivientes ni realiza limpieza, imputación o recodificación. Las comprobaciones finales verifican que el CSV y la tabla en memoria permanezcan intactos.
 
-La selección comprende 19 columnas originales: 3 variables centrales, 12 complementarias y 4 auxiliares. Incluye género (`p3`), año de inicio de convivencia (`p84`), edad de la pareja (`p91`) y `fecha` como referencia temporal por validar. Los años aproximados de convivencia y la diferencia de edad se calcularán en F2 cuando sus entradas estén validadas. El diagnóstico de F1 informa dos fechas de 1970 en la base completa; no corrige ni elimina esos registros.
+La selección comprende 19 columnas originales: 3 variables centrales, 12 complementarias y 4 auxiliares. Incluye género (`p3`), año de inicio de convivencia (`p84`), edad de la pareja (`p91`) y `fecha` como referencia temporal por validar. F2 calcula la diferencia de edad. La duración de convivencia no se calcula ni se exporta, porque la referencia temporal no está validada. El diagnóstico de F1 informa dos fechas de 1970 en la base completa; no corrige ni elimina esos registros.
 
 La evidencia de ejecución queda en las salidas del notebook. F1 no vuelve a escribir el informe del validador preliminar ni genera un dataset procesado. `Validacion_preliminar_ENSSEX.ipynb` se conserva como antecedente y no es un paso previo obligatorio para ejecutar F1.
 
@@ -152,6 +152,7 @@ Las rutas de lectura y escritura se expresan desde la carpeta de ejecución del 
 |---|---|---|---|
 | `F1/notebooks` | `../../data/raw/20241205_enssex_desde_sav.csv` | No exporta datos procesados | `../docs` |
 | `F2/notebooks` | `../../data/raw/20241205_enssex_desde_sav.csv` | `../../F2/data/processed` | `../docs` |
+| `F3/notebooks` | CSV convertido y SAV en `data/raw`, localizados desde la raíz | `F3/data/processed`, desde la raíz | `F3/docs`, desde la raíz |
 
 Ejemplo de lectura desde un notebook de F1:
 
@@ -171,7 +172,7 @@ Para F2 se utiliza la ruta de su fila en la tabla. F1 reconocerá los datos; el 
 
 Los notebooks `F1/notebooks/F1_Definicion.ipynb` y `F2/notebooks/F2_limpieza_transformacion_ENSSEX.ipynb` están desarrollados y conservan sus salidas. Ejecutar F1 y después F2, cada uno con **Kernel → Restart Kernel and Run All Cells** y el kernel **Python (grupo9-mcdi500)**. F2 no depende de variables en memoria de F1.
 
-F2 importa sus funciones desde `F2/src` y sus casos controlados desde `F2/tests`, verifica las dependencias y contrasta su selección con F1. Procesa 8.579 personas y genera dos archivos en `F2/data/processed`: el principal de 21 columnas y una matriz nominal auxiliar de 65 columnas. La diferencia de edad está calculada; los años de convivencia se conservan sin valores hasta validar la referencia temporal. No hay imputaciones ni eliminación de filas por faltantes o extremos.
+F2 importa sus funciones desde `F2/src` y sus casos controlados desde `F2/tests`, verifica las dependencias y contrasta su selección con F1. Procesa 8.579 personas y genera dos archivos en `F2/data/processed`: el principal de 20 columnas y una matriz nominal auxiliar de 65 columnas. La diferencia de edad está calculada; no se incluye una columna vacía de duración de convivencia. No hay imputaciones ni eliminación de filas por faltantes o extremos.
 
 Cada ejecución regenera la bitácora, el resumen para el informe, el diccionario y `validacion_F2.json` en `F2/docs`, además de actualizar `F2/README.md`. Al terminar, la tabla de cierre debe mostrar siete resultados OK. Estos resultados comprueban el procesamiento y no declaran resuelta la limitación temporal.
 
@@ -181,7 +182,7 @@ El código incluye casos normales, límites y excepciones, y verifica la relectu
 
 Se establece **`SEMILLA = 42`** como convención del proyecto. F1 declara esta constante, pero su lectura y reconocimiento inicial son deterministas y no utilizan operaciones aleatorias. F2 y la validación preliminar tampoco requieren aleatoriedad.
 
-Si posteriormente se incorpora muestreo u otro procedimiento aleatorio, se declarará la semilla en la celda de configuración y se utilizará explícitamente en la operación. Para un generador de NumPy:
+F3 utiliza la semilla 42 en las muestras con reemplazo de las mediciones algorítmicas. Estas muestras evalúan rendimiento y no amplían la población del estudio. La preparación principal mantiene las reglas deterministas de F2. Como pauta general para un generador de NumPy:
 
 ```python
 import numpy as np
@@ -190,7 +191,7 @@ SEMILLA = 42
 rng = np.random.default_rng(SEMILLA)
 ```
 
-Las operaciones posteriores deberán usar ese generador; cuando una función reciba `random_state`, se le entregará `SEMILLA`. Se documentará para qué se usa y se conservarán las versiones de las bibliotecas. Declarar una constante sin conectarla a las operaciones aleatorias no asegura su reproducción. Este bloque es una pauta para el desarrollo posterior, no una transformación ya incorporada al notebook.
+Las operaciones posteriores deberán usar ese generador; cuando una función reciba `random_state`, se le entregará `SEMILLA`. Se documentará para qué se usa y se conservarán las versiones de las bibliotecas. Declarar una constante sin conectarla a las operaciones aleatorias no asegura su reproducción. Este bloque ilustra el uso del generador; la implementación concreta de las muestras de rendimiento está en `F3/src/medicion_algoritmos.py` y en el notebook F3.
 
 ## 10. Retomar el trabajo y cerrar la sesión
 
@@ -221,7 +222,7 @@ En el entorno local de desarrollo se verificaron el 20/09/2026:
 
 El [registro de verificación del segundo entorno](verificacion_entorno_karla.md) documenta las comprobaciones de instalación realizadas.
 
-La [verificación integral desde una copia nueva](Verificacion_reproduccion_completa.md) registra la revisión de Git, la instalación independiente, la ejecución de ambos notebooks y la coincidencia de los CSV publicados y regenerados. Si se incorporan nuevas dependencias, se revisará su necesidad, se actualizará `requirements.txt` desde el entorno del proyecto y se registrará el cambio; no se regenerará desde el Python general del computador.
+La [verificación integral desde una copia nueva](Verificacion_reproduccion_completa.md) registra la revisión de Git, la instalación independiente, la ejecución de los notebooks F1 y F2 y la coincidencia de los CSV publicados y regenerados. Si se incorporan nuevas dependencias, se revisará su necesidad, se actualizará `requirements.txt` desde el entorno del proyecto y se registrará el cambio; no se regenerará desde el Python general del computador.
 
 ## Fuentes técnicas
 
@@ -232,3 +233,5 @@ La [verificación integral desde una copia nueva](Verificacion_reproduccion_comp
 - [Generadores aleatorios de NumPy](https://numpy.org/doc/stable/reference/random/generator.html).
 
 Las versiones y rutas del proyecto proceden de la comprobación local; los enlaces técnicos respaldan los procedimientos generales.
+
+La [reproducción integral de F3](../../F3/docs/Verificacion_reproduccion_F3.md), comprobada el 27/09/2026 sobre `9294ac4`, registra un clon y un entorno virtual nuevos, descarga del SAV y ejecución completa del notebook. El [README de F3](../../F3/README.md) describe sus entradas, pruebas y productos.

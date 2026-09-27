@@ -1,0 +1,105 @@
+{
+  "estado": "OK",
+  "inicio_utc": "2026-09-27T15:24:53.655451+00:00",
+  "fin_utc": "2026-09-27T15:25:31.844497+00:00",
+  "commit_clonado": "9294ac4d2895c7aaa9b23786eb23723c992818ff",
+  "python": "3.13.15",
+  "entorno_nuevo_sin_paquetes_globales": true,
+  "dependencias_verificadas": 121,
+  "pip_check": "No broken requirements found.",
+  "descarga_nueva_del_SAV": true,
+  "source_sha256": "0f4218b9553600dfd44e6b1f78d376b040a0e6f0d854453312c59a6497ec58ea",
+  "csv_sha256": "75393ce321f5151fbfd7846034158aabcbe448e82c76fa7c919eeace194ef0d8",
+  "huellas_coinciden_con_publicadas": true,
+  "celdas_codigo": 16,
+  "errores": 0,
+  "scripts_pruebas": 7,
+  "comprobaciones_producto": 130,
+  "originales_y_F2_intactos": true,
+  "notebook_publicado_intacto": true,
+  "stderr": [],
+  "entorno_kernel": {
+    "python": "3.13.15",
+    "sistema": "Windows",
+    "arquitectura": "AMD64",
+    "pandas": "3.0.5",
+    "numpy": "2.5.3",
+    "matplotlib": "3.11.2",
+    "pyreadstat": "1.3.6",
+    "ipykernel": "7.3.0",
+    "jupyterlab": "4.6.3"
+  },
+  "metodo_ejecucion": "nbclient; kernel nuevo del entorno virtual del clon; salidas previas eliminadas en la copia de ejecución",
+  "productos": {
+    "principal": {
+      "filas": 8579,
+      "columnas": 20,
+      "sha256": "9af8b7f5f95289fdf1d632d60b384b5820013c659e184245f535ce11918a21fc"
+    },
+    "nominales": {
+      "filas": 8579,
+      "columnas": 65,
+      "sha256": "8896ffa62fe569aed2d91f59560e88fff073ed2379790885bbdcf25be9fcb5f0"
+    }
+  },
+  "pruebas": [
+    {
+      "script": "validar_transformadores.py",
+      "resultado": "OK",
+      "codigo_salida": 0
+    },
+    {
+      "script": "validar_faltantes.py",
+      "resultado": "OK",
+      "codigo_salida": 0
+    },
+    {
+      "script": "validar_pipeline.py",
+      "resultado": "OK",
+      "codigo_salida": 0
+    },
+    {
+      "script": "validar_exportacion.py",
+      "resultado": "OK",
+      "codigo_salida": 0
+    },
+    {
+      "script": "validar_medicion_lectura.py",
+      "resultado": "OK",
+      "codigo_salida": 0
+    },
+    {
+      "script": "validar_diferencia_edad.py",
+      "resultado": "OK",
+      "codigo_salida": 0
+    },
+    {
+      "script": "validar_medicion_algoritmos.py",
+      "resultado": "OK",
+      "codigo_salida": 0
+    }
+  ],
+  "schema_sha256_lf": "ba07debf0ff880bac775c64584a2fcb1c172ff7f88a13acea402df951fd3d2ad",
+  "codigo_sha256_lf": {
+    "F2\\src\\documentar_enssex.py": "6ea06f243ee0cb8cb8fe81ec766090cb832da3bd72cbe320ad6f6d682d4484ba",
+    "F2\\src\\preparar_enssex.py": "7bd7bbd4818247cb0112c2f4bad39a539eadfd267475a0733e226a1252a33ffc",
+    "F2\\src\\presentacion_enssex.py": "d9028a912e0cfa32c1bc510d81d3f41a22ae0a5b3d3381bd91b5df71708e02a0",
+    "F2\\src\\visualizar_enssex.py": "a5ec693e67e478be84e46d7f92930fe301e388b4aba746c23a0a22fae2e55c18",
+    "F3\\src\\diferencia_edad.py": "4c44c2baf8a1eed9d605c95cabf69055dd172820d7b8e7824f23e638302f6682",
+    "F3\\src\\exportacion_enssex.py": "f8478e6bdd5342cc22ea5026dc0727c36e71d98197121aba53f6f4c98395f5b7",
+    "F3\\src\\faltantes.py": "8d9a74eb09e020ad1b74cb2029b762a78194f5ec4a6d49f2242b51727eb462d9",
+    "F3\\src\\medicion_algoritmos.py": "8d77511db624d7a1dec4a35dcf3cf82ebb29875a2863d0af8280cdb12d7858d5",
+    "F3\\src\\medicion_lectura.py": "43037b91f3074f127d45415157bbbc3a4405a7032eb34b2fa0aed6488f527473",
+    "F3\\src\\pipeline_enssex.py": "9d2c8fcee423e11052d121f745ddf7704b5b6c22632788d3b6150f644ac5ea81",
+    "F3\\src\\transformadores.py": "51e6e6219e17ec2ef54ec1b24b7a62f20e30e5235df5445f366ce694bf738bbd",
+    "F3\\tests\\validar_diferencia_edad.py": "6f908fdbafd7db2503fc51c83139870d679bc8fb59dcaff81aa2cab15bcc6777",
+    "F3\\tests\\validar_exportacion.py": "7448402582351fcd03835eb9f0b723b25787431405ee8e7b9f6019bd6e8fc3b8",
+    "F3\\tests\\validar_faltantes.py": "d4086fd158501fd5cf83137e505e08c2beed45b38a4ea265f9417e96dd74628b",
+    "F3\\tests\\validar_medicion_algoritmos.py": "e0536921759bfad95b0f9b6eddd82359828b2a4eda32c363bc40b67c21e90c4e",
+    "F3\\tests\\validar_medicion_lectura.py": "2085806761d5ca5a6178920f0845951182cba7a11fdaddfeabd85e6083d4728a",
+    "F3\\tests\\validar_pipeline.py": "4c4ea8cfa610e4c3d5fad034829e6c40f23818eba4e5e718cfc6b74fa7a4c4a3",
+    "F3\\tests\\validar_transformadores.py": "d6f66edb08044cdf58cd978b6a875d9c0c84e0e8ac5d07a960b47e68beebcd70",
+    "F3\\benchmarks\\medir_diferencia_edad.py": "fcf86e6a9157633035fb586a304f21f897e4ff923aa912dc8e172409371d9749",
+    "F3\\benchmarks\\medir_lectura_sav.py": "6266fb9d9c879a2a4dfd818f41f35b742c1d762f5fa7ada02d66d4423e5bcd39"
+  }
+}
