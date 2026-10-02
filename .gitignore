@@ -37,3 +37,6 @@ F3/data/processed/exportacion_F3.json
 
 # Registros locales de datos interpretables de F4
 F4/data/processed/**/*.json
+
+# CSV locales de F4, incluidos destinos en subcarpetas
+F4/data/processed/**/*.csv
