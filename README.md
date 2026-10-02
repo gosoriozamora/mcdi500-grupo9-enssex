@@ -20,7 +20,7 @@ El alcance es descriptivo y comparativo de la muestra, sin ponderación. Selecci
 | F1 | Problema, objetivos, entorno y reconocimiento de la base | [Notebook F1](F1/notebooks/F1_Definicion.ipynb) |
 | F2 | Exploración, limpieza, transformación y validación | [Notebook F2](F2/notebooks/F2_limpieza_transformacion_ENSSEX.ipynb) y [documentación](F2/README.md) |
 | F3 | Preparación mediante clases, estrategias, equivalencia con F2, eficiencia y exportación verificada | [Notebook F3 ejecutado](F3/notebooks/F3_Nucleo_algoritmico_ENSSEX.ipynb) e [instrucciones de F3](F3/README.md) |
-| F4 | Copia interpretable, denominadores, tablas y tres figuras descriptivas | [Instrucciones de F4](F4/README.md) y [resultados](F4/docs/Resultados_descriptivos.md); notebook integrador pendiente |
+| F4 | Copia interpretable, denominadores, tablas y tres figuras descriptivas | [Notebook integrador F4](F4/notebooks/F4_Integrador_ENSSEX.ipynb), [instrucciones y estado de ejecución](F4/README.md) y [resultados](F4/docs/Resultados_descriptivos.md) |
 
 ```text
 proyecto-enssex/
@@ -70,7 +70,7 @@ El [README de F3](F3/README.md) detalla entradas, ejecución, pruebas, medicione
 
 ## Resultados y decisiones de preparación
 
-La base original contiene 20.392 registros y 1.126 columnas. La selección `p81 = 1` y `p83 = 1` conserva 8.579 personas. Se recodifican 883 códigos de no respuesta como ausencias, según el esquema. No se imputan valores ni se eliminan filas por faltantes o extremos estadísticos.
+La base original contiene 20.392 registros y 1.126 columnas. La selección de respuesta Sí en tiene pareja actualmente (`p81 = 1`) y convive actualmente con su pareja (`p83 = 1`) conserva 8.579 personas. Se recodifican 883 códigos de no respuesta como ausencias, según el esquema. No se imputan valores ni se eliminan filas por faltantes o extremos estadísticos.
 
 El producto principal tiene 19 columnas originales preparadas y una diferencia de edad calculada. La matriz auxiliar tiene **65 columnas: el folio y 64 indicadores nominales**. La duración de convivencia no forma parte de los productos: las fuentes no definen el evento representado por `fecha` y no presuponemos una fecha de entrevista.
 
@@ -86,8 +86,8 @@ Trabajamos con ramas por tarea y revisión cruzada mediante pull requests. El [P
 
 Para F1 y F2 se documentó una [reproducción desde copia y entorno nuevos](F1/docs/Verificacion_reproduccion_completa.md), además de la [verificación de F2 por Karla](F2/docs/Verificacion_F2_Karla.md). Para F3 se dispone de pruebas de componentes en ambos equipos, ejecución completa del notebook desde kernel nuevo y revisión de sus resultados. El 27/09/2026 se comprobó también F3 desde un clon nuevo y una `.venv` independiente, con descarga nueva del SAV, 121 dependencias coincidentes, siete scripts y 130 comprobaciones correctas. Véase la [evidencia de reproducción de F3](F3/docs/Verificacion_reproduccion_F3.md).
 
-La copia interpretable de F4 fue ejecutada por Karla y su corrección de exclusión de CSV fue revisada por Guillermo en el [PR #13](https://github.com/gosoriozamora/mcdi500-grupo9-enssex/pull/13), integrado en `bfa1c9a`. La [verificación de tablas y figuras](F4/docs/Verificacion_analisis.md) corresponde a la ejecución local posterior de Guillermo y conserva esa distinción.
+La copia interpretable de F4 fue ejecutada por Karla y su corrección de exclusión de CSV fue revisada por Guillermo en el [PR #13](https://github.com/gosoriozamora/mcdi500-grupo9-enssex/pull/13), integrado en `bfa1c9a`. La [verificación de tablas y figuras](F4/docs/Verificacion_analisis.md) corresponde a la ejecución local posterior de Guillermo y conserva esa distinción. Posteriormente, Karla ejecutó las pruebas, reprodujo y comparó las ocho tablas, revisó las tres figuras y aprobó el [PR #14](https://github.com/gosoriozamora/mcdi500-grupo9-enssex/pull/14), integrado en `3e6d5d6`. Ambos equipos actualizaron su rama `main`.
 
 F4 calcula distribuciones de dependencia económica de la pareja (`p93`), valoración de la vida sexual (`i_6_p9`) y bienestar mental o emocional percibido (`i_2_p9`). Los porcentajes de las valoraciones usan respuestas válidas dentro de cada grupo y mantienen separadas ambas dimensiones. Las dos figuras de valoraciones incluyen el total y paneles desagregados por sexo asignado al nacer (`p1`), con denominadores propios y escala común; no se utiliza género declarado (`p3`) para esa desagregación. Los resultados agregados seleccionados están en `F4/resultados`; los registros individuales y sus metadatos permanecen locales.
 
-Para la entrega final quedan pendientes el notebook integrador de F4, la ejecución completa F1–F4 sobre la versión final, el informe institucional, la presentación audiovisual y la revisión integral de la rúbrica. Las salidas técnicas y las revisiones de código no acreditan por sí solas el envío de la evaluación.
+El notebook integrador de F4 se ejecutó completo desde un kernel nuevo en el equipo de Guillermo, con sus salidas guardadas y [verificación documentada](F4/docs/Verificacion_notebook_F4.md). Para la entrega final quedan pendientes la revisión cruzada y publicación del notebook sobre la versión final, el informe institucional, la presentación audiovisual y la revisión integral de la rúbrica. Las salidas técnicas y las revisiones de código no acreditan por sí solas el envío de la evaluación.
