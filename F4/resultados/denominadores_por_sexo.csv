@@ -1,0 +1,19 @@
+﻿desagregacion;codigo_sexo;sexo;variable;agrupacion;codigo_grupo;grupo;total_grupo;validos;ausentes;porcentaje_ausentes_grupo
+Sexo asignado al nacer (p1);1;Hombre;Valoración de la vida sexual (i_6_p9);Dependencia económica de la pareja (p93);1;Sí, completamente;120;118;2;1.6666666666666667
+Sexo asignado al nacer (p1);1;Hombre;Valoración de la vida sexual (i_6_p9);Dependencia económica de la pareja (p93);2;Sí, en parte;337;335;2;0.5934718100890207
+Sexo asignado al nacer (p1);1;Hombre;Valoración de la vida sexual (i_6_p9);Dependencia económica de la pareja (p93);3;No;2336;2320;16;0.684931506849315
+Sexo asignado al nacer (p1);1;Hombre;Bienestar mental o emocional percibido (i_2_p9);Dependencia económica de la pareja (p93);1;Sí, completamente;120;120;0;0.0
+Sexo asignado al nacer (p1);1;Hombre;Bienestar mental o emocional percibido (i_2_p9);Dependencia económica de la pareja (p93);2;Sí, en parte;337;337;0;0.0
+Sexo asignado al nacer (p1);1;Hombre;Bienestar mental o emocional percibido (i_2_p9);Dependencia económica de la pareja (p93);3;No;2336;2334;2;0.08561643835616438
+Sexo asignado al nacer (p1);2;Mujer;Valoración de la vida sexual (i_6_p9);Dependencia económica de la pareja (p93);1;Sí, completamente;2077;2052;25;1.203659123736158
+Sexo asignado al nacer (p1);2;Mujer;Valoración de la vida sexual (i_6_p9);Dependencia económica de la pareja (p93);2;Sí, en parte;1650;1625;25;1.5151515151515151
+Sexo asignado al nacer (p1);2;Mujer;Valoración de la vida sexual (i_6_p9);Dependencia económica de la pareja (p93);3;No;1982;1949;33;1.6649848637739657
+Sexo asignado al nacer (p1);2;Mujer;Bienestar mental o emocional percibido (i_2_p9);Dependencia económica de la pareja (p93);1;Sí, completamente;2077;2074;3;0.14443909484833894
+Sexo asignado al nacer (p1);2;Mujer;Bienestar mental o emocional percibido (i_2_p9);Dependencia económica de la pareja (p93);2;Sí, en parte;1650;1649;1;0.06060606060606061
+Sexo asignado al nacer (p1);2;Mujer;Bienestar mental o emocional percibido (i_2_p9);Dependencia económica de la pareja (p93);3;No;1982;1977;5;0.2522704339051463
+Sexo asignado al nacer (p1);;Sin respuesta;Valoración de la vida sexual (i_6_p9);Dependencia económica de la pareja (p93);1;Sí, completamente;0;0;0;
+Sexo asignado al nacer (p1);;Sin respuesta;Valoración de la vida sexual (i_6_p9);Dependencia económica de la pareja (p93);2;Sí, en parte;0;0;0;
+Sexo asignado al nacer (p1);;Sin respuesta;Valoración de la vida sexual (i_6_p9);Dependencia económica de la pareja (p93);3;No;0;0;0;
+Sexo asignado al nacer (p1);;Sin respuesta;Bienestar mental o emocional percibido (i_2_p9);Dependencia económica de la pareja (p93);1;Sí, completamente;0;0;0;
+Sexo asignado al nacer (p1);;Sin respuesta;Bienestar mental o emocional percibido (i_2_p9);Dependencia económica de la pareja (p93);2;Sí, en parte;0;0;0;
+Sexo asignado al nacer (p1);;Sin respuesta;Bienestar mental o emocional percibido (i_2_p9);Dependencia económica de la pareja (p93);3;No;0;0;0;

@@ -40,3 +40,6 @@ F4/data/processed/**/*.json
 
 # CSV locales de F4, incluidos destinos en subcarpetas
 F4/data/processed/**/*.csv
+
+# Repeticiones locales de tablas y figuras de F4
+F4/resultados_locales/

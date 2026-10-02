@@ -20,7 +20,7 @@ El alcance es descriptivo y comparativo de la muestra, sin ponderación. Selecci
 | F1 | Problema, objetivos, entorno y reconocimiento de la base | [Notebook F1](F1/notebooks/F1_Definicion.ipynb) |
 | F2 | Exploración, limpieza, transformación y validación | [Notebook F2](F2/notebooks/F2_limpieza_transformacion_ENSSEX.ipynb) y [documentación](F2/README.md) |
 | F3 | Preparación mediante clases, estrategias, equivalencia con F2, eficiencia y exportación verificada | [Notebook F3 ejecutado](F3/notebooks/F3_Nucleo_algoritmico_ENSSEX.ipynb) e [instrucciones de F3](F3/README.md) |
-| F4 | Carpeta reservada para la fase posterior | Sin implementación en esta entrega |
+| F4 | Copia interpretable, denominadores, tablas y tres figuras descriptivas | [Instrucciones de F4](F4/README.md) y [resultados](F4/docs/Resultados_descriptivos.md); notebook integrador pendiente |
 
 ```text
 proyecto-enssex/
@@ -38,7 +38,7 @@ proyecto-enssex/
 │   ├── benchmarks/          # Mediciones reproducibles
 │   ├── docs/                # Decisiones y evidencia técnica
 │   └── data/processed/      # Productos generados localmente al ejecutar F3
-├── F4/
+├── F4/                     # Análisis, pruebas, figuras y resultados agregados
 └── docs/                   # Antecedentes de S1 y evidencia de conversión
 ```
 
@@ -86,4 +86,8 @@ Trabajamos con ramas por tarea y revisión cruzada mediante pull requests. El [P
 
 Para F1 y F2 se documentó una [reproducción desde copia y entorno nuevos](F1/docs/Verificacion_reproduccion_completa.md), además de la [verificación de F2 por Karla](F2/docs/Verificacion_F2_Karla.md). Para F3 se dispone de pruebas de componentes en ambos equipos, ejecución completa del notebook desde kernel nuevo y revisión de sus resultados. El 27/09/2026 se comprobó también F3 desde un clon nuevo y una `.venv` independiente, con descarga nueva del SAV, 121 dependencias coincidentes, siete scripts y 130 comprobaciones correctas. Véase la [evidencia de reproducción de F3](F3/docs/Verificacion_reproduccion_F3.md).
 
-La auditoría completa de Sumativa 2 y el informe institucional también permanecen pendientes. Las salidas técnicas y las revisiones de código no sustituyen la revisión de todos los criterios ni acreditan el envío de la evaluación.
+La copia interpretable de F4 fue ejecutada por Karla y su corrección de exclusión de CSV fue revisada por Guillermo en el [PR #13](https://github.com/gosoriozamora/mcdi500-grupo9-enssex/pull/13), integrado en `bfa1c9a`. La [verificación de tablas y figuras](F4/docs/Verificacion_analisis.md) corresponde a la ejecución local posterior de Guillermo y conserva esa distinción.
+
+F4 calcula distribuciones de dependencia económica de la pareja (`p93`), valoración de la vida sexual (`i_6_p9`) y bienestar mental o emocional percibido (`i_2_p9`). Los porcentajes de las valoraciones usan respuestas válidas dentro de cada grupo y mantienen separadas ambas dimensiones. Las dos figuras de valoraciones incluyen el total y paneles desagregados por sexo asignado al nacer (`p1`), con denominadores propios y escala común; no se utiliza género declarado (`p3`) para esa desagregación. Los resultados agregados seleccionados están en `F4/resultados`; los registros individuales y sus metadatos permanecen locales.
+
+Para la entrega final quedan pendientes el notebook integrador de F4, la ejecución completa F1–F4 sobre la versión final, el informe institucional, la presentación audiovisual y la revisión integral de la rúbrica. Las salidas técnicas y las revisiones de código no acreditan por sí solas el envío de la evaluación.
