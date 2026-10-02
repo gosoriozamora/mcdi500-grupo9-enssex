@@ -80,4 +80,46 @@ El [análisis de resultados](docs/Resultados_descriptivos.md) presenta denominad
 
 Las pruebas nuevas usan casos pequeños con respuestas conocidas, ausencias superpuestas, sexo sin respuesta, grupos sin respuestas válidas y categorías con cero. Verifican la conciliación de los estratos con el total, la escala común de los gráficos, la conservación de entradas, la exportación repetible y el rechazo de sobrescrituras o entradas alteradas.
 
-El notebook final integrador de F4, su ejecución de principio a fin, el informe y la presentación audiovisual siguen pendientes. Estos módulos y figuras constituyen su base analítica.
+El informe y la presentación audiovisual siguen pendientes. La preparación y el estado de ejecución del notebook integrador se detallan a continuación.
+
+## Notebook final integrador
+
+El [notebook integrador de F4](notebooks/F4_Integrador_ENSSEX.ipynb) contiene 29 celdas,
+14 de código. Reúne problema y objetivos de F1, preparación de F2, clases,
+equivalencia, pruebas y mediciones de F3, y tablas, figuras e interpretación de F4.
+No requiere ejecutar antes otros notebooks. Parte del SAV y CSV originales
+verificados de `data/raw`, el esquema y la evidencia de conversión.
+
+Desde la raíz del repositorio, en Git Bash:
+
+```bash
+source .venv/Scripts/activate
+python -m pip check
+python -c "import pyreadstat; print(pyreadstat.__version__)"
+python -m jupyterlab
+```
+
+Abrir `F4/notebooks/F4_Integrador_ENSSEX.ipynb`, elegir **Python (grupo9-mcdi500)**,
+usar **Kernel → Restart Kernel and Run All Cells** y guardar. El import previo
+comprueba que la biblioteca nativa de lectura SAV puede cargarse: `pip check`
+solo verifica compatibilidad de dependencias, no esa carga.
+
+Cada ejecución completa crea una carpeta `F4/resultados_locales/notebook_<fecha>_<id>`.
+Contiene `datos_f3` (dos CSV y su JSON), `datos_f4` (CSV interpretable y su JSON),
+`analisis` (ocho tablas, tres figuras PNG/SVG y registro) y
+`ejecucion_integrador.json` (entorno, pruebas, mediciones y huellas).
+Todo ese destino permanece local. Los CSV deben acompañarse de sus JSON al trasladarlos.
+Los productos anteriores y las tablas publicadas no se sobrescriben; estas últimas
+se comparan por contenido para admitir LF/CRLF. Los tiempos y metadatos de ejecución
+pueden variar entre equipos.
+
+La ejecución completa debe comprobar 21 casos F2, nueve scripts F3–F4, 130 invariantes,
+relectura exacta y coincidencia de las ocho tablas con las integradas mediante el PR #14.
+Los resultados intermedios y finales quedan en las salidas del cuaderno al guardarlo.
+
+**Estado de esta versión:** el notebook se ejecutó completo desde un kernel nuevo
+en el equipo de Guillermo, con las 14 celdas de código en orden, las nueve pruebas
+de scripts, la medición SAV y el cierre correctos. Las salidas quedan guardadas.
+El bloqueo inicial de pyreadstat y su resolución en este equipo se documentan en el
+[registro de verificación del notebook](docs/Verificacion_notebook_F4.md).
+La revisión cruzada del notebook por Karla y su publicación siguen pendientes.
