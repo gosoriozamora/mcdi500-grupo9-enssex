@@ -34,3 +34,6 @@ F3/benchmarks/resultados_locales/
 
 # Manifiesto local que acompaña los CSV generados por F3
 F3/data/processed/exportacion_F3.json
+
+# Registros locales de datos interpretables de F4
+F4/data/processed/**/*.json
