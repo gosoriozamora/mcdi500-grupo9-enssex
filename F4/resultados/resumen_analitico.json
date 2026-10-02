@@ -1,0 +1,2553 @@
+{
+  "personas": 8579,
+  "dependencia": {
+    "variable": "Dependencia económica de la pareja (p93)",
+    "validos": 8502,
+    "ausentes": 77,
+    "distribucion": [
+      {
+        "variable": "Dependencia económica de la pareja (p93)",
+        "codigo_grupo": 1,
+        "grupo": "Sí, completamente",
+        "personas": 2197,
+        "denominador": 8502,
+        "porcentaje": 25.840978593272173
+      },
+      {
+        "variable": "Dependencia económica de la pareja (p93)",
+        "codigo_grupo": 2,
+        "grupo": "Sí, en parte",
+        "personas": 1987,
+        "denominador": 8502,
+        "porcentaje": 23.37097153610915
+      },
+      {
+        "variable": "Dependencia económica de la pareja (p93)",
+        "codigo_grupo": 3,
+        "grupo": "No",
+        "personas": 4318,
+        "denominador": 8502,
+        "porcentaje": 50.78804987061868
+      }
+    ]
+  },
+  "comparaciones": {
+    "i_6_p9": {
+      "variable": "Valoración de la vida sexual (i_6_p9)",
+      "base_comparacion": 8399,
+      "excluidos_comparacion": 180,
+      "ausentes_valoracion_total": 105,
+      "ausentes_ambas_variables": 2,
+      "denominadores": [
+        {
+          "variable": "Valoración de la vida sexual (i_6_p9)",
+          "agrupacion": "Dependencia económica de la pareja (p93)",
+          "codigo_grupo": 1,
+          "grupo": "Sí, completamente",
+          "total_grupo": 2197,
+          "validos": 2170,
+          "ausentes": 27,
+          "porcentaje_ausentes_grupo": 1.2289485662266728
+        },
+        {
+          "variable": "Valoración de la vida sexual (i_6_p9)",
+          "agrupacion": "Dependencia económica de la pareja (p93)",
+          "codigo_grupo": 2,
+          "grupo": "Sí, en parte",
+          "total_grupo": 1987,
+          "validos": 1960,
+          "ausentes": 27,
+          "porcentaje_ausentes_grupo": 1.3588324106693508
+        },
+        {
+          "variable": "Valoración de la vida sexual (i_6_p9)",
+          "agrupacion": "Dependencia económica de la pareja (p93)",
+          "codigo_grupo": 3,
+          "grupo": "No",
+          "total_grupo": 4318,
+          "validos": 4269,
+          "ausentes": 49,
+          "porcentaje_ausentes_grupo": 1.1347846225104214
+        }
+      ],
+      "distribucion": [
+        {
+          "variable": "Valoración de la vida sexual (i_6_p9)",
+          "agrupacion": "Dependencia económica de la pareja (p93)",
+          "codigo_grupo": 1,
+          "grupo": "Sí, completamente",
+          "codigo_respuesta": 1,
+          "respuesta": "1 Muy mal",
+          "personas": 92,
+          "denominador": 2170,
+          "porcentaje": 4.23963133640553
+        },
+        {
+          "variable": "Valoración de la vida sexual (i_6_p9)",
+          "agrupacion": "Dependencia económica de la pareja (p93)",
+          "codigo_grupo": 1,
+          "grupo": "Sí, completamente",
+          "codigo_respuesta": 2,
+          "respuesta": "2",
+          "personas": 43,
+          "denominador": 2170,
+          "porcentaje": 1.9815668202764978
+        },
+        {
+          "variable": "Valoración de la vida sexual (i_6_p9)",
+          "agrupacion": "Dependencia económica de la pareja (p93)",
+          "codigo_grupo": 1,
+          "grupo": "Sí, completamente",
+          "codigo_respuesta": 3,
+          "respuesta": "3",
+          "personas": 74,
+          "denominador": 2170,
+          "porcentaje": 3.410138248847926
+        },
+        {
+          "variable": "Valoración de la vida sexual (i_6_p9)",
+          "agrupacion": "Dependencia económica de la pareja (p93)",
+          "codigo_grupo": 1,
+          "grupo": "Sí, completamente",
+          "codigo_respuesta": 4,
+          "respuesta": "4",
+          "personas": 166,
+          "denominador": 2170,
+          "porcentaje": 7.649769585253456
+        },
+        {
+          "variable": "Valoración de la vida sexual (i_6_p9)",
+          "agrupacion": "Dependencia económica de la pareja (p93)",
+          "codigo_grupo": 1,
+          "grupo": "Sí, completamente",
+          "codigo_respuesta": 5,
+          "respuesta": "5",
+          "personas": 398,
+          "denominador": 2170,
+          "porcentaje": 18.341013824884794
+        },
+        {
+          "variable": "Valoración de la vida sexual (i_6_p9)",
+          "agrupacion": "Dependencia económica de la pareja (p93)",
+          "codigo_grupo": 1,
+          "grupo": "Sí, completamente",
+          "codigo_respuesta": 6,
+          "respuesta": "6",
+          "personas": 563,
+          "denominador": 2170,
+          "porcentaje": 25.944700460829495
+        },
+        {
+          "variable": "Valoración de la vida sexual (i_6_p9)",
+          "agrupacion": "Dependencia económica de la pareja (p93)",
+          "codigo_grupo": 1,
+          "grupo": "Sí, completamente",
+          "codigo_respuesta": 7,
+          "respuesta": "7 Muy bien",
+          "personas": 834,
+          "denominador": 2170,
+          "porcentaje": 38.433179723502306
+        },
+        {
+          "variable": "Valoración de la vida sexual (i_6_p9)",
+          "agrupacion": "Dependencia económica de la pareja (p93)",
+          "codigo_grupo": 2,
+          "grupo": "Sí, en parte",
+          "codigo_respuesta": 1,
+          "respuesta": "1 Muy mal",
+          "personas": 100,
+          "denominador": 1960,
+          "porcentaje": 5.1020408163265305
+        },
+        {
+          "variable": "Valoración de la vida sexual (i_6_p9)",
+          "agrupacion": "Dependencia económica de la pareja (p93)",
+          "codigo_grupo": 2,
+          "grupo": "Sí, en parte",
+          "codigo_respuesta": 2,
+          "respuesta": "2",
+          "personas": 47,
+          "denominador": 1960,
+          "porcentaje": 2.3979591836734695
+        },
+        {
+          "variable": "Valoración de la vida sexual (i_6_p9)",
+          "agrupacion": "Dependencia económica de la pareja (p93)",
+          "codigo_grupo": 2,
+          "grupo": "Sí, en parte",
+          "codigo_respuesta": 3,
+          "respuesta": "3",
+          "personas": 90,
+          "denominador": 1960,
+          "porcentaje": 4.591836734693878
+        },
+        {
+          "variable": "Valoración de la vida sexual (i_6_p9)",
+          "agrupacion": "Dependencia económica de la pareja (p93)",
+          "codigo_grupo": 2,
+          "grupo": "Sí, en parte",
+          "codigo_respuesta": 4,
+          "respuesta": "4",
+          "personas": 193,
+          "denominador": 1960,
+          "porcentaje": 9.846938775510203
+        },
+        {
+          "variable": "Valoración de la vida sexual (i_6_p9)",
+          "agrupacion": "Dependencia económica de la pareja (p93)",
+          "codigo_grupo": 2,
+          "grupo": "Sí, en parte",
+          "codigo_respuesta": 5,
+          "respuesta": "5",
+          "personas": 325,
+          "denominador": 1960,
+          "porcentaje": 16.581632653061224
+        },
+        {
+          "variable": "Valoración de la vida sexual (i_6_p9)",
+          "agrupacion": "Dependencia económica de la pareja (p93)",
+          "codigo_grupo": 2,
+          "grupo": "Sí, en parte",
+          "codigo_respuesta": 6,
+          "respuesta": "6",
+          "personas": 539,
+          "denominador": 1960,
+          "porcentaje": 27.5
+        },
+        {
+          "variable": "Valoración de la vida sexual (i_6_p9)",
+          "agrupacion": "Dependencia económica de la pareja (p93)",
+          "codigo_grupo": 2,
+          "grupo": "Sí, en parte",
+          "codigo_respuesta": 7,
+          "respuesta": "7 Muy bien",
+          "personas": 666,
+          "denominador": 1960,
+          "porcentaje": 33.97959183673469
+        },
+        {
+          "variable": "Valoración de la vida sexual (i_6_p9)",
+          "agrupacion": "Dependencia económica de la pareja (p93)",
+          "codigo_grupo": 3,
+          "grupo": "No",
+          "codigo_respuesta": 1,
+          "respuesta": "1 Muy mal",
+          "personas": 146,
+          "denominador": 4269,
+          "porcentaje": 3.4200046849379246
+        },
+        {
+          "variable": "Valoración de la vida sexual (i_6_p9)",
+          "agrupacion": "Dependencia económica de la pareja (p93)",
+          "codigo_grupo": 3,
+          "grupo": "No",
+          "codigo_respuesta": 2,
+          "respuesta": "2",
+          "personas": 75,
+          "denominador": 4269,
+          "porcentaje": 1.7568517217146873
+        },
+        {
+          "variable": "Valoración de la vida sexual (i_6_p9)",
+          "agrupacion": "Dependencia económica de la pareja (p93)",
+          "codigo_grupo": 3,
+          "grupo": "No",
+          "codigo_respuesta": 3,
+          "respuesta": "3",
+          "personas": 156,
+          "denominador": 4269,
+          "porcentaje": 3.6542515811665495
+        },
+        {
+          "variable": "Valoración de la vida sexual (i_6_p9)",
+          "agrupacion": "Dependencia económica de la pareja (p93)",
+          "codigo_grupo": 3,
+          "grupo": "No",
+          "codigo_respuesta": 4,
+          "respuesta": "4",
+          "personas": 334,
+          "denominador": 4269,
+          "porcentaje": 7.823846334036074
+        },
+        {
+          "variable": "Valoración de la vida sexual (i_6_p9)",
+          "agrupacion": "Dependencia económica de la pareja (p93)",
+          "codigo_grupo": 3,
+          "grupo": "No",
+          "codigo_respuesta": 5,
+          "respuesta": "5",
+          "personas": 728,
+          "denominador": 4269,
+          "porcentaje": 17.0531740454439
+        },
+        {
+          "variable": "Valoración de la vida sexual (i_6_p9)",
+          "agrupacion": "Dependencia económica de la pareja (p93)",
+          "codigo_grupo": 3,
+          "grupo": "No",
+          "codigo_respuesta": 6,
+          "respuesta": "6",
+          "personas": 1201,
+          "denominador": 4269,
+          "porcentaje": 28.13305223705786
+        },
+        {
+          "variable": "Valoración de la vida sexual (i_6_p9)",
+          "agrupacion": "Dependencia económica de la pareja (p93)",
+          "codigo_grupo": 3,
+          "grupo": "No",
+          "codigo_respuesta": 7,
+          "respuesta": "7 Muy bien",
+          "personas": 1629,
+          "denominador": 4269,
+          "porcentaje": 38.15881939564301
+        }
+      ]
+    },
+    "i_2_p9": {
+      "variable": "Bienestar mental o emocional percibido (i_2_p9)",
+      "base_comparacion": 8491,
+      "excluidos_comparacion": 88,
+      "ausentes_valoracion_total": 11,
+      "ausentes_ambas_variables": 0,
+      "denominadores": [
+        {
+          "variable": "Bienestar mental o emocional percibido (i_2_p9)",
+          "agrupacion": "Dependencia económica de la pareja (p93)",
+          "codigo_grupo": 1,
+          "grupo": "Sí, completamente",
+          "total_grupo": 2197,
+          "validos": 2194,
+          "ausentes": 3,
+          "porcentaje_ausentes_grupo": 0.13654984069185253
+        },
+        {
+          "variable": "Bienestar mental o emocional percibido (i_2_p9)",
+          "agrupacion": "Dependencia económica de la pareja (p93)",
+          "codigo_grupo": 2,
+          "grupo": "Sí, en parte",
+          "total_grupo": 1987,
+          "validos": 1986,
+          "ausentes": 1,
+          "porcentaje_ausentes_grupo": 0.050327126321087066
+        },
+        {
+          "variable": "Bienestar mental o emocional percibido (i_2_p9)",
+          "agrupacion": "Dependencia económica de la pareja (p93)",
+          "codigo_grupo": 3,
+          "grupo": "No",
+          "total_grupo": 4318,
+          "validos": 4311,
+          "ausentes": 7,
+          "porcentaje_ausentes_grupo": 0.1621120889300602
+        }
+      ],
+      "distribucion": [
+        {
+          "variable": "Bienestar mental o emocional percibido (i_2_p9)",
+          "agrupacion": "Dependencia económica de la pareja (p93)",
+          "codigo_grupo": 1,
+          "grupo": "Sí, completamente",
+          "codigo_respuesta": 1,
+          "respuesta": "1 Muy mal",
+          "personas": 36,
+          "denominador": 2194,
+          "porcentaje": 1.6408386508659982
+        },
+        {
+          "variable": "Bienestar mental o emocional percibido (i_2_p9)",
+          "agrupacion": "Dependencia económica de la pareja (p93)",
+          "codigo_grupo": 1,
+          "grupo": "Sí, completamente",
+          "codigo_respuesta": 2,
+          "respuesta": "2",
+          "personas": 30,
+          "denominador": 2194,
+          "porcentaje": 1.3673655423883317
+        },
+        {
+          "variable": "Bienestar mental o emocional percibido (i_2_p9)",
+          "agrupacion": "Dependencia económica de la pareja (p93)",
+          "codigo_grupo": 1,
+          "grupo": "Sí, completamente",
+          "codigo_respuesta": 3,
+          "respuesta": "3",
+          "personas": 86,
+          "denominador": 2194,
+          "porcentaje": 3.919781221513218
+        },
+        {
+          "variable": "Bienestar mental o emocional percibido (i_2_p9)",
+          "agrupacion": "Dependencia económica de la pareja (p93)",
+          "codigo_grupo": 1,
+          "grupo": "Sí, completamente",
+          "codigo_respuesta": 4,
+          "respuesta": "4",
+          "personas": 235,
+          "denominador": 2194,
+          "porcentaje": 10.711030082041933
+        },
+        {
+          "variable": "Bienestar mental o emocional percibido (i_2_p9)",
+          "agrupacion": "Dependencia económica de la pareja (p93)",
+          "codigo_grupo": 1,
+          "grupo": "Sí, completamente",
+          "codigo_respuesta": 5,
+          "respuesta": "5",
+          "personas": 511,
+          "denominador": 2194,
+          "porcentaje": 23.290793072014583
+        },
+        {
+          "variable": "Bienestar mental o emocional percibido (i_2_p9)",
+          "agrupacion": "Dependencia económica de la pareja (p93)",
+          "codigo_grupo": 1,
+          "grupo": "Sí, completamente",
+          "codigo_respuesta": 6,
+          "respuesta": "6",
+          "personas": 652,
+          "denominador": 2194,
+          "porcentaje": 29.717411121239746
+        },
+        {
+          "variable": "Bienestar mental o emocional percibido (i_2_p9)",
+          "agrupacion": "Dependencia económica de la pareja (p93)",
+          "codigo_grupo": 1,
+          "grupo": "Sí, completamente",
+          "codigo_respuesta": 7,
+          "respuesta": "7 Muy bien",
+          "personas": 644,
+          "denominador": 2194,
+          "porcentaje": 29.35278030993619
+        },
+        {
+          "variable": "Bienestar mental o emocional percibido (i_2_p9)",
+          "agrupacion": "Dependencia económica de la pareja (p93)",
+          "codigo_grupo": 2,
+          "grupo": "Sí, en parte",
+          "codigo_respuesta": 1,
+          "respuesta": "1 Muy mal",
+          "personas": 35,
+          "denominador": 1986,
+          "porcentaje": 1.7623363544813695
+        },
+        {
+          "variable": "Bienestar mental o emocional percibido (i_2_p9)",
+          "agrupacion": "Dependencia económica de la pareja (p93)",
+          "codigo_grupo": 2,
+          "grupo": "Sí, en parte",
+          "codigo_respuesta": 2,
+          "respuesta": "2",
+          "personas": 26,
+          "denominador": 1986,
+          "porcentaje": 1.309164149043303
+        },
+        {
+          "variable": "Bienestar mental o emocional percibido (i_2_p9)",
+          "agrupacion": "Dependencia económica de la pareja (p93)",
+          "codigo_grupo": 2,
+          "grupo": "Sí, en parte",
+          "codigo_respuesta": 3,
+          "respuesta": "3",
+          "personas": 83,
+          "denominador": 1986,
+          "porcentaje": 4.1792547834843905
+        },
+        {
+          "variable": "Bienestar mental o emocional percibido (i_2_p9)",
+          "agrupacion": "Dependencia económica de la pareja (p93)",
+          "codigo_grupo": 2,
+          "grupo": "Sí, en parte",
+          "codigo_respuesta": 4,
+          "respuesta": "4",
+          "personas": 214,
+          "denominador": 1986,
+          "porcentaje": 10.775427995971803
+        },
+        {
+          "variable": "Bienestar mental o emocional percibido (i_2_p9)",
+          "agrupacion": "Dependencia económica de la pareja (p93)",
+          "codigo_grupo": 2,
+          "grupo": "Sí, en parte",
+          "codigo_respuesta": 5,
+          "respuesta": "5",
+          "personas": 480,
+          "denominador": 1986,
+          "porcentaje": 24.169184290030213
+        },
+        {
+          "variable": "Bienestar mental o emocional percibido (i_2_p9)",
+          "agrupacion": "Dependencia económica de la pareja (p93)",
+          "codigo_grupo": 2,
+          "grupo": "Sí, en parte",
+          "codigo_respuesta": 6,
+          "respuesta": "6",
+          "personas": 604,
+          "denominador": 1986,
+          "porcentaje": 30.41289023162135
+        },
+        {
+          "variable": "Bienestar mental o emocional percibido (i_2_p9)",
+          "agrupacion": "Dependencia económica de la pareja (p93)",
+          "codigo_grupo": 2,
+          "grupo": "Sí, en parte",
+          "codigo_respuesta": 7,
+          "respuesta": "7 Muy bien",
+          "personas": 544,
+          "denominador": 1986,
+          "porcentaje": 27.391742195367573
+        },
+        {
+          "variable": "Bienestar mental o emocional percibido (i_2_p9)",
+          "agrupacion": "Dependencia económica de la pareja (p93)",
+          "codigo_grupo": 3,
+          "grupo": "No",
+          "codigo_respuesta": 1,
+          "respuesta": "1 Muy mal",
+          "personas": 42,
+          "denominador": 4311,
+          "porcentaje": 0.9742519137091162
+        },
+        {
+          "variable": "Bienestar mental o emocional percibido (i_2_p9)",
+          "agrupacion": "Dependencia económica de la pareja (p93)",
+          "codigo_grupo": 3,
+          "grupo": "No",
+          "codigo_respuesta": 2,
+          "respuesta": "2",
+          "personas": 37,
+          "denominador": 4311,
+          "porcentaje": 0.8582695430294596
+        },
+        {
+          "variable": "Bienestar mental o emocional percibido (i_2_p9)",
+          "agrupacion": "Dependencia económica de la pareja (p93)",
+          "codigo_grupo": 3,
+          "grupo": "No",
+          "codigo_respuesta": 3,
+          "respuesta": "3",
+          "personas": 99,
+          "denominador": 4311,
+          "porcentaje": 2.2964509394572024
+        },
+        {
+          "variable": "Bienestar mental o emocional percibido (i_2_p9)",
+          "agrupacion": "Dependencia económica de la pareja (p93)",
+          "codigo_grupo": 3,
+          "grupo": "No",
+          "codigo_respuesta": 4,
+          "respuesta": "4",
+          "personas": 377,
+          "denominador": 4311,
+          "porcentaje": 8.745070749246114
+        },
+        {
+          "variable": "Bienestar mental o emocional percibido (i_2_p9)",
+          "agrupacion": "Dependencia económica de la pareja (p93)",
+          "codigo_grupo": 3,
+          "grupo": "No",
+          "codigo_respuesta": 5,
+          "respuesta": "5",
+          "personas": 1007,
+          "denominador": 4311,
+          "porcentaje": 23.358849454882858
+        },
+        {
+          "variable": "Bienestar mental o emocional percibido (i_2_p9)",
+          "agrupacion": "Dependencia económica de la pareja (p93)",
+          "codigo_grupo": 3,
+          "grupo": "No",
+          "codigo_respuesta": 6,
+          "respuesta": "6",
+          "personas": 1419,
+          "denominador": 4311,
+          "porcentaje": 32.91579679888657
+        },
+        {
+          "variable": "Bienestar mental o emocional percibido (i_2_p9)",
+          "agrupacion": "Dependencia económica de la pareja (p93)",
+          "codigo_grupo": 3,
+          "grupo": "No",
+          "codigo_respuesta": 7,
+          "respuesta": "7 Muy bien",
+          "personas": 1330,
+          "denominador": 4311,
+          "porcentaje": 30.85131060078868
+        }
+      ]
+    }
+  },
+  "base_comun": {
+    "personas": 8392,
+    "uso": "Referencia disponible; no es la base de las figuras por dimensión.",
+    "grupos": [
+      {
+        "grupo": "Sí, completamente",
+        "personas": 2167
+      },
+      {
+        "grupo": "Sí, en parte",
+        "personas": 1960
+      },
+      {
+        "grupo": "No",
+        "personas": 4265
+      }
+    ]
+  },
+  "version": 2,
+  "metodologia": {
+    "alcance": "Descriptivo de la muestra, sin ponderación ni extrapolación nacional.",
+    "dependencia": "Porcentajes entre respuestas válidas de dependencia económica.",
+    "valoraciones": "Porcentajes entre respuestas válidas dentro de cada grupo de dependencia.",
+    "desagregacion": "Sexo asignado al nacer (p1); denominador propio por sexo y dependencia.",
+    "sexo_ausente": "Se conserva en el total y se informa aparte; no se asigna a hombre o mujer.",
+    "ausencias": "Exclusión específica por comparación; sin imputación ni eliminación global.",
+    "base_cero": "Porcentaje no calculable: null en JSON, vacío en CSV y sin base en figuras.",
+    "escala": "Siete categorías ordinales; sin agrupación arbitraria ni indicador combinado."
+  },
+  "variables": {
+    "p93": {
+      "nombre": "p93",
+      "rol": "central",
+      "tipo": "ordinal",
+      "descripcion": "¿Diría que usted depende económicamente de su pareja?",
+      "categorias": [
+        1,
+        2,
+        3
+      ],
+      "etiquetas": {
+        "1": "Sí, completamente",
+        "2": "Sí, en parte",
+        "3": "No"
+      },
+      "no_respuesta": [
+        9
+      ],
+      "ordenada": true,
+      "nombre_legible": "Dependencia económica de la pareja",
+      "grupo_explicativo": "central",
+      "justificacion": "Define los tres grupos que se compararán: dependencia completa, parcial y ausencia de dependencia. Es la variable explicativa de la pregunta; no equivale al monto de ingresos ni demuestra una relación causal."
+    },
+    "i_6_p9": {
+      "nombre": "i_6_p9",
+      "rol": "central",
+      "tipo": "ordinal",
+      "descripcion": "P9: valorar de 1 a 7 cómo se siente en distintos ámbitos. Ítem: «Con su vida sexual».",
+      "categorias": [
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7
+      ],
+      "etiquetas": {
+        "1": "1 Muy mal",
+        "2": "2",
+        "3": "3",
+        "4": "4",
+        "5": "5",
+        "6": "6",
+        "7": "7 Muy bien"
+      },
+      "no_respuesta": [
+        9
+      ],
+      "ordenada": true,
+      "nombre_legible": "Valoración de la vida sexual",
+      "grupo_explicativo": "central",
+      "justificacion": "Registra una de las dos valoraciones que queremos comparar entre niveles de dependencia. Describe cómo la persona valora su vida sexual; no se sustituye por la presencia de actividad sexual ni se suma al bienestar emocional."
+    },
+    "i_2_p9": {
+      "nombre": "i_2_p9",
+      "rol": "central",
+      "tipo": "ordinal",
+      "descripcion": "P9: valorar de 1 a 7 cómo se siente en distintos ámbitos. Ítem: «Con su bienestar mental o emocional».",
+      "categorias": [
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7
+      ],
+      "etiquetas": {
+        "1": "1 Muy mal",
+        "2": "2",
+        "3": "3",
+        "4": "4",
+        "5": "5",
+        "6": "6",
+        "7": "7 Muy bien"
+      },
+      "no_respuesta": [
+        9
+      ],
+      "ordenada": true,
+      "nombre_legible": "Bienestar mental o emocional percibido",
+      "grupo_explicativo": "central",
+      "justificacion": "Registra la segunda valoración de la pregunta. Permite estudiar este ámbito por separado de la vida sexual. Es una percepción declarada por la persona, no un diagnóstico de salud mental."
+    },
+    "p1": {
+      "nombre": "p1",
+      "rol": "complementaria",
+      "tipo": "nominal",
+      "descripcion": "¿Cuál es su sexo asignado al nacer?",
+      "categorias": [
+        1,
+        2
+      ],
+      "etiquetas": {
+        "1": "Hombre",
+        "2": "Mujer"
+      },
+      "no_respuesta": [],
+      "ordenada": false,
+      "nombre_legible": "Sexo asignado al nacer",
+      "grupo_explicativo": "sociodemografica",
+      "justificacion": "Permite caracterizar a las personas y explorar, si los datos lo permiten, si los patrones descriptivos difieren según el sexo asignado al nacer. Se conserva separado del género declarado porque son preguntas distintas."
+    }
+  },
+  "por_sexo": {
+    "variable": "Sexo asignado al nacer (p1)",
+    "grupos": [
+      {
+        "codigo_sexo": 1,
+        "sexo": "Hombre",
+        "personas": 2822,
+        "dependencia": {
+          "variable": "Dependencia económica de la pareja (p93)",
+          "validos": 2793,
+          "ausentes": 29,
+          "distribucion": [
+            {
+              "variable": "Dependencia económica de la pareja (p93)",
+              "codigo_grupo": 1,
+              "grupo": "Sí, completamente",
+              "personas": 120,
+              "denominador": 2793,
+              "porcentaje": 4.296455424274973
+            },
+            {
+              "variable": "Dependencia económica de la pareja (p93)",
+              "codigo_grupo": 2,
+              "grupo": "Sí, en parte",
+              "personas": 337,
+              "denominador": 2793,
+              "porcentaje": 12.065878983172217
+            },
+            {
+              "variable": "Dependencia económica de la pareja (p93)",
+              "codigo_grupo": 3,
+              "grupo": "No",
+              "personas": 2336,
+              "denominador": 2793,
+              "porcentaje": 83.6376655925528
+            }
+          ]
+        },
+        "comparaciones": {
+          "i_6_p9": {
+            "variable": "Valoración de la vida sexual (i_6_p9)",
+            "base_comparacion": 2773,
+            "excluidos_comparacion": 49,
+            "ausentes_valoracion_total": 20,
+            "ausentes_ambas_variables": 0,
+            "denominadores": [
+              {
+                "variable": "Valoración de la vida sexual (i_6_p9)",
+                "agrupacion": "Dependencia económica de la pareja (p93)",
+                "codigo_grupo": 1,
+                "grupo": "Sí, completamente",
+                "total_grupo": 120,
+                "validos": 118,
+                "ausentes": 2,
+                "porcentaje_ausentes_grupo": 1.6666666666666667
+              },
+              {
+                "variable": "Valoración de la vida sexual (i_6_p9)",
+                "agrupacion": "Dependencia económica de la pareja (p93)",
+                "codigo_grupo": 2,
+                "grupo": "Sí, en parte",
+                "total_grupo": 337,
+                "validos": 335,
+                "ausentes": 2,
+                "porcentaje_ausentes_grupo": 0.5934718100890207
+              },
+              {
+                "variable": "Valoración de la vida sexual (i_6_p9)",
+                "agrupacion": "Dependencia económica de la pareja (p93)",
+                "codigo_grupo": 3,
+                "grupo": "No",
+                "total_grupo": 2336,
+                "validos": 2320,
+                "ausentes": 16,
+                "porcentaje_ausentes_grupo": 0.684931506849315
+              }
+            ],
+            "distribucion": [
+              {
+                "variable": "Valoración de la vida sexual (i_6_p9)",
+                "agrupacion": "Dependencia económica de la pareja (p93)",
+                "codigo_grupo": 1,
+                "grupo": "Sí, completamente",
+                "codigo_respuesta": 1,
+                "respuesta": "1 Muy mal",
+                "personas": 3,
+                "denominador": 118,
+                "porcentaje": 2.542372881355932
+              },
+              {
+                "variable": "Valoración de la vida sexual (i_6_p9)",
+                "agrupacion": "Dependencia económica de la pareja (p93)",
+                "codigo_grupo": 1,
+                "grupo": "Sí, completamente",
+                "codigo_respuesta": 2,
+                "respuesta": "2",
+                "personas": 1,
+                "denominador": 118,
+                "porcentaje": 0.847457627118644
+              },
+              {
+                "variable": "Valoración de la vida sexual (i_6_p9)",
+                "agrupacion": "Dependencia económica de la pareja (p93)",
+                "codigo_grupo": 1,
+                "grupo": "Sí, completamente",
+                "codigo_respuesta": 3,
+                "respuesta": "3",
+                "personas": 6,
+                "denominador": 118,
+                "porcentaje": 5.084745762711864
+              },
+              {
+                "variable": "Valoración de la vida sexual (i_6_p9)",
+                "agrupacion": "Dependencia económica de la pareja (p93)",
+                "codigo_grupo": 1,
+                "grupo": "Sí, completamente",
+                "codigo_respuesta": 4,
+                "respuesta": "4",
+                "personas": 12,
+                "denominador": 118,
+                "porcentaje": 10.169491525423728
+              },
+              {
+                "variable": "Valoración de la vida sexual (i_6_p9)",
+                "agrupacion": "Dependencia económica de la pareja (p93)",
+                "codigo_grupo": 1,
+                "grupo": "Sí, completamente",
+                "codigo_respuesta": 5,
+                "respuesta": "5",
+                "personas": 22,
+                "denominador": 118,
+                "porcentaje": 18.64406779661017
+              },
+              {
+                "variable": "Valoración de la vida sexual (i_6_p9)",
+                "agrupacion": "Dependencia económica de la pareja (p93)",
+                "codigo_grupo": 1,
+                "grupo": "Sí, completamente",
+                "codigo_respuesta": 6,
+                "respuesta": "6",
+                "personas": 24,
+                "denominador": 118,
+                "porcentaje": 20.338983050847457
+              },
+              {
+                "variable": "Valoración de la vida sexual (i_6_p9)",
+                "agrupacion": "Dependencia económica de la pareja (p93)",
+                "codigo_grupo": 1,
+                "grupo": "Sí, completamente",
+                "codigo_respuesta": 7,
+                "respuesta": "7 Muy bien",
+                "personas": 50,
+                "denominador": 118,
+                "porcentaje": 42.3728813559322
+              },
+              {
+                "variable": "Valoración de la vida sexual (i_6_p9)",
+                "agrupacion": "Dependencia económica de la pareja (p93)",
+                "codigo_grupo": 2,
+                "grupo": "Sí, en parte",
+                "codigo_respuesta": 1,
+                "respuesta": "1 Muy mal",
+                "personas": 8,
+                "denominador": 335,
+                "porcentaje": 2.388059701492537
+              },
+              {
+                "variable": "Valoración de la vida sexual (i_6_p9)",
+                "agrupacion": "Dependencia económica de la pareja (p93)",
+                "codigo_grupo": 2,
+                "grupo": "Sí, en parte",
+                "codigo_respuesta": 2,
+                "respuesta": "2",
+                "personas": 6,
+                "denominador": 335,
+                "porcentaje": 1.791044776119403
+              },
+              {
+                "variable": "Valoración de la vida sexual (i_6_p9)",
+                "agrupacion": "Dependencia económica de la pareja (p93)",
+                "codigo_grupo": 2,
+                "grupo": "Sí, en parte",
+                "codigo_respuesta": 3,
+                "respuesta": "3",
+                "personas": 12,
+                "denominador": 335,
+                "porcentaje": 3.582089552238806
+              },
+              {
+                "variable": "Valoración de la vida sexual (i_6_p9)",
+                "agrupacion": "Dependencia económica de la pareja (p93)",
+                "codigo_grupo": 2,
+                "grupo": "Sí, en parte",
+                "codigo_respuesta": 4,
+                "respuesta": "4",
+                "personas": 40,
+                "denominador": 335,
+                "porcentaje": 11.940298507462687
+              },
+              {
+                "variable": "Valoración de la vida sexual (i_6_p9)",
+                "agrupacion": "Dependencia económica de la pareja (p93)",
+                "codigo_grupo": 2,
+                "grupo": "Sí, en parte",
+                "codigo_respuesta": 5,
+                "respuesta": "5",
+                "personas": 58,
+                "denominador": 335,
+                "porcentaje": 17.313432835820894
+              },
+              {
+                "variable": "Valoración de la vida sexual (i_6_p9)",
+                "agrupacion": "Dependencia económica de la pareja (p93)",
+                "codigo_grupo": 2,
+                "grupo": "Sí, en parte",
+                "codigo_respuesta": 6,
+                "respuesta": "6",
+                "personas": 89,
+                "denominador": 335,
+                "porcentaje": 26.567164179104477
+              },
+              {
+                "variable": "Valoración de la vida sexual (i_6_p9)",
+                "agrupacion": "Dependencia económica de la pareja (p93)",
+                "codigo_grupo": 2,
+                "grupo": "Sí, en parte",
+                "codigo_respuesta": 7,
+                "respuesta": "7 Muy bien",
+                "personas": 122,
+                "denominador": 335,
+                "porcentaje": 36.417910447761194
+              },
+              {
+                "variable": "Valoración de la vida sexual (i_6_p9)",
+                "agrupacion": "Dependencia económica de la pareja (p93)",
+                "codigo_grupo": 3,
+                "grupo": "No",
+                "codigo_respuesta": 1,
+                "respuesta": "1 Muy mal",
+                "personas": 48,
+                "denominador": 2320,
+                "porcentaje": 2.0689655172413794
+              },
+              {
+                "variable": "Valoración de la vida sexual (i_6_p9)",
+                "agrupacion": "Dependencia económica de la pareja (p93)",
+                "codigo_grupo": 3,
+                "grupo": "No",
+                "codigo_respuesta": 2,
+                "respuesta": "2",
+                "personas": 36,
+                "denominador": 2320,
+                "porcentaje": 1.5517241379310345
+              },
+              {
+                "variable": "Valoración de la vida sexual (i_6_p9)",
+                "agrupacion": "Dependencia económica de la pareja (p93)",
+                "codigo_grupo": 3,
+                "grupo": "No",
+                "codigo_respuesta": 3,
+                "respuesta": "3",
+                "personas": 78,
+                "denominador": 2320,
+                "porcentaje": 3.3620689655172415
+              },
+              {
+                "variable": "Valoración de la vida sexual (i_6_p9)",
+                "agrupacion": "Dependencia económica de la pareja (p93)",
+                "codigo_grupo": 3,
+                "grupo": "No",
+                "codigo_respuesta": 4,
+                "respuesta": "4",
+                "personas": 189,
+                "denominador": 2320,
+                "porcentaje": 8.14655172413793
+              },
+              {
+                "variable": "Valoración de la vida sexual (i_6_p9)",
+                "agrupacion": "Dependencia económica de la pareja (p93)",
+                "codigo_grupo": 3,
+                "grupo": "No",
+                "codigo_respuesta": 5,
+                "respuesta": "5",
+                "personas": 420,
+                "denominador": 2320,
+                "porcentaje": 18.103448275862068
+              },
+              {
+                "variable": "Valoración de la vida sexual (i_6_p9)",
+                "agrupacion": "Dependencia económica de la pareja (p93)",
+                "codigo_grupo": 3,
+                "grupo": "No",
+                "codigo_respuesta": 6,
+                "respuesta": "6",
+                "personas": 676,
+                "denominador": 2320,
+                "porcentaje": 29.137931034482758
+              },
+              {
+                "variable": "Valoración de la vida sexual (i_6_p9)",
+                "agrupacion": "Dependencia económica de la pareja (p93)",
+                "codigo_grupo": 3,
+                "grupo": "No",
+                "codigo_respuesta": 7,
+                "respuesta": "7 Muy bien",
+                "personas": 873,
+                "denominador": 2320,
+                "porcentaje": 37.62931034482759
+              }
+            ]
+          },
+          "i_2_p9": {
+            "variable": "Bienestar mental o emocional percibido (i_2_p9)",
+            "base_comparacion": 2791,
+            "excluidos_comparacion": 31,
+            "ausentes_valoracion_total": 2,
+            "ausentes_ambas_variables": 0,
+            "denominadores": [
+              {
+                "variable": "Bienestar mental o emocional percibido (i_2_p9)",
+                "agrupacion": "Dependencia económica de la pareja (p93)",
+                "codigo_grupo": 1,
+                "grupo": "Sí, completamente",
+                "total_grupo": 120,
+                "validos": 120,
+                "ausentes": 0,
+                "porcentaje_ausentes_grupo": 0.0
+              },
+              {
+                "variable": "Bienestar mental o emocional percibido (i_2_p9)",
+                "agrupacion": "Dependencia económica de la pareja (p93)",
+                "codigo_grupo": 2,
+                "grupo": "Sí, en parte",
+                "total_grupo": 337,
+                "validos": 337,
+                "ausentes": 0,
+                "porcentaje_ausentes_grupo": 0.0
+              },
+              {
+                "variable": "Bienestar mental o emocional percibido (i_2_p9)",
+                "agrupacion": "Dependencia económica de la pareja (p93)",
+                "codigo_grupo": 3,
+                "grupo": "No",
+                "total_grupo": 2336,
+                "validos": 2334,
+                "ausentes": 2,
+                "porcentaje_ausentes_grupo": 0.08561643835616438
+              }
+            ],
+            "distribucion": [
+              {
+                "variable": "Bienestar mental o emocional percibido (i_2_p9)",
+                "agrupacion": "Dependencia económica de la pareja (p93)",
+                "codigo_grupo": 1,
+                "grupo": "Sí, completamente",
+                "codigo_respuesta": 1,
+                "respuesta": "1 Muy mal",
+                "personas": 1,
+                "denominador": 120,
+                "porcentaje": 0.8333333333333334
+              },
+              {
+                "variable": "Bienestar mental o emocional percibido (i_2_p9)",
+                "agrupacion": "Dependencia económica de la pareja (p93)",
+                "codigo_grupo": 1,
+                "grupo": "Sí, completamente",
+                "codigo_respuesta": 2,
+                "respuesta": "2",
+                "personas": 2,
+                "denominador": 120,
+                "porcentaje": 1.6666666666666667
+              },
+              {
+                "variable": "Bienestar mental o emocional percibido (i_2_p9)",
+                "agrupacion": "Dependencia económica de la pareja (p93)",
+                "codigo_grupo": 1,
+                "grupo": "Sí, completamente",
+                "codigo_respuesta": 3,
+                "respuesta": "3",
+                "personas": 3,
+                "denominador": 120,
+                "porcentaje": 2.5
+              },
+              {
+                "variable": "Bienestar mental o emocional percibido (i_2_p9)",
+                "agrupacion": "Dependencia económica de la pareja (p93)",
+                "codigo_grupo": 1,
+                "grupo": "Sí, completamente",
+                "codigo_respuesta": 4,
+                "respuesta": "4",
+                "personas": 19,
+                "denominador": 120,
+                "porcentaje": 15.833333333333334
+              },
+              {
+                "variable": "Bienestar mental o emocional percibido (i_2_p9)",
+                "agrupacion": "Dependencia económica de la pareja (p93)",
+                "codigo_grupo": 1,
+                "grupo": "Sí, completamente",
+                "codigo_respuesta": 5,
+                "respuesta": "5",
+                "personas": 19,
+                "denominador": 120,
+                "porcentaje": 15.833333333333334
+              },
+              {
+                "variable": "Bienestar mental o emocional percibido (i_2_p9)",
+                "agrupacion": "Dependencia económica de la pareja (p93)",
+                "codigo_grupo": 1,
+                "grupo": "Sí, completamente",
+                "codigo_respuesta": 6,
+                "respuesta": "6",
+                "personas": 42,
+                "denominador": 120,
+                "porcentaje": 35.0
+              },
+              {
+                "variable": "Bienestar mental o emocional percibido (i_2_p9)",
+                "agrupacion": "Dependencia económica de la pareja (p93)",
+                "codigo_grupo": 1,
+                "grupo": "Sí, completamente",
+                "codigo_respuesta": 7,
+                "respuesta": "7 Muy bien",
+                "personas": 34,
+                "denominador": 120,
+                "porcentaje": 28.333333333333332
+              },
+              {
+                "variable": "Bienestar mental o emocional percibido (i_2_p9)",
+                "agrupacion": "Dependencia económica de la pareja (p93)",
+                "codigo_grupo": 2,
+                "grupo": "Sí, en parte",
+                "codigo_respuesta": 1,
+                "respuesta": "1 Muy mal",
+                "personas": 3,
+                "denominador": 337,
+                "porcentaje": 0.8902077151335311
+              },
+              {
+                "variable": "Bienestar mental o emocional percibido (i_2_p9)",
+                "agrupacion": "Dependencia económica de la pareja (p93)",
+                "codigo_grupo": 2,
+                "grupo": "Sí, en parte",
+                "codigo_respuesta": 2,
+                "respuesta": "2",
+                "personas": 2,
+                "denominador": 337,
+                "porcentaje": 0.5934718100890207
+              },
+              {
+                "variable": "Bienestar mental o emocional percibido (i_2_p9)",
+                "agrupacion": "Dependencia económica de la pareja (p93)",
+                "codigo_grupo": 2,
+                "grupo": "Sí, en parte",
+                "codigo_respuesta": 3,
+                "respuesta": "3",
+                "personas": 12,
+                "denominador": 337,
+                "porcentaje": 3.5608308605341246
+              },
+              {
+                "variable": "Bienestar mental o emocional percibido (i_2_p9)",
+                "agrupacion": "Dependencia económica de la pareja (p93)",
+                "codigo_grupo": 2,
+                "grupo": "Sí, en parte",
+                "codigo_respuesta": 4,
+                "respuesta": "4",
+                "personas": 36,
+                "denominador": 337,
+                "porcentaje": 10.682492581602373
+              },
+              {
+                "variable": "Bienestar mental o emocional percibido (i_2_p9)",
+                "agrupacion": "Dependencia económica de la pareja (p93)",
+                "codigo_grupo": 2,
+                "grupo": "Sí, en parte",
+                "codigo_respuesta": 5,
+                "respuesta": "5",
+                "personas": 78,
+                "denominador": 337,
+                "porcentaje": 23.14540059347181
+              },
+              {
+                "variable": "Bienestar mental o emocional percibido (i_2_p9)",
+                "agrupacion": "Dependencia económica de la pareja (p93)",
+                "codigo_grupo": 2,
+                "grupo": "Sí, en parte",
+                "codigo_respuesta": 6,
+                "respuesta": "6",
+                "personas": 105,
+                "denominador": 337,
+                "porcentaje": 31.15727002967359
+              },
+              {
+                "variable": "Bienestar mental o emocional percibido (i_2_p9)",
+                "agrupacion": "Dependencia económica de la pareja (p93)",
+                "codigo_grupo": 2,
+                "grupo": "Sí, en parte",
+                "codigo_respuesta": 7,
+                "respuesta": "7 Muy bien",
+                "personas": 101,
+                "denominador": 337,
+                "porcentaje": 29.97032640949555
+              },
+              {
+                "variable": "Bienestar mental o emocional percibido (i_2_p9)",
+                "agrupacion": "Dependencia económica de la pareja (p93)",
+                "codigo_grupo": 3,
+                "grupo": "No",
+                "codigo_respuesta": 1,
+                "respuesta": "1 Muy mal",
+                "personas": 11,
+                "denominador": 2334,
+                "porcentaje": 0.4712939160239931
+              },
+              {
+                "variable": "Bienestar mental o emocional percibido (i_2_p9)",
+                "agrupacion": "Dependencia económica de la pareja (p93)",
+                "codigo_grupo": 3,
+                "grupo": "No",
+                "codigo_respuesta": 2,
+                "respuesta": "2",
+                "personas": 14,
+                "denominador": 2334,
+                "porcentaje": 0.5998286203941731
+              },
+              {
+                "variable": "Bienestar mental o emocional percibido (i_2_p9)",
+                "agrupacion": "Dependencia económica de la pareja (p93)",
+                "codigo_grupo": 3,
+                "grupo": "No",
+                "codigo_respuesta": 3,
+                "respuesta": "3",
+                "personas": 44,
+                "denominador": 2334,
+                "porcentaje": 1.8851756640959725
+              },
+              {
+                "variable": "Bienestar mental o emocional percibido (i_2_p9)",
+                "agrupacion": "Dependencia económica de la pareja (p93)",
+                "codigo_grupo": 3,
+                "grupo": "No",
+                "codigo_respuesta": 4,
+                "respuesta": "4",
+                "personas": 182,
+                "denominador": 2334,
+                "porcentaje": 7.79777206512425
+              },
+              {
+                "variable": "Bienestar mental o emocional percibido (i_2_p9)",
+                "agrupacion": "Dependencia económica de la pareja (p93)",
+                "codigo_grupo": 3,
+                "grupo": "No",
+                "codigo_respuesta": 5,
+                "respuesta": "5",
+                "personas": 511,
+                "denominador": 2334,
+                "porcentaje": 21.89374464438732
+              },
+              {
+                "variable": "Bienestar mental o emocional percibido (i_2_p9)",
+                "agrupacion": "Dependencia económica de la pareja (p93)",
+                "codigo_grupo": 3,
+                "grupo": "No",
+                "codigo_respuesta": 6,
+                "respuesta": "6",
+                "personas": 806,
+                "denominador": 2334,
+                "porcentaje": 34.532990574121676
+              },
+              {
+                "variable": "Bienestar mental o emocional percibido (i_2_p9)",
+                "agrupacion": "Dependencia económica de la pareja (p93)",
+                "codigo_grupo": 3,
+                "grupo": "No",
+                "codigo_respuesta": 7,
+                "respuesta": "7 Muy bien",
+                "personas": 766,
+                "denominador": 2334,
+                "porcentaje": 32.819194515852615
+              }
+            ]
+          }
+        },
+        "base_comun": {
+          "personas": 2771,
+          "uso": "Referencia disponible; no es la base de las figuras por dimensión.",
+          "grupos": [
+            {
+              "grupo": "Sí, completamente",
+              "personas": 118
+            },
+            {
+              "grupo": "Sí, en parte",
+              "personas": 335
+            },
+            {
+              "grupo": "No",
+              "personas": 2318
+            }
+          ]
+        }
+      },
+      {
+        "codigo_sexo": 2,
+        "sexo": "Mujer",
+        "personas": 5757,
+        "dependencia": {
+          "variable": "Dependencia económica de la pareja (p93)",
+          "validos": 5709,
+          "ausentes": 48,
+          "distribucion": [
+            {
+              "variable": "Dependencia económica de la pareja (p93)",
+              "codigo_grupo": 1,
+              "grupo": "Sí, completamente",
+              "personas": 2077,
+              "denominador": 5709,
+              "porcentaje": 36.38115256612367
+            },
+            {
+              "variable": "Dependencia económica de la pareja (p93)",
+              "codigo_grupo": 2,
+              "grupo": "Sí, en parte",
+              "personas": 1650,
+              "denominador": 5709,
+              "porcentaje": 28.90173410404624
+            },
+            {
+              "variable": "Dependencia económica de la pareja (p93)",
+              "codigo_grupo": 3,
+              "grupo": "No",
+              "personas": 1982,
+              "denominador": 5709,
+              "porcentaje": 34.71711332983009
+            }
+          ]
+        },
+        "comparaciones": {
+          "i_6_p9": {
+            "variable": "Valoración de la vida sexual (i_6_p9)",
+            "base_comparacion": 5626,
+            "excluidos_comparacion": 131,
+            "ausentes_valoracion_total": 85,
+            "ausentes_ambas_variables": 2,
+            "denominadores": [
+              {
+                "variable": "Valoración de la vida sexual (i_6_p9)",
+                "agrupacion": "Dependencia económica de la pareja (p93)",
+                "codigo_grupo": 1,
+                "grupo": "Sí, completamente",
+                "total_grupo": 2077,
+                "validos": 2052,
+                "ausentes": 25,
+                "porcentaje_ausentes_grupo": 1.203659123736158
+              },
+              {
+                "variable": "Valoración de la vida sexual (i_6_p9)",
+                "agrupacion": "Dependencia económica de la pareja (p93)",
+                "codigo_grupo": 2,
+                "grupo": "Sí, en parte",
+                "total_grupo": 1650,
+                "validos": 1625,
+                "ausentes": 25,
+                "porcentaje_ausentes_grupo": 1.5151515151515151
+              },
+              {
+                "variable": "Valoración de la vida sexual (i_6_p9)",
+                "agrupacion": "Dependencia económica de la pareja (p93)",
+                "codigo_grupo": 3,
+                "grupo": "No",
+                "total_grupo": 1982,
+                "validos": 1949,
+                "ausentes": 33,
+                "porcentaje_ausentes_grupo": 1.6649848637739657
+              }
+            ],
+            "distribucion": [
+              {
+                "variable": "Valoración de la vida sexual (i_6_p9)",
+                "agrupacion": "Dependencia económica de la pareja (p93)",
+                "codigo_grupo": 1,
+                "grupo": "Sí, completamente",
+                "codigo_respuesta": 1,
+                "respuesta": "1 Muy mal",
+                "personas": 89,
+                "denominador": 2052,
+                "porcentaje": 4.337231968810916
+              },
+              {
+                "variable": "Valoración de la vida sexual (i_6_p9)",
+                "agrupacion": "Dependencia económica de la pareja (p93)",
+                "codigo_grupo": 1,
+                "grupo": "Sí, completamente",
+                "codigo_respuesta": 2,
+                "respuesta": "2",
+                "personas": 42,
+                "denominador": 2052,
+                "porcentaje": 2.046783625730994
+              },
+              {
+                "variable": "Valoración de la vida sexual (i_6_p9)",
+                "agrupacion": "Dependencia económica de la pareja (p93)",
+                "codigo_grupo": 1,
+                "grupo": "Sí, completamente",
+                "codigo_respuesta": 3,
+                "respuesta": "3",
+                "personas": 68,
+                "denominador": 2052,
+                "porcentaje": 3.313840155945419
+              },
+              {
+                "variable": "Valoración de la vida sexual (i_6_p9)",
+                "agrupacion": "Dependencia económica de la pareja (p93)",
+                "codigo_grupo": 1,
+                "grupo": "Sí, completamente",
+                "codigo_respuesta": 4,
+                "respuesta": "4",
+                "personas": 154,
+                "denominador": 2052,
+                "porcentaje": 7.504873294346979
+              },
+              {
+                "variable": "Valoración de la vida sexual (i_6_p9)",
+                "agrupacion": "Dependencia económica de la pareja (p93)",
+                "codigo_grupo": 1,
+                "grupo": "Sí, completamente",
+                "codigo_respuesta": 5,
+                "respuesta": "5",
+                "personas": 376,
+                "denominador": 2052,
+                "porcentaje": 18.323586744639375
+              },
+              {
+                "variable": "Valoración de la vida sexual (i_6_p9)",
+                "agrupacion": "Dependencia económica de la pareja (p93)",
+                "codigo_grupo": 1,
+                "grupo": "Sí, completamente",
+                "codigo_respuesta": 6,
+                "respuesta": "6",
+                "personas": 539,
+                "denominador": 2052,
+                "porcentaje": 26.267056530214425
+              },
+              {
+                "variable": "Valoración de la vida sexual (i_6_p9)",
+                "agrupacion": "Dependencia económica de la pareja (p93)",
+                "codigo_grupo": 1,
+                "grupo": "Sí, completamente",
+                "codigo_respuesta": 7,
+                "respuesta": "7 Muy bien",
+                "personas": 784,
+                "denominador": 2052,
+                "porcentaje": 38.20662768031189
+              },
+              {
+                "variable": "Valoración de la vida sexual (i_6_p9)",
+                "agrupacion": "Dependencia económica de la pareja (p93)",
+                "codigo_grupo": 2,
+                "grupo": "Sí, en parte",
+                "codigo_respuesta": 1,
+                "respuesta": "1 Muy mal",
+                "personas": 92,
+                "denominador": 1625,
+                "porcentaje": 5.661538461538462
+              },
+              {
+                "variable": "Valoración de la vida sexual (i_6_p9)",
+                "agrupacion": "Dependencia económica de la pareja (p93)",
+                "codigo_grupo": 2,
+                "grupo": "Sí, en parte",
+                "codigo_respuesta": 2,
+                "respuesta": "2",
+                "personas": 41,
+                "denominador": 1625,
+                "porcentaje": 2.523076923076923
+              },
+              {
+                "variable": "Valoración de la vida sexual (i_6_p9)",
+                "agrupacion": "Dependencia económica de la pareja (p93)",
+                "codigo_grupo": 2,
+                "grupo": "Sí, en parte",
+                "codigo_respuesta": 3,
+                "respuesta": "3",
+                "personas": 78,
+                "denominador": 1625,
+                "porcentaje": 4.8
+              },
+              {
+                "variable": "Valoración de la vida sexual (i_6_p9)",
+                "agrupacion": "Dependencia económica de la pareja (p93)",
+                "codigo_grupo": 2,
+                "grupo": "Sí, en parte",
+                "codigo_respuesta": 4,
+                "respuesta": "4",
+                "personas": 153,
+                "denominador": 1625,
+                "porcentaje": 9.415384615384616
+              },
+              {
+                "variable": "Valoración de la vida sexual (i_6_p9)",
+                "agrupacion": "Dependencia económica de la pareja (p93)",
+                "codigo_grupo": 2,
+                "grupo": "Sí, en parte",
+                "codigo_respuesta": 5,
+                "respuesta": "5",
+                "personas": 267,
+                "denominador": 1625,
+                "porcentaje": 16.43076923076923
+              },
+              {
+                "variable": "Valoración de la vida sexual (i_6_p9)",
+                "agrupacion": "Dependencia económica de la pareja (p93)",
+                "codigo_grupo": 2,
+                "grupo": "Sí, en parte",
+                "codigo_respuesta": 6,
+                "respuesta": "6",
+                "personas": 450,
+                "denominador": 1625,
+                "porcentaje": 27.692307692307693
+              },
+              {
+                "variable": "Valoración de la vida sexual (i_6_p9)",
+                "agrupacion": "Dependencia económica de la pareja (p93)",
+                "codigo_grupo": 2,
+                "grupo": "Sí, en parte",
+                "codigo_respuesta": 7,
+                "respuesta": "7 Muy bien",
+                "personas": 544,
+                "denominador": 1625,
+                "porcentaje": 33.47692307692308
+              },
+              {
+                "variable": "Valoración de la vida sexual (i_6_p9)",
+                "agrupacion": "Dependencia económica de la pareja (p93)",
+                "codigo_grupo": 3,
+                "grupo": "No",
+                "codigo_respuesta": 1,
+                "respuesta": "1 Muy mal",
+                "personas": 98,
+                "denominador": 1949,
+                "porcentaje": 5.028219599794767
+              },
+              {
+                "variable": "Valoración de la vida sexual (i_6_p9)",
+                "agrupacion": "Dependencia económica de la pareja (p93)",
+                "codigo_grupo": 3,
+                "grupo": "No",
+                "codigo_respuesta": 2,
+                "respuesta": "2",
+                "personas": 39,
+                "denominador": 1949,
+                "porcentaje": 2.0010261672652643
+              },
+              {
+                "variable": "Valoración de la vida sexual (i_6_p9)",
+                "agrupacion": "Dependencia económica de la pareja (p93)",
+                "codigo_grupo": 3,
+                "grupo": "No",
+                "codigo_respuesta": 3,
+                "respuesta": "3",
+                "personas": 78,
+                "denominador": 1949,
+                "porcentaje": 4.0020523345305286
+              },
+              {
+                "variable": "Valoración de la vida sexual (i_6_p9)",
+                "agrupacion": "Dependencia económica de la pareja (p93)",
+                "codigo_grupo": 3,
+                "grupo": "No",
+                "codigo_respuesta": 4,
+                "respuesta": "4",
+                "personas": 145,
+                "denominador": 1949,
+                "porcentaje": 7.439712673165726
+              },
+              {
+                "variable": "Valoración de la vida sexual (i_6_p9)",
+                "agrupacion": "Dependencia económica de la pareja (p93)",
+                "codigo_grupo": 3,
+                "grupo": "No",
+                "codigo_respuesta": 5,
+                "respuesta": "5",
+                "personas": 308,
+                "denominador": 1949,
+                "porcentaje": 15.802975885069266
+              },
+              {
+                "variable": "Valoración de la vida sexual (i_6_p9)",
+                "agrupacion": "Dependencia económica de la pareja (p93)",
+                "codigo_grupo": 3,
+                "grupo": "No",
+                "codigo_respuesta": 6,
+                "respuesta": "6",
+                "personas": 525,
+                "denominador": 1949,
+                "porcentaje": 26.936890713186248
+              },
+              {
+                "variable": "Valoración de la vida sexual (i_6_p9)",
+                "agrupacion": "Dependencia económica de la pareja (p93)",
+                "codigo_grupo": 3,
+                "grupo": "No",
+                "codigo_respuesta": 7,
+                "respuesta": "7 Muy bien",
+                "personas": 756,
+                "denominador": 1949,
+                "porcentaje": 38.7891226269882
+              }
+            ]
+          },
+          "i_2_p9": {
+            "variable": "Bienestar mental o emocional percibido (i_2_p9)",
+            "base_comparacion": 5700,
+            "excluidos_comparacion": 57,
+            "ausentes_valoracion_total": 9,
+            "ausentes_ambas_variables": 0,
+            "denominadores": [
+              {
+                "variable": "Bienestar mental o emocional percibido (i_2_p9)",
+                "agrupacion": "Dependencia económica de la pareja (p93)",
+                "codigo_grupo": 1,
+                "grupo": "Sí, completamente",
+                "total_grupo": 2077,
+                "validos": 2074,
+                "ausentes": 3,
+                "porcentaje_ausentes_grupo": 0.14443909484833894
+              },
+              {
+                "variable": "Bienestar mental o emocional percibido (i_2_p9)",
+                "agrupacion": "Dependencia económica de la pareja (p93)",
+                "codigo_grupo": 2,
+                "grupo": "Sí, en parte",
+                "total_grupo": 1650,
+                "validos": 1649,
+                "ausentes": 1,
+                "porcentaje_ausentes_grupo": 0.06060606060606061
+              },
+              {
+                "variable": "Bienestar mental o emocional percibido (i_2_p9)",
+                "agrupacion": "Dependencia económica de la pareja (p93)",
+                "codigo_grupo": 3,
+                "grupo": "No",
+                "total_grupo": 1982,
+                "validos": 1977,
+                "ausentes": 5,
+                "porcentaje_ausentes_grupo": 0.2522704339051463
+              }
+            ],
+            "distribucion": [
+              {
+                "variable": "Bienestar mental o emocional percibido (i_2_p9)",
+                "agrupacion": "Dependencia económica de la pareja (p93)",
+                "codigo_grupo": 1,
+                "grupo": "Sí, completamente",
+                "codigo_respuesta": 1,
+                "respuesta": "1 Muy mal",
+                "personas": 35,
+                "denominador": 2074,
+                "porcentaje": 1.6875602700096433
+              },
+              {
+                "variable": "Bienestar mental o emocional percibido (i_2_p9)",
+                "agrupacion": "Dependencia económica de la pareja (p93)",
+                "codigo_grupo": 1,
+                "grupo": "Sí, completamente",
+                "codigo_respuesta": 2,
+                "respuesta": "2",
+                "personas": 28,
+                "denominador": 2074,
+                "porcentaje": 1.3500482160077145
+              },
+              {
+                "variable": "Bienestar mental o emocional percibido (i_2_p9)",
+                "agrupacion": "Dependencia económica de la pareja (p93)",
+                "codigo_grupo": 1,
+                "grupo": "Sí, completamente",
+                "codigo_respuesta": 3,
+                "respuesta": "3",
+                "personas": 83,
+                "denominador": 2074,
+                "porcentaje": 4.0019286403085825
+              },
+              {
+                "variable": "Bienestar mental o emocional percibido (i_2_p9)",
+                "agrupacion": "Dependencia económica de la pareja (p93)",
+                "codigo_grupo": 1,
+                "grupo": "Sí, completamente",
+                "codigo_respuesta": 4,
+                "respuesta": "4",
+                "personas": 216,
+                "denominador": 2074,
+                "porcentaje": 10.414657666345226
+              },
+              {
+                "variable": "Bienestar mental o emocional percibido (i_2_p9)",
+                "agrupacion": "Dependencia económica de la pareja (p93)",
+                "codigo_grupo": 1,
+                "grupo": "Sí, completamente",
+                "codigo_respuesta": 5,
+                "respuesta": "5",
+                "personas": 492,
+                "denominador": 2074,
+                "porcentaje": 23.722275795564126
+              },
+              {
+                "variable": "Bienestar mental o emocional percibido (i_2_p9)",
+                "agrupacion": "Dependencia económica de la pareja (p93)",
+                "codigo_grupo": 1,
+                "grupo": "Sí, completamente",
+                "codigo_respuesta": 6,
+                "respuesta": "6",
+                "personas": 610,
+                "denominador": 2074,
+                "porcentaje": 29.41176470588235
+              },
+              {
+                "variable": "Bienestar mental o emocional percibido (i_2_p9)",
+                "agrupacion": "Dependencia económica de la pareja (p93)",
+                "codigo_grupo": 1,
+                "grupo": "Sí, completamente",
+                "codigo_respuesta": 7,
+                "respuesta": "7 Muy bien",
+                "personas": 610,
+                "denominador": 2074,
+                "porcentaje": 29.41176470588235
+              },
+              {
+                "variable": "Bienestar mental o emocional percibido (i_2_p9)",
+                "agrupacion": "Dependencia económica de la pareja (p93)",
+                "codigo_grupo": 2,
+                "grupo": "Sí, en parte",
+                "codigo_respuesta": 1,
+                "respuesta": "1 Muy mal",
+                "personas": 32,
+                "denominador": 1649,
+                "porcentaje": 1.9405700424499697
+              },
+              {
+                "variable": "Bienestar mental o emocional percibido (i_2_p9)",
+                "agrupacion": "Dependencia económica de la pareja (p93)",
+                "codigo_grupo": 2,
+                "grupo": "Sí, en parte",
+                "codigo_respuesta": 2,
+                "respuesta": "2",
+                "personas": 24,
+                "denominador": 1649,
+                "porcentaje": 1.4554275318374772
+              },
+              {
+                "variable": "Bienestar mental o emocional percibido (i_2_p9)",
+                "agrupacion": "Dependencia económica de la pareja (p93)",
+                "codigo_grupo": 2,
+                "grupo": "Sí, en parte",
+                "codigo_respuesta": 3,
+                "respuesta": "3",
+                "personas": 71,
+                "denominador": 1649,
+                "porcentaje": 4.30563978168587
+              },
+              {
+                "variable": "Bienestar mental o emocional percibido (i_2_p9)",
+                "agrupacion": "Dependencia económica de la pareja (p93)",
+                "codigo_grupo": 2,
+                "grupo": "Sí, en parte",
+                "codigo_respuesta": 4,
+                "respuesta": "4",
+                "personas": 178,
+                "denominador": 1649,
+                "porcentaje": 10.794420861127957
+              },
+              {
+                "variable": "Bienestar mental o emocional percibido (i_2_p9)",
+                "agrupacion": "Dependencia económica de la pareja (p93)",
+                "codigo_grupo": 2,
+                "grupo": "Sí, en parte",
+                "codigo_respuesta": 5,
+                "respuesta": "5",
+                "personas": 402,
+                "denominador": 1649,
+                "porcentaje": 24.378411158277743
+              },
+              {
+                "variable": "Bienestar mental o emocional percibido (i_2_p9)",
+                "agrupacion": "Dependencia económica de la pareja (p93)",
+                "codigo_grupo": 2,
+                "grupo": "Sí, en parte",
+                "codigo_respuesta": 6,
+                "respuesta": "6",
+                "personas": 499,
+                "denominador": 1649,
+                "porcentaje": 30.260764099454214
+              },
+              {
+                "variable": "Bienestar mental o emocional percibido (i_2_p9)",
+                "agrupacion": "Dependencia económica de la pareja (p93)",
+                "codigo_grupo": 2,
+                "grupo": "Sí, en parte",
+                "codigo_respuesta": 7,
+                "respuesta": "7 Muy bien",
+                "personas": 443,
+                "denominador": 1649,
+                "porcentaje": 26.864766525166768
+              },
+              {
+                "variable": "Bienestar mental o emocional percibido (i_2_p9)",
+                "agrupacion": "Dependencia económica de la pareja (p93)",
+                "codigo_grupo": 3,
+                "grupo": "No",
+                "codigo_respuesta": 1,
+                "respuesta": "1 Muy mal",
+                "personas": 31,
+                "denominador": 1977,
+                "porcentaje": 1.5680323722812342
+              },
+              {
+                "variable": "Bienestar mental o emocional percibido (i_2_p9)",
+                "agrupacion": "Dependencia económica de la pareja (p93)",
+                "codigo_grupo": 3,
+                "grupo": "No",
+                "codigo_respuesta": 2,
+                "respuesta": "2",
+                "personas": 23,
+                "denominador": 1977,
+                "porcentaje": 1.1633788568538188
+              },
+              {
+                "variable": "Bienestar mental o emocional percibido (i_2_p9)",
+                "agrupacion": "Dependencia económica de la pareja (p93)",
+                "codigo_grupo": 3,
+                "grupo": "No",
+                "codigo_respuesta": 3,
+                "respuesta": "3",
+                "personas": 55,
+                "denominador": 1977,
+                "porcentaje": 2.78199291856348
+              },
+              {
+                "variable": "Bienestar mental o emocional percibido (i_2_p9)",
+                "agrupacion": "Dependencia económica de la pareja (p93)",
+                "codigo_grupo": 3,
+                "grupo": "No",
+                "codigo_respuesta": 4,
+                "respuesta": "4",
+                "personas": 195,
+                "denominador": 1977,
+                "porcentaje": 9.863429438543248
+              },
+              {
+                "variable": "Bienestar mental o emocional percibido (i_2_p9)",
+                "agrupacion": "Dependencia económica de la pareja (p93)",
+                "codigo_grupo": 3,
+                "grupo": "No",
+                "codigo_respuesta": 5,
+                "respuesta": "5",
+                "personas": 496,
+                "denominador": 1977,
+                "porcentaje": 25.088517956499746
+              },
+              {
+                "variable": "Bienestar mental o emocional percibido (i_2_p9)",
+                "agrupacion": "Dependencia económica de la pareja (p93)",
+                "codigo_grupo": 3,
+                "grupo": "No",
+                "codigo_respuesta": 6,
+                "respuesta": "6",
+                "personas": 613,
+                "denominador": 1977,
+                "porcentaje": 31.006575619625696
+              },
+              {
+                "variable": "Bienestar mental o emocional percibido (i_2_p9)",
+                "agrupacion": "Dependencia económica de la pareja (p93)",
+                "codigo_grupo": 3,
+                "grupo": "No",
+                "codigo_respuesta": 7,
+                "respuesta": "7 Muy bien",
+                "personas": 564,
+                "denominador": 1977,
+                "porcentaje": 28.528072837632777
+              }
+            ]
+          }
+        },
+        "base_comun": {
+          "personas": 5621,
+          "uso": "Referencia disponible; no es la base de las figuras por dimensión.",
+          "grupos": [
+            {
+              "grupo": "Sí, completamente",
+              "personas": 2049
+            },
+            {
+              "grupo": "Sí, en parte",
+              "personas": 1625
+            },
+            {
+              "grupo": "No",
+              "personas": 1947
+            }
+          ]
+        }
+      }
+    ],
+    "sin_respuesta": {
+      "personas": 0,
+      "dependencia": {
+        "variable": "Dependencia económica de la pareja (p93)",
+        "validos": 0,
+        "ausentes": 0,
+        "distribucion": [
+          {
+            "variable": "Dependencia económica de la pareja (p93)",
+            "codigo_grupo": 1,
+            "grupo": "Sí, completamente",
+            "personas": 0,
+            "denominador": 0,
+            "porcentaje": null
+          },
+          {
+            "variable": "Dependencia económica de la pareja (p93)",
+            "codigo_grupo": 2,
+            "grupo": "Sí, en parte",
+            "personas": 0,
+            "denominador": 0,
+            "porcentaje": null
+          },
+          {
+            "variable": "Dependencia económica de la pareja (p93)",
+            "codigo_grupo": 3,
+            "grupo": "No",
+            "personas": 0,
+            "denominador": 0,
+            "porcentaje": null
+          }
+        ]
+      },
+      "comparaciones": {
+        "i_6_p9": {
+          "variable": "Valoración de la vida sexual (i_6_p9)",
+          "base_comparacion": 0,
+          "excluidos_comparacion": 0,
+          "ausentes_valoracion_total": 0,
+          "ausentes_ambas_variables": 0,
+          "denominadores": [
+            {
+              "variable": "Valoración de la vida sexual (i_6_p9)",
+              "agrupacion": "Dependencia económica de la pareja (p93)",
+              "codigo_grupo": 1,
+              "grupo": "Sí, completamente",
+              "total_grupo": 0,
+              "validos": 0,
+              "ausentes": 0,
+              "porcentaje_ausentes_grupo": null
+            },
+            {
+              "variable": "Valoración de la vida sexual (i_6_p9)",
+              "agrupacion": "Dependencia económica de la pareja (p93)",
+              "codigo_grupo": 2,
+              "grupo": "Sí, en parte",
+              "total_grupo": 0,
+              "validos": 0,
+              "ausentes": 0,
+              "porcentaje_ausentes_grupo": null
+            },
+            {
+              "variable": "Valoración de la vida sexual (i_6_p9)",
+              "agrupacion": "Dependencia económica de la pareja (p93)",
+              "codigo_grupo": 3,
+              "grupo": "No",
+              "total_grupo": 0,
+              "validos": 0,
+              "ausentes": 0,
+              "porcentaje_ausentes_grupo": null
+            }
+          ],
+          "distribucion": [
+            {
+              "variable": "Valoración de la vida sexual (i_6_p9)",
+              "agrupacion": "Dependencia económica de la pareja (p93)",
+              "codigo_grupo": 1,
+              "grupo": "Sí, completamente",
+              "codigo_respuesta": 1,
+              "respuesta": "1 Muy mal",
+              "personas": 0,
+              "denominador": 0,
+              "porcentaje": null
+            },
+            {
+              "variable": "Valoración de la vida sexual (i_6_p9)",
+              "agrupacion": "Dependencia económica de la pareja (p93)",
+              "codigo_grupo": 1,
+              "grupo": "Sí, completamente",
+              "codigo_respuesta": 2,
+              "respuesta": "2",
+              "personas": 0,
+              "denominador": 0,
+              "porcentaje": null
+            },
+            {
+              "variable": "Valoración de la vida sexual (i_6_p9)",
+              "agrupacion": "Dependencia económica de la pareja (p93)",
+              "codigo_grupo": 1,
+              "grupo": "Sí, completamente",
+              "codigo_respuesta": 3,
+              "respuesta": "3",
+              "personas": 0,
+              "denominador": 0,
+              "porcentaje": null
+            },
+            {
+              "variable": "Valoración de la vida sexual (i_6_p9)",
+              "agrupacion": "Dependencia económica de la pareja (p93)",
+              "codigo_grupo": 1,
+              "grupo": "Sí, completamente",
+              "codigo_respuesta": 4,
+              "respuesta": "4",
+              "personas": 0,
+              "denominador": 0,
+              "porcentaje": null
+            },
+            {
+              "variable": "Valoración de la vida sexual (i_6_p9)",
+              "agrupacion": "Dependencia económica de la pareja (p93)",
+              "codigo_grupo": 1,
+              "grupo": "Sí, completamente",
+              "codigo_respuesta": 5,
+              "respuesta": "5",
+              "personas": 0,
+              "denominador": 0,
+              "porcentaje": null
+            },
+            {
+              "variable": "Valoración de la vida sexual (i_6_p9)",
+              "agrupacion": "Dependencia económica de la pareja (p93)",
+              "codigo_grupo": 1,
+              "grupo": "Sí, completamente",
+              "codigo_respuesta": 6,
+              "respuesta": "6",
+              "personas": 0,
+              "denominador": 0,
+              "porcentaje": null
+            },
+            {
+              "variable": "Valoración de la vida sexual (i_6_p9)",
+              "agrupacion": "Dependencia económica de la pareja (p93)",
+              "codigo_grupo": 1,
+              "grupo": "Sí, completamente",
+              "codigo_respuesta": 7,
+              "respuesta": "7 Muy bien",
+              "personas": 0,
+              "denominador": 0,
+              "porcentaje": null
+            },
+            {
+              "variable": "Valoración de la vida sexual (i_6_p9)",
+              "agrupacion": "Dependencia económica de la pareja (p93)",
+              "codigo_grupo": 2,
+              "grupo": "Sí, en parte",
+              "codigo_respuesta": 1,
+              "respuesta": "1 Muy mal",
+              "personas": 0,
+              "denominador": 0,
+              "porcentaje": null
+            },
+            {
+              "variable": "Valoración de la vida sexual (i_6_p9)",
+              "agrupacion": "Dependencia económica de la pareja (p93)",
+              "codigo_grupo": 2,
+              "grupo": "Sí, en parte",
+              "codigo_respuesta": 2,
+              "respuesta": "2",
+              "personas": 0,
+              "denominador": 0,
+              "porcentaje": null
+            },
+            {
+              "variable": "Valoración de la vida sexual (i_6_p9)",
+              "agrupacion": "Dependencia económica de la pareja (p93)",
+              "codigo_grupo": 2,
+              "grupo": "Sí, en parte",
+              "codigo_respuesta": 3,
+              "respuesta": "3",
+              "personas": 0,
+              "denominador": 0,
+              "porcentaje": null
+            },
+            {
+              "variable": "Valoración de la vida sexual (i_6_p9)",
+              "agrupacion": "Dependencia económica de la pareja (p93)",
+              "codigo_grupo": 2,
+              "grupo": "Sí, en parte",
+              "codigo_respuesta": 4,
+              "respuesta": "4",
+              "personas": 0,
+              "denominador": 0,
+              "porcentaje": null
+            },
+            {
+              "variable": "Valoración de la vida sexual (i_6_p9)",
+              "agrupacion": "Dependencia económica de la pareja (p93)",
+              "codigo_grupo": 2,
+              "grupo": "Sí, en parte",
+              "codigo_respuesta": 5,
+              "respuesta": "5",
+              "personas": 0,
+              "denominador": 0,
+              "porcentaje": null
+            },
+            {
+              "variable": "Valoración de la vida sexual (i_6_p9)",
+              "agrupacion": "Dependencia económica de la pareja (p93)",
+              "codigo_grupo": 2,
+              "grupo": "Sí, en parte",
+              "codigo_respuesta": 6,
+              "respuesta": "6",
+              "personas": 0,
+              "denominador": 0,
+              "porcentaje": null
+            },
+            {
+              "variable": "Valoración de la vida sexual (i_6_p9)",
+              "agrupacion": "Dependencia económica de la pareja (p93)",
+              "codigo_grupo": 2,
+              "grupo": "Sí, en parte",
+              "codigo_respuesta": 7,
+              "respuesta": "7 Muy bien",
+              "personas": 0,
+              "denominador": 0,
+              "porcentaje": null
+            },
+            {
+              "variable": "Valoración de la vida sexual (i_6_p9)",
+              "agrupacion": "Dependencia económica de la pareja (p93)",
+              "codigo_grupo": 3,
+              "grupo": "No",
+              "codigo_respuesta": 1,
+              "respuesta": "1 Muy mal",
+              "personas": 0,
+              "denominador": 0,
+              "porcentaje": null
+            },
+            {
+              "variable": "Valoración de la vida sexual (i_6_p9)",
+              "agrupacion": "Dependencia económica de la pareja (p93)",
+              "codigo_grupo": 3,
+              "grupo": "No",
+              "codigo_respuesta": 2,
+              "respuesta": "2",
+              "personas": 0,
+              "denominador": 0,
+              "porcentaje": null
+            },
+            {
+              "variable": "Valoración de la vida sexual (i_6_p9)",
+              "agrupacion": "Dependencia económica de la pareja (p93)",
+              "codigo_grupo": 3,
+              "grupo": "No",
+              "codigo_respuesta": 3,
+              "respuesta": "3",
+              "personas": 0,
+              "denominador": 0,
+              "porcentaje": null
+            },
+            {
+              "variable": "Valoración de la vida sexual (i_6_p9)",
+              "agrupacion": "Dependencia económica de la pareja (p93)",
+              "codigo_grupo": 3,
+              "grupo": "No",
+              "codigo_respuesta": 4,
+              "respuesta": "4",
+              "personas": 0,
+              "denominador": 0,
+              "porcentaje": null
+            },
+            {
+              "variable": "Valoración de la vida sexual (i_6_p9)",
+              "agrupacion": "Dependencia económica de la pareja (p93)",
+              "codigo_grupo": 3,
+              "grupo": "No",
+              "codigo_respuesta": 5,
+              "respuesta": "5",
+              "personas": 0,
+              "denominador": 0,
+              "porcentaje": null
+            },
+            {
+              "variable": "Valoración de la vida sexual (i_6_p9)",
+              "agrupacion": "Dependencia económica de la pareja (p93)",
+              "codigo_grupo": 3,
+              "grupo": "No",
+              "codigo_respuesta": 6,
+              "respuesta": "6",
+              "personas": 0,
+              "denominador": 0,
+              "porcentaje": null
+            },
+            {
+              "variable": "Valoración de la vida sexual (i_6_p9)",
+              "agrupacion": "Dependencia económica de la pareja (p93)",
+              "codigo_grupo": 3,
+              "grupo": "No",
+              "codigo_respuesta": 7,
+              "respuesta": "7 Muy bien",
+              "personas": 0,
+              "denominador": 0,
+              "porcentaje": null
+            }
+          ]
+        },
+        "i_2_p9": {
+          "variable": "Bienestar mental o emocional percibido (i_2_p9)",
+          "base_comparacion": 0,
+          "excluidos_comparacion": 0,
+          "ausentes_valoracion_total": 0,
+          "ausentes_ambas_variables": 0,
+          "denominadores": [
+            {
+              "variable": "Bienestar mental o emocional percibido (i_2_p9)",
+              "agrupacion": "Dependencia económica de la pareja (p93)",
+              "codigo_grupo": 1,
+              "grupo": "Sí, completamente",
+              "total_grupo": 0,
+              "validos": 0,
+              "ausentes": 0,
+              "porcentaje_ausentes_grupo": null
+            },
+            {
+              "variable": "Bienestar mental o emocional percibido (i_2_p9)",
+              "agrupacion": "Dependencia económica de la pareja (p93)",
+              "codigo_grupo": 2,
+              "grupo": "Sí, en parte",
+              "total_grupo": 0,
+              "validos": 0,
+              "ausentes": 0,
+              "porcentaje_ausentes_grupo": null
+            },
+            {
+              "variable": "Bienestar mental o emocional percibido (i_2_p9)",
+              "agrupacion": "Dependencia económica de la pareja (p93)",
+              "codigo_grupo": 3,
+              "grupo": "No",
+              "total_grupo": 0,
+              "validos": 0,
+              "ausentes": 0,
+              "porcentaje_ausentes_grupo": null
+            }
+          ],
+          "distribucion": [
+            {
+              "variable": "Bienestar mental o emocional percibido (i_2_p9)",
+              "agrupacion": "Dependencia económica de la pareja (p93)",
+              "codigo_grupo": 1,
+              "grupo": "Sí, completamente",
+              "codigo_respuesta": 1,
+              "respuesta": "1 Muy mal",
+              "personas": 0,
+              "denominador": 0,
+              "porcentaje": null
+            },
+            {
+              "variable": "Bienestar mental o emocional percibido (i_2_p9)",
+              "agrupacion": "Dependencia económica de la pareja (p93)",
+              "codigo_grupo": 1,
+              "grupo": "Sí, completamente",
+              "codigo_respuesta": 2,
+              "respuesta": "2",
+              "personas": 0,
+              "denominador": 0,
+              "porcentaje": null
+            },
+            {
+              "variable": "Bienestar mental o emocional percibido (i_2_p9)",
+              "agrupacion": "Dependencia económica de la pareja (p93)",
+              "codigo_grupo": 1,
+              "grupo": "Sí, completamente",
+              "codigo_respuesta": 3,
+              "respuesta": "3",
+              "personas": 0,
+              "denominador": 0,
+              "porcentaje": null
+            },
+            {
+              "variable": "Bienestar mental o emocional percibido (i_2_p9)",
+              "agrupacion": "Dependencia económica de la pareja (p93)",
+              "codigo_grupo": 1,
+              "grupo": "Sí, completamente",
+              "codigo_respuesta": 4,
+              "respuesta": "4",
+              "personas": 0,
+              "denominador": 0,
+              "porcentaje": null
+            },
+            {
+              "variable": "Bienestar mental o emocional percibido (i_2_p9)",
+              "agrupacion": "Dependencia económica de la pareja (p93)",
+              "codigo_grupo": 1,
+              "grupo": "Sí, completamente",
+              "codigo_respuesta": 5,
+              "respuesta": "5",
+              "personas": 0,
+              "denominador": 0,
+              "porcentaje": null
+            },
+            {
+              "variable": "Bienestar mental o emocional percibido (i_2_p9)",
+              "agrupacion": "Dependencia económica de la pareja (p93)",
+              "codigo_grupo": 1,
+              "grupo": "Sí, completamente",
+              "codigo_respuesta": 6,
+              "respuesta": "6",
+              "personas": 0,
+              "denominador": 0,
+              "porcentaje": null
+            },
+            {
+              "variable": "Bienestar mental o emocional percibido (i_2_p9)",
+              "agrupacion": "Dependencia económica de la pareja (p93)",
+              "codigo_grupo": 1,
+              "grupo": "Sí, completamente",
+              "codigo_respuesta": 7,
+              "respuesta": "7 Muy bien",
+              "personas": 0,
+              "denominador": 0,
+              "porcentaje": null
+            },
+            {
+              "variable": "Bienestar mental o emocional percibido (i_2_p9)",
+              "agrupacion": "Dependencia económica de la pareja (p93)",
+              "codigo_grupo": 2,
+              "grupo": "Sí, en parte",
+              "codigo_respuesta": 1,
+              "respuesta": "1 Muy mal",
+              "personas": 0,
+              "denominador": 0,
+              "porcentaje": null
+            },
+            {
+              "variable": "Bienestar mental o emocional percibido (i_2_p9)",
+              "agrupacion": "Dependencia económica de la pareja (p93)",
+              "codigo_grupo": 2,
+              "grupo": "Sí, en parte",
+              "codigo_respuesta": 2,
+              "respuesta": "2",
+              "personas": 0,
+              "denominador": 0,
+              "porcentaje": null
+            },
+            {
+              "variable": "Bienestar mental o emocional percibido (i_2_p9)",
+              "agrupacion": "Dependencia económica de la pareja (p93)",
+              "codigo_grupo": 2,
+              "grupo": "Sí, en parte",
+              "codigo_respuesta": 3,
+              "respuesta": "3",
+              "personas": 0,
+              "denominador": 0,
+              "porcentaje": null
+            },
+            {
+              "variable": "Bienestar mental o emocional percibido (i_2_p9)",
+              "agrupacion": "Dependencia económica de la pareja (p93)",
+              "codigo_grupo": 2,
+              "grupo": "Sí, en parte",
+              "codigo_respuesta": 4,
+              "respuesta": "4",
+              "personas": 0,
+              "denominador": 0,
+              "porcentaje": null
+            },
+            {
+              "variable": "Bienestar mental o emocional percibido (i_2_p9)",
+              "agrupacion": "Dependencia económica de la pareja (p93)",
+              "codigo_grupo": 2,
+              "grupo": "Sí, en parte",
+              "codigo_respuesta": 5,
+              "respuesta": "5",
+              "personas": 0,
+              "denominador": 0,
+              "porcentaje": null
+            },
+            {
+              "variable": "Bienestar mental o emocional percibido (i_2_p9)",
+              "agrupacion": "Dependencia económica de la pareja (p93)",
+              "codigo_grupo": 2,
+              "grupo": "Sí, en parte",
+              "codigo_respuesta": 6,
+              "respuesta": "6",
+              "personas": 0,
+              "denominador": 0,
+              "porcentaje": null
+            },
+            {
+              "variable": "Bienestar mental o emocional percibido (i_2_p9)",
+              "agrupacion": "Dependencia económica de la pareja (p93)",
+              "codigo_grupo": 2,
+              "grupo": "Sí, en parte",
+              "codigo_respuesta": 7,
+              "respuesta": "7 Muy bien",
+              "personas": 0,
+              "denominador": 0,
+              "porcentaje": null
+            },
+            {
+              "variable": "Bienestar mental o emocional percibido (i_2_p9)",
+              "agrupacion": "Dependencia económica de la pareja (p93)",
+              "codigo_grupo": 3,
+              "grupo": "No",
+              "codigo_respuesta": 1,
+              "respuesta": "1 Muy mal",
+              "personas": 0,
+              "denominador": 0,
+              "porcentaje": null
+            },
+            {
+              "variable": "Bienestar mental o emocional percibido (i_2_p9)",
+              "agrupacion": "Dependencia económica de la pareja (p93)",
+              "codigo_grupo": 3,
+              "grupo": "No",
+              "codigo_respuesta": 2,
+              "respuesta": "2",
+              "personas": 0,
+              "denominador": 0,
+              "porcentaje": null
+            },
+            {
+              "variable": "Bienestar mental o emocional percibido (i_2_p9)",
+              "agrupacion": "Dependencia económica de la pareja (p93)",
+              "codigo_grupo": 3,
+              "grupo": "No",
+              "codigo_respuesta": 3,
+              "respuesta": "3",
+              "personas": 0,
+              "denominador": 0,
+              "porcentaje": null
+            },
+            {
+              "variable": "Bienestar mental o emocional percibido (i_2_p9)",
+              "agrupacion": "Dependencia económica de la pareja (p93)",
+              "codigo_grupo": 3,
+              "grupo": "No",
+              "codigo_respuesta": 4,
+              "respuesta": "4",
+              "personas": 0,
+              "denominador": 0,
+              "porcentaje": null
+            },
+            {
+              "variable": "Bienestar mental o emocional percibido (i_2_p9)",
+              "agrupacion": "Dependencia económica de la pareja (p93)",
+              "codigo_grupo": 3,
+              "grupo": "No",
+              "codigo_respuesta": 5,
+              "respuesta": "5",
+              "personas": 0,
+              "denominador": 0,
+              "porcentaje": null
+            },
+            {
+              "variable": "Bienestar mental o emocional percibido (i_2_p9)",
+              "agrupacion": "Dependencia económica de la pareja (p93)",
+              "codigo_grupo": 3,
+              "grupo": "No",
+              "codigo_respuesta": 6,
+              "respuesta": "6",
+              "personas": 0,
+              "denominador": 0,
+              "porcentaje": null
+            },
+            {
+              "variable": "Bienestar mental o emocional percibido (i_2_p9)",
+              "agrupacion": "Dependencia económica de la pareja (p93)",
+              "codigo_grupo": 3,
+              "grupo": "No",
+              "codigo_respuesta": 7,
+              "respuesta": "7 Muy bien",
+              "personas": 0,
+              "denominador": 0,
+              "porcentaje": null
+            }
+          ]
+        }
+      },
+      "base_comun": {
+        "personas": 0,
+        "uso": "Referencia disponible; no es la base de las figuras por dimensión.",
+        "grupos": [
+          {
+            "grupo": "Sí, completamente",
+            "personas": 0
+          },
+          {
+            "grupo": "Sí, en parte",
+            "personas": 0
+          },
+          {
+            "grupo": "No",
+            "personas": 0
+          }
+        ]
+      }
+    }
+  },
+  "reproduccion": {
+    "fecha_utc": "2026-10-02T21:35:58.206965+00:00",
+    "entorno": {
+      "python": "3.13.15",
+      "pandas": "3.0.5",
+      "numpy": "2.5.3",
+      "matplotlib": "3.11.2"
+    },
+    "entradas": {
+      "enssex_convivientes_F4_interpretable.csv": "3fee86729908e1bcdfb7b3cae68f527b81cffadc5a14e68de9a0dc03dca18e58",
+      "datos_interpretables_F4.json": "af09e71c93cf2160b6eb8540cbdf944b0da2a16aedcf00692d7e54d1e5a5ab91"
+    },
+    "codigo": {
+      "F4/src/datos_interpretables.py": "62b3d5da0970b372eb13992da3eb49693c2e6caf1a08207cffac693acdea169b",
+      "F4/src/analisis_descriptivo.py": "cb871da406aba32e2589ab2fbf1e9894a8257dc5759c915370b2b67f2db3cb35",
+      "F4/src/visualizaciones.py": "1ddde043c918dd44a72fc1b25ed4dbbd3233ca00bd4df47c1f4bc6638039ec3a"
+    },
+    "productos": {
+      "bienestar_mental_emocional.csv": "1d43ea676216441d043680e98f946b7d311c5d41c3f0825cb0ce1d008c61b9ee",
+      "bienestar_mental_emocional_por_sexo.csv": "3b6872238e91015c395753065dc2a693f772d6f4b22d2fa9120beb1979000fcf",
+      "denominadores.csv": "1bc48703562b4a09a78c5de1e79f4726c356cd4bb7c18774421068e8cd495dd7",
+      "denominadores_por_sexo.csv": "80f92a6f5d0006640f1e2805db9b2737ef9a835845a3fc19c261ee2894d965a6",
+      "dependencia_economica.csv": "c1fa61b8eed75f517c6ea044a784906263e455ba788af2ac9476caae917b8f6e",
+      "dependencia_economica_por_sexo.csv": "c6cba8793a64c22fce94b51a71e6c29210fb258d7eac3906e98cbb01f650d667",
+      "figura_1_dependencia_economica.png": "265c0fbbc378b64f01e79e1b06a6ef827eb232ec542c861239ca454b67e475ba",
+      "figura_1_dependencia_economica.svg": "e72aa6767862d0513029574e7c600a922579708864406cd316281100127f11dd",
+      "figura_2_valoracion_vida_sexual.png": "b46cff78bfb63f8d392a16e55ffa634d5bff9899d7d6cedd2473aebff2f90226",
+      "figura_2_valoracion_vida_sexual.svg": "36f7ba8833a368a0f09e95efcce906574595d35b2b0b6f4b90cf7c5e3fdc6f35",
+      "figura_3_bienestar_mental_emocional.png": "a1b81c1b571728efa84ee1889480e560baf635aa93be9497d589aabe9ca0c5b2",
+      "figura_3_bienestar_mental_emocional.svg": "2e4e278086741fa2dd6feea3c96ae41f8d51eb75ddd508d92348e9ae434eb97c",
+      "valoracion_vida_sexual.csv": "ec6193059059e8e4fef78c06ff428a515be1eb8f019da957d4673afac8c6f678",
+      "valoracion_vida_sexual_por_sexo.csv": "aa38a09aa255328053e2dfcabf55512bf04aa9940538e17b825b632c2bc2af5d"
+    },
+    "comprobaciones": "Conteos, ausencias, bases por grupo y sexo, porcentajes y conciliación con el total correctos."
+  }
+}
